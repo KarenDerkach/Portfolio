@@ -1,19 +1,25 @@
 import React from 'react';
 // import './App.css';
-import { Route, Router } from 'react-router-dom'
-import AboutMe from './Container/AboutMe/AboutMe';
-import Home from './Container/Home/Profile'
+import { BrowserRouter,  Route, Routes } from 'react-router-dom'
 import NavBar from './Container/NavBar/NavBar';
+import Home from './Container/Home/Profile';
+import AboutMe from './Container/AboutMe/AboutMe';
+import Portfolio from './Container/Portfolio/Portfolio';
+import Contact from './Container/Contact/Contact';
+
 
 function App() {
   return (
-    <React.Fragment>
-    <Router> 
-     <Route path='/' element={<NavBar/>}/>
-      <Route exact path='/' element={<Home/>}/>
+   <BrowserRouter>
+    <Routes> 
+     <Route path='/' element={<NavBar/>}>
+      <Route index element={<Home/>}/>
       <Route path='/aboutMe' element={<AboutMe/>}/>
-    </Router>
-    </React.Fragment>
+      <Route path='/portfolio' element={<Portfolio/>}/>
+      <Route path='/contactMe' element={<Contact/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 

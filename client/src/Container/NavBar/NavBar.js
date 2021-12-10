@@ -1,19 +1,21 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import AboutMe from '../AboutMe/AboutMe'
+import { NavLink, Outlet} from 'react-router-dom'
+import './NavBar.css';
+
 
 
 export default function NavBar() {
     return (
-        <div>
+        <main>
             <nav>
-                <div>
-                <Link to='/aboutMe' > About Me <AboutMe/>
-               </Link>
-               </div>
+                <NavLink activeClassName="current" to='/' >Home </NavLink> |
+                <NavLink activeClassName="current" to='/aboutMe'  > About Me</NavLink> |
+                <NavLink activeClassName="current" to='/portfolio'  > Portfolio  </NavLink> |
+                <NavLink activeClassName="current" to='/contactMe' > Contact Me  </NavLink>
             </nav>
+        <section><Outlet/></section>
+        </main>
 
-        </div>
     )
 
 }
