@@ -1,9 +1,9 @@
-@font-face {
+ /* @font-face {
   font-family: "Poppins Medium";
   font-style: normal;
   font-weight: normal;
   src: url("./assets/fonts/Poppins-Medium.ttf");
-}
+} 
 
 @font-face {
   font-family: "Poppins Regular";
@@ -45,7 +45,7 @@
   font-style: normal;
   font-weight: normal;
   src: url("./assets/fonts/Poppins-Thin.ttf");
-}
+}  */
 
 * {
   outline: none;
