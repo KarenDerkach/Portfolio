@@ -14,7 +14,7 @@ export default function AboutMe() {
         <div className='a-right' >
             <h1 className='a-title'> About Me</h1>
             <p className='a-sub'>
-                dfndsfodkj´fdsj´vkfgfdplgfdghflfdlvdfghfhnfghgh
+                dplgfdghflfdlvdfghfhnfghgh
                 gfhfhfgthfx
             </p>
             <p className='a-desc'>
@@ -23,7 +23,13 @@ export default function AboutMe() {
             hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
             hhhhhhhhhhhhhhhhhhhhhhh
             </p>
+            <div className="resume">
+            <a href='CV_DERKACH KAREN-.pdf' download='KD_CV.pdf'> 
+             <button className="btn-get-resume"> Get Resume</button>
+            </a>
+          </div>
         </div>
+
         </div>
     )
 

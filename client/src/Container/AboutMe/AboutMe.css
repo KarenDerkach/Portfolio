@@ -10,7 +10,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 position: relative;
-background-color: tomato;
+
 height: 100%;
 }
 .a-card{
@@ -24,7 +24,7 @@ height: 100%;
     position: absolute;
     top: 50px;
     left: 50px;
-    background-color: violet;
+    
 }
 
 .a-img{
@@ -60,3 +60,12 @@ flex: 1;
 .a-desc{
     font-weight: 300;
 }
+/*----------------------BTN RESUME----------------*/
+.resume{
+  
+}
+
+.btn-get-resume{
+
+}
+

@@ -1,7 +1,23 @@
-.layout{
-    position: fixed;
-  width: 100%;
-  height: auto;
-  background-color: black;
-  top: 0;
+.navbar{
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.i-home{
+margin: 15px;
+}
+
+.i-about{
+  margin: 15px;
+}
+
+.i-portfolio{
+  margin: 15px;
+}
+
+.i-contact{
+  margin: 15px;
 }

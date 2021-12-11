@@ -6,15 +6,15 @@ import './NavBar.css';
 
 export default function NavBar() {
     return (
-        <main>
-            <nav>
-                <NavLink activeClassName="current" to='/' >Home </NavLink> |
-                <NavLink activeClassName="current" to='/aboutMe'  > About Me</NavLink> |
-                <NavLink activeClassName="current" to='/portfolio'  > Portfolio  </NavLink> |
-                <NavLink activeClassName="current" to='/contactMe' > Contact Me  </NavLink>
+        <div >
+            <nav className="navbar">
+                <NavLink activeClassName="current" to='/' className='i-home' >Home </NavLink> |
+                <NavLink activeClassName="current" to='/aboutMe' className='i-about'  > About Me</NavLink> |
+                <NavLink activeClassName="current" to='/portfolio' className='i-portfolio'  > Portfolio  </NavLink> |
+                <NavLink activeClassName="current" to='/contactMe' className='i-contact' > Contact Me  </NavLink>
             </nav>
         <section><Outlet/></section>
-        </main>
+        </div>
 
     )
 
