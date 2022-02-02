@@ -6,8 +6,8 @@ import gmail from '../../assets/Contact/gmail_png.png';
 import linkedin from '../../assets/Contact/linkedin_png.png';
 import github from '../../assets/Contact/github_png.png';
 import whatsapp from '../../assets/Contact/whatsapp.png'
+import contact from '../../assets/Contact/contact.png'
 import swal from 'sweetalert'
-// require('dotenv')
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
@@ -18,7 +18,7 @@ export default function Contact() {
 
     const language = useSelector((state) => state.language);
 
-    const [done , setDone] = React.useState(false);
+    const [ setDone] = React.useState(false);
 
     const [input, setInput] = useState({
         user_name: '',
@@ -64,7 +64,9 @@ export default function Contact() {
             <div className="c-bg">
                 <div className="c-wrapper">
                     <div className="c-left">
-                        <h1 className="c-title"> Let's discuss your project</h1>
+                        <h1 className="c-title"> {language === 'EN' ? "Let's get in touch!" : "Pongamonos en contacto!"}</h1>
+                    </div>
+                        <div className="c-right">
                         <div className="c-info">
                             {/*EMAIL */}
                             <div className="c-info-item">
@@ -89,9 +91,8 @@ export default function Contact() {
                                 </a>
                             </div>
                         </div>
-                    </div>
                     {/*FORM */}
-                    <div className="c-right">
+                  
                         <div className="containerForm">
                         <form ref={form} onSubmit={handleSubmit} className="c-form">
                             <input type='text' placeholder={language === 'EN'? "Name": "Nombre"} name="user_name" value={input.user_name} onChange={(e)=>handleInputChange(e)}/>
@@ -104,7 +105,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-
+        <img src={contact} alt="imagen background" className="imgbkg"/>
         </div>
     )
 
