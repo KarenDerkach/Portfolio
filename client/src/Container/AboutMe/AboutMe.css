@@ -40,7 +40,11 @@ height: 100%;
 }
 
 .a-footer{
-    margin-top: 10vh;
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
 }
 /*---------------------------------------------------*/
 .a-right{
@@ -60,7 +64,9 @@ margin-top: 20vh;
 }
 
 .a-title{
-    font-weight: 400;
+    font-weight: bold;
+    color:tomato;
+    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.57);
 }
 
 .a-sub{
@@ -80,6 +86,11 @@ margin-top: 20vh;
 .btn-get-resume{
     border-radius: 10px;
     background-color: #e76f51;
+    border: none;
+    width: 10vw;
+    height: 8vh;
+    font-weight: bold;
+    color: white;
 }
 .btn-get-resume:hover{
     background-color: white;

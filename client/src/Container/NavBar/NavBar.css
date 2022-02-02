@@ -1,11 +1,12 @@
 .navbar{
   display: flex;
+  justify-content: space-around;
   position: fixed;
-  /* justify-content: space-around; */
   font-size: 18px;
   padding: 20px;
   width: 40vw;
   z-index: 999;
+  margin-top: 3vh;
 }
 .buttonLang{
   display: flex;
@@ -29,38 +30,34 @@
 .buttonLang:hover{
   background-color: white;
   color: tomato;
-  box-shadow: 3px 3px 10px tomato;
+  box-shadow: 3px 3px 5px rgb(248, 246, 245);
 }
-.i-home{
-margin: 15px;
+.i-home, .i-about, .i-portfolio, .i-contact{
+margin: 10px;
 color: tomato;
+text-decoration: none;
 }
+
 .i-home:hover{
   color: rgb(201, 46, 18);
+  text-decoration: none;
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
-.i-about{
-  margin: 15px;
-  color: tomato;
-}
 .i-about:hover{
   color: rgb(201, 46, 18);
+  text-decoration: none;
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
-
-.i-portfolio{
-  margin: 15px;
-  color: tomato;
-}
 .i-portfolio:hover{
   color: rgb(201, 46, 18);
+  text-decoration: none;
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
-
-.i-contact{
-  margin: 15px;
-  color: tomato;
-}
 .i-contact:hover{
   color: rgb(201, 46, 18);
+  text-decoration: none;
+  transform: scaleX(1.1) scaleY(1.1);
 }

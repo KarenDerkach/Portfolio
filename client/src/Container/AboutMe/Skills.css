@@ -52,3 +52,8 @@
     object-fit: cover;
     bottom: 10vh;
 }
+
+.itemImg:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}

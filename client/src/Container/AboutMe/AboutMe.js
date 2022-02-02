@@ -26,7 +26,7 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className='a-right' >
-                <h1 className='a-title'>{language === 'EN'? 'My history': 'Mi historia' } </h1>
+                <h1 className='a-title'>{language === 'EN'? 'Why program?': '¿Por que programar?' } </h1>
                 <p className='a-sub'>
                 <img src={logoArg} alt="arg" className="imgArg"/>  correntina viendo en Buenos Aires, <br/> dispuesta a conocer el 🌎
                 </p>
@@ -38,7 +38,7 @@ export default function AboutMe() {
                         <button className="btn-get-resume">{language === 'EN' ? 'Get Resume' : 'Mi CV'}</button>
                     </a>
                 </div>
-                <p className="a-footer">Apuesto a nuevos desafíos. ¿Me ayudas a concretarlos?</p>
+                <p className="a-footer">{language === 'EN'? 'I bet on new challenges. Can you help me to specify them?' : 'Apuesto a nuevos desafíos. ¿Me ayudas a concretarlos?'}</p>
            
             <div className="a-down">
             <span className="a-Skill">{language === 'EN' ? 'Skills' : 'Habilidades'}</span>

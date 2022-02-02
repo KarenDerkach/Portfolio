@@ -31,12 +31,21 @@ export default function NavBar() {
 					{language === 'ES' ? 'EN' : 'ES'}
 				</button>
             </div>
-            <nav className="navbar">
+            {/* <nav className="navbar">
                 <Link to='/' className='i-home' textDecoration="none" >{language === 'EN' ? 'Home' : 'Principal' }</Link> 
                 <Link to='/AboutMe' className='i-about'  > {language === 'EN' ? 'About Me' : 'Acerca de Mi' }</Link> 
                 <Link to='/Portfolio' className='i-portfolio'  > {language === 'EN' ? 'Projects' : 'Proyectos' } </Link> 
                 <Link to='/Contact' className='i-contact' > {language === 'EN' ? 'Contact' : 'Contacto' } </Link>
-            </nav>
+            </nav> */}
+            <nav className="navbar" class="navbar navbar-light ">
+  <div  class="container-fluid">
+    <Link to='/'  class="navbar-brand"className='i-home' >{language === 'EN' ? 'Home' : 'Principal' }</Link>
+    <Link to='/AboutMe' class="navbar-brand" className='i-about'  > {language === 'EN' ? 'About Me' : 'Acerca de Mi' }</Link> 
+    <Link to='/Portfolio' class="navbar-brand" className='i-portfolio'  > {language === 'EN' ? 'Projects' : 'Proyectos' } </Link> 
+    <Link to='/Contact'  class="navbar-brand" className='i-contact' > {language === 'EN' ? 'Contact' : 'Contacto' } </Link>
+
+  </div>
+</nav>
    
         </div>
 

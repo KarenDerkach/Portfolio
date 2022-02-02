@@ -1,14 +1,29 @@
-.p{
+/* .p{
     width: 30%;
     height: 40vh;
     margin: 20px 10px;
-    border: 2px solid #ccc;
+   
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
    
-}
+} */
+
 
 .card-img-top{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
 }
+
+.buttonModal{
+    border: transparent;
+    background-color: transparent;
+}
+
+.buttonModal:hover{
+ border:none;
+    /* opacity: 50% */
+transform: scaleX(1.01) scaleY(1.01);
+box-shadow: 3px 3px 10px rgb(14, 11, 11);
+}
+
