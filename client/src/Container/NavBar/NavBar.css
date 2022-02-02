@@ -1,23 +1,66 @@
 .navbar{
   display: flex;
-  position: absolute;
-  justify-content: space-around;
+  position: fixed;
+  /* justify-content: space-around; */
   font-size: 18px;
   padding: 20px;
+  width: 40vw;
+  z-index: 999;
+}
+.buttonLang{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  padding: 20px;
+  width: 5vw;
+  height: 5vh;
+  left: 90vw;
+  position: fixed;
+  border: none;
+  z-index: 999;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none;
 }
 
+.buttonLang:hover{
+  background-color: white;
+  color: tomato;
+  box-shadow: 3px 3px 10px tomato;
+}
 .i-home{
 margin: 15px;
+color: tomato;
+}
+.i-home:hover{
+  color: rgb(201, 46, 18);
 }
 
 .i-about{
   margin: 15px;
+  color: tomato;
 }
+.i-about:hover{
+  color: rgb(201, 46, 18);
+}
+
 
 .i-portfolio{
   margin: 15px;
+  color: tomato;
 }
+.i-portfolio:hover{
+  color: rgb(201, 46, 18);
+}
+
 
 .i-contact{
   margin: 15px;
+  color: tomato;
+}
+.i-contact:hover{
+  color: rgb(201, 46, 18);
 }

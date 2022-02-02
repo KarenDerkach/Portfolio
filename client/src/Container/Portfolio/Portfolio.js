@@ -1,6 +1,7 @@
 import React from "react";
 import './Portfolio.css';
 import Projects from "../Projects/Projects";
+import projects from '../../data/projects'
 
 export default function Portfolio() {
     return (
@@ -11,10 +12,9 @@ export default function Portfolio() {
                vsfvsvosmvasfvdfvdfvfrfr</p>
            </div>
              <div className="pl-list">
-                 <Projects/>
-                 <Projects/>
-                 <Projects/>
-                 <Projects/>
+                 <Projects project={projects[0]}/>
+                 <Projects project={projects[1]}/>
+                
              </div>
 
         </div>
