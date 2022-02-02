@@ -2,6 +2,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    
 }
 /*IMAGEN*/
 .a-left{
@@ -12,6 +13,11 @@ justify-content: center;
 position: relative;
 
 height: 100%;
+}
+
+.imgArg{
+    width: 2vw;
+    height: 4vh;
 }
 .a-card{
     width: 60%;
@@ -33,9 +39,13 @@ height: 100%;
     object-fit: cover;
 }
 
+.a-footer{
+    margin-top: 10vh;
+}
 /*---------------------------------------------------*/
 .a-right{
 flex: 1;
+margin-top: 20vh;
 }
 .a-seccionImg{
     margin-top: 50px;
@@ -62,10 +72,37 @@ flex: 1;
 }
 /*----------------------BTN RESUME----------------*/
 .resume{
-  
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-get-resume{
-
+    border-radius: 10px;
+    background-color: #e76f51;
+}
+.btn-get-resume:hover{
+    background-color: white;
+    color:#e76f51 ;
+    box-shadow: 3px 3px 10px #e76f51;
+}
+.a-down{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
 
+.a-Skill{
+    margin-top: 5vh;
+    color: rgb(102, 28, 15);
+    font-weight: bold;
+}
+/*----------------SKILLS------------------------------------*/
+.c-skills{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
