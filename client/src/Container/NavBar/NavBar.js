@@ -8,7 +8,17 @@ import ES from '../../assets/Home/ES.png'
 import EN from '../../assets/Home/EN.png'
 import './NavBar.css';
 
-
+// function handleMobile (){
+//    window.addEventListener('DOMContentLoaded', () => {
+//     const btn_menu = document.querySelector('.btn-menu-mobile');
+//     if(btn_menu) {
+//         btn_menu.addEventListener('click', () => {
+//             const menu_items = document.querySelector('.menu-items');
+//             menu_items.classList.toggle('show');
+//         });
+//     }
+// })
+// }
 
 export default function NavBar() {
 
@@ -28,34 +38,34 @@ export default function NavBar() {
 		dispatch(changeLanguage());
 	}
 
+    function handleShowMenu (){
+        const menu_items = document.querySelector('.menu-items');
+        menu_items.classList.toggle('show');
+    }
+
+
     return (
         <div >
-            <div>
+           
+            <nav className="navbar">
+            <div className="menu-lang">
             <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
 					{language === 'ES' ? <img src={EN} alt='U.S' className="flat"/> : <img src={ES} alt='ES' className="flat"/>}
 				</button>
             </div>
-            <nav className="navbar">
+            <div className="btn-menu-mobile" onClick={handleShowMenu} >
+                    <BiMenu />
+                </div>
+             
                 <ul className="menu-items">
                 <li><a href='/' className='i-home'  >{language === 'EN' ? 'Home' : 'Principal' }</a> </li>
                 <li> <a href='/AboutMe' className='i-about'  > {language === 'EN' ? 'About Me' : 'Acerca de Mi' }</a> </li>
                 <li> <a href='/Portfolio' className='i-portfolio'  > {language === 'EN' ? 'Projects' : 'Proyectos' } </a> </li>
                 <li>  <a href='/Contact' className='i-contact' > {language === 'EN' ? 'Contact' : 'Contacto' } </a></li>
                 </ul>
-                <div className="btn-menu-mobile">
-                    <BiMenu />
-                </div>
              
             </nav>
-            {/* <nav className="navbar" class="navbar navbar-light ">
-  <div  class="container-fluid">
-    <Link to='/'  class="navbar-brand"className='i-home' >{language === 'EN' ? 'Home' : 'Principal' }</Link>
-    <Link to='/AboutMe' class="navbar-brand" className='i-about'  > {language === 'EN' ? 'About Me' : 'Acerca de Mi' }</Link> 
-    <Link to='/Portfolio' class="navbar-brand" className='i-portfolio'  > {language === 'EN' ? 'Projects' : 'Proyectos' } </Link> 
-    <Link to='/Contact'  class="navbar-brand" className='i-contact' > {language === 'EN' ? 'Contact' : 'Contacto' } </Link>
 
-  </div>
-</nav> */}
    
         </div>
 

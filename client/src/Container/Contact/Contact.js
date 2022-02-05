@@ -6,7 +6,7 @@ import gmail from '../../assets/Contact/gmail_png.png';
 import linkedin from '../../assets/Contact/linkedin_png.png';
 import github from '../../assets/Contact/github_png.png';
 import whatsapp from '../../assets/Contact/whatsapp.png'
-import contact from '../../assets/Contact/contact.png'
+// import contact from '../../assets/Contact/contact.png'
 import swal from 'sweetalert'
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -105,7 +105,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        <img src={contact} alt="imagen background" className="imgbkg"/>
+        {/* <img src={contact} alt="imagen background" className="imgbkg"/> */}
         </div>
     )
 

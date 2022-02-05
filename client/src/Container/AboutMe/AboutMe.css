@@ -15,10 +15,7 @@ position: relative;
 height: 100%;
 }
 
-.imgArg{
-    width: 2vw;
-    height: 4vh;
-}
+
 .a-card{
     width: 60%;
     height: 70vh;
@@ -39,13 +36,7 @@ height: 100%;
     object-fit: cover;
 }
 
-.a-footer{
-    margin-top: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
-}
+
 /*---------------------------------------------------*/
 .a-right{
 flex: 1;
@@ -72,9 +63,20 @@ margin-top: 20vh;
 .a-sub{
     margin: 20px 0px;
 }
+.imgArg{
+    width: 2vw;
+    height: 4vh;
+}
 
 .a-desc{
     font-weight: 300;
+}
+.a-footer{
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
 }
 /*----------------------BTN RESUME----------------*/
 .resume{
@@ -116,4 +118,42 @@ margin-top: 20vh;
     height: 100vh;
     width: 100vw;
     align-items: center;
+}
+
+@media screen and  (max-width: 480px){
+  
+    .a-left{
+        display: none;
+    }
+    .a-right{
+        margin-top: 5vh;
+    }
+    .a-title{
+        margin-top: 9vh;
+        margin-left: 10vw;
+    }
+    .a-sub{
+        margin-left: 10vw;
+    }
+    .imgArg{
+        width: 6vw;
+        height: 3vh;
+    }
+    .a-desc{
+        margin-left: 5vw;
+        text-align: center;
+    }
+    .a-footer{
+        margin-top: 18vh;
+        text-align: center;
+    }
+
+    .btn-get-resume{
+        margin-bottom: -20vh;
+        width: 50vw;
+        height: 10vh;
+    }
+    .a-down{
+        margin-top: -5vh;
+    }
 }

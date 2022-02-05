@@ -35,6 +35,7 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
     flex-direction: row;
     justify-content: center;
    
+   
 }
 
 .container .card{
@@ -48,7 +49,7 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
     width: 30vw;
     height: 100vh;
     transition: 0.5s;
-    border-radius: 10px;
+   
 }
 
 .container .card .face.face1{
@@ -79,7 +80,7 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
     width: 30vw;
     height: 50vh;
     object-fit: cover;
-    border-radius: 10px;
+    
 }
 
 .container .card .face.face1 .content h3{
@@ -126,4 +127,38 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
 .container .card .face.face2 .content a:hover{
     background: #FF4500;
     color: #fff;
+}
+
+@media screen and  (max-width: 480px){
+
+    .container{
+        
+        right: 27vw;
+    }
+    .container .card {
+        margin-top: 30vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    .container .card .face{
+        width: 90vw;
+        height:100vh;
+        
+       
+    }
+    .container .card .face.face1 .content img{
+        width: 90vw;
+        height:70vh;
+    }
+
+    .container .card .face.face2{
+        transform: translateY(-300px);;
+    }
+    .container .card:hover .face.face2{
+        transform: translateY(-20px);
+    }
 }

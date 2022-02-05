@@ -98,6 +98,18 @@ position: relative;
     .i{
         flex-direction: column;
     }
+    .i-intro, .i-name, .i-desc{
+        text-align: center;
+    }
+ 
+    .i-left{
+        margin-top: 10vh;
+        height: 50vh;
+    }
+    .i-bg{
+        background-color: transparent;
+    }
+   
     
 }
 
