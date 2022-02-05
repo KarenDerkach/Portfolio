@@ -20,7 +20,7 @@
   position: fixed;
   border: none;
   z-index: 999;
-  background-color: tomato;
+  background-color: rgba(255, 99, 71, 0.021);
   color: white;
   font-weight: bold;
   border-radius: 10px;
@@ -28,36 +28,52 @@
 }
 
 .buttonLang:hover{
-  background-color: white;
-  color: tomato;
-  box-shadow: 3px 3px 5px rgb(248, 246, 245);
+  background-color: rgba(255, 255, 255, 0.089);
+  box-shadow: 3px 3px 5px rgba(248, 246, 245, 0.034);
 }
-.i-home, .i-about, .i-portfolio, .i-contact{
+
+.flat{
+  width: 5vw;
+  height: 5vh;
+}
+
+.menu-items{
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+
+.menu-items, li{
 margin: 10px;
-color: tomato;
+
 text-decoration: none;
 }
 
-.i-home:hover{
+.menu-items, li, a{
+  text-decoration: none;
+  color: tomato;
+}
+.menu-items, li:hover, a:hover{
   color: rgb(201, 46, 18);
   text-decoration: none;
   transform: scaleX(1.1) scaleY(1.1);
+
 }
 
-.i-about:hover{
-  color: rgb(201, 46, 18);
-  text-decoration: none;
-  transform: scaleX(1.1) scaleY(1.1);
+.btn-menu-mobile{
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
 }
 
-.i-portfolio:hover{
-  color: rgb(201, 46, 18);
-  text-decoration: none;
-  transform: scaleX(1.1) scaleY(1.1);
+ul.show{
+  top: 65px
 }
 
-.i-contact:hover{
-  color: rgb(201, 46, 18);
-  text-decoration: none;
-  transform: scaleX(1.1) scaleY(1.1);
+@media screen and(max-width: 450px) {
+  .btn-menu-mobile{
+    display: inline-flex;
+  }
 }
