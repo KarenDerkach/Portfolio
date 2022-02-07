@@ -18,7 +18,7 @@ export default function Contact() {
 
     const language = useSelector((state) => state.language);
 
-    const [done ,setDone] = useState(false);
+    const [setDone] = useState(false);
 
     const [input, setInput] = useState({
         user_name: '',
