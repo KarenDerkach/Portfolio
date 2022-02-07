@@ -8,10 +8,11 @@ import github from '../assets/Skills/github.png'
 import postgres from '../assets/Skills/postgres.png'
 import sequelize from '../assets/Skills/sequelize.png'
 import vscode from '../assets/Skills/vscode.png'
+import material from '../assets/Skills/material-ui.png'
 
 
 const skills = {  
-    technical:[js, react, redux, sql, html, css, github, postgres, sequelize, vscode],
+    technical:[js, react, redux, sql, html, css, github, postgres, sequelize, vscode, material],
     soft:{
         ES:["Responsable","Adaptabilidad","Scrum","Creatividad","Orientada a Resultados","Resolución de problemas","Pensamiento analítico","Prensamiento crítico","Curiosa",
     "Autodidacta","Perseverante", "Comunicativa"],

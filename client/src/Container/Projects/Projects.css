@@ -90,7 +90,7 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
-    text-shadow: rgb(228, 207, 19) 0px 0px 10px;
+    /* text-shadow: rgb(228, 207, 19) 0px 0px 10px; */
 }
 
 .container .card .face.face2{
@@ -110,23 +110,33 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
 }
 
 .container .card .face.face2 .content p{
-    margin: 0;
+    margin-bottom: 20px;
     padding: 0;
 }
 
 .container .card .face.face2 .content a{
-    margin: 15px 0 0;
+    margin: 5px 0 0;
     display:  inline-block;
     text-decoration: none;
     font-weight: 900;
     color: #FF4500;
     padding: 5px;
     border: 1px solid #FF4500;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    
 }
 
 .container .card .face.face2 .content a:hover{
     background: #FF4500;
     color: #fff;
+ 
+    
+}
+
+.btn{
+
 }
 
 @media screen and  (max-width: 480px){

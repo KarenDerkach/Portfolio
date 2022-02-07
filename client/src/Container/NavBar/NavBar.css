@@ -117,7 +117,6 @@ line-height: 30px;
   }
  li:hover{
    height: 10vh;
-  transform: scaleX(1.1) scaleY(1.1);
  background-color: rgb(233, 38, 38);
   text-decoration: none;
 }
@@ -135,7 +134,7 @@ line-height: 30px;
   .menu-items, a:hover{
     color: rgb(248, 244, 244);
     text-decoration: none;
-    transform: scaleX(1.1) scaleY(1.1);
+   
   } 
 
 }

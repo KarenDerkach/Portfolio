@@ -1,3 +1,5 @@
+
+
 .i{
     display: flex;
     height: 100vh;
@@ -7,6 +9,8 @@ flex: 1;
 display: flex;
 align-items: center;
 justify-content: center;
+animation: slideInDown;
+animation-duration: 1s;
 
 }
 
@@ -82,7 +86,13 @@ position: relative;
     height: 100%;
     object-fit: cover;
     position: absolute;
+    animation: fadeInRight;
+    animation-duration: 2s;
 }
+
+    
+
+
 .i-bg{
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
     background-color: tomato;
@@ -91,6 +101,8 @@ position: relative;
     position: absolute;
     top: 0;
     right: 0;
+    animation: fadeInRight;
+    animation-duration: 2s;
 }
 
 
@@ -109,7 +121,10 @@ position: relative;
     .i-bg{
         background-color: transparent;
     }
-   
+   .i-img{
+       animation: slideInUp;
+         animation-duration: 2s;
+   }
     
 }
 

@@ -12,7 +12,7 @@ export default function Portfolio() {
         <div className="pl">
            <div className="heading">
                <h1 className="heading">{language === 'EN' ? 'My Projects' : 'Mis Proyectos'}</h1>
-               <p className="heading-p">{language === 'EN' ? 'Below I present recently developed projects' : 'A continuacion presento los proyectos desarrollados recientemente'}</p>
+               <p className="heading-p">{language === 'EN' ? 'In this section you can see some of my most recent projects, any feedback is fully received': 'En esta seccion podras ver algunos de mis proyectos más recientes, cualquier feedback es completamente recibido'}</p>
            </div>
              <div className="pl-list">
                  {

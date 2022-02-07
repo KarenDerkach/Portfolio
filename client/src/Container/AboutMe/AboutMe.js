@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import "./AboutMe.css";
 import { IconButton } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import data from '../../data/about'
 import photo from "../../assets/Home/profilephoto-.png";
 import Skills from "./Skills";
 import logoArg from "../../assets/About/argentina.png";
@@ -28,17 +29,14 @@ export default function AboutMe() {
             {language === "EN" ? "Why program?" : "¿Por que programar?"}{" "}
           </h1>
           <p className="a-sub">
-            <img src={logoArg} alt="arg" className="imgArg" /> correntina viendo
-            en Buenos Aires, <br /> dispuesta a conocer el 🌎
+            <img src={logoArg} alt="arg" className="imgArg" />{language === "EN" ? data[0].EN.sub1 : data[0].ES.sub1}  <br /> {language === "EN" ? data[0].EN.sub2 : data[0].ES.sub2}
           </p>
           <p className="a-desc">
-            Considero que la tecnología es un mundo infinito el cual me permite
-            volcar conocimientos y satisfacer necesidades del ser humano actual.{" "}
+            {language === "EN" ? data[0].EN.description : data[0].ES.description}
             <br />
-            Es la razón de mi elección a este mundo sin fronteras y en constante
-            crecimiento✨, <br /> ya que, en armonía con mi profesión contable,
-            busco poder brindar soluciones a problemáticas cotidianas y
-            rutinarias.
+           {language === "EN" ? data[0].EN.description2 : data[0].ES.description2}
+           <br />
+            {language === "EN" ? data[0].EN.description3 : data[0].ES.description3}
           </p>
           <div className="resume">
             <a href="CV_DERKACH KAREN-.pdf" download="KD_CV.pdf">

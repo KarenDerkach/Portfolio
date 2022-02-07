@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import photo from '../../assets/Home/profilephoto-.png'
 import './Profile.css';
+import 'animate.css'
 
 
 export default function Profile() {
@@ -30,7 +31,7 @@ export default function Profile() {
 
       <div className='i-right'>
         <div className='i-bg'></div>
-        <img src={photo} alt='' className='i-img'/>
+        <img src={photo} alt='' className='i-img' />
       </div>
 
     </div>

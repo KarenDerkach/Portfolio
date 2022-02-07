@@ -2,23 +2,12 @@ import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BiMenu} from 'react-icons/bi';
 import {changeLanguage} from '../../react-redux/action'
-// import { Link} from 'react-router-dom'
+
 
 import ES from '../../assets/Home/ES.png'
 import EN from '../../assets/Home/EN.png'
 import './NavBar.css';
 
-// function handleMobile (){
-//    window.addEventListener('DOMContentLoaded', () => {
-//     const btn_menu = document.querySelector('.btn-menu-mobile');
-//     if(btn_menu) {
-//         btn_menu.addEventListener('click', () => {
-//             const menu_items = document.querySelector('.menu-items');
-//             menu_items.classList.toggle('show');
-//         });
-//     }
-// })
-// }
 
 export default function NavBar() {
 

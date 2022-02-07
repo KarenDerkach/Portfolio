@@ -18,7 +18,7 @@ export default function Contact() {
 
     const language = useSelector((state) => state.language);
 
-    const [ setDone] = React.useState(false);
+    const [done ,setDone] = useState(false);
 
     const [input, setInput] = useState({
         user_name: '',
@@ -53,6 +53,12 @@ export default function Contact() {
             }
             )
             language === 'EN' ? swal('Message sent!', 'I will get back to you as soon as possible', 'success') : swal('Mensaje enviado!', 'Te responderé lo antes posible', 'success');
+            setInput({
+                user_name: '',
+                user_subject: '',
+                user_email: '',
+                user_message: ''
+              });
         }
             else{
                 language === 'EN' ? swal('Please fill in all the fields', '', 'error') : swal('Por favor llena todos los campos', '', 'error');
@@ -99,7 +105,7 @@ export default function Contact() {
                             <input type='text' placeholder={language === 'EN'? "Subject": "Intro"} name="user_subject"value={input.user_subject} onChange={(e)=>handleInputChange(e)} />
                             <input type='text' placeholder={language === 'EN'? "Email": "Correo"} name="user_email"value={input.user_email} onChange={(e)=>handleInputChange(e)}/>
                             <textarea rows="5" placeholder={language === 'EN'? "Message": "Mensaje"} name="user_message"value={input.user_message} onChange={(e)=>handleInputChange(e)}/>
-                            <button className="buttonSend">{language === 'EN'? "Submit": "Enviar"}</button>
+                            <button type='submit' onClick={(e) => handleSubmit(e)}className="buttonSend">{language === 'EN'? "Submit": "Enviar"}</button>
                         </form>
                         </div>
                     </div>
