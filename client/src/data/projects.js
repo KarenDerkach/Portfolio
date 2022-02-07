@@ -51,7 +51,7 @@ const projects = [
     ES:{
     title: 'PORTAFOLIO',
     description:
-      'Desarrollo de una página web que donde el usuario visualiza informacion relevante sobre mi experiencia profesional y personal.',
+      'Desarrollo de una página web donde el usuario visualiza información relevante sobre mi experiencia profesional y personal.',
     image: portfolio,
     tools: "",
     link: 'https://portfolio-rose-psi-88.vercel.app/',

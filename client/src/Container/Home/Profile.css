@@ -3,12 +3,14 @@
 .i{
     display: flex;
     height: 100vh;
+ 
 }
 .i-left{
 flex: 1;
 display: flex;
 align-items: center;
 justify-content: center;
+position: relative;
 animation: slideInDown;
 animation-duration: 1s;
 
@@ -106,6 +108,8 @@ position: relative;
 }
 
 
+
+
 @media screen and  (max-width: 480px){
     .i{
         flex-direction: column;
@@ -132,6 +136,7 @@ position: relative;
        animation-duration: 2s;
        position: relative;
    }
+
     
 }
 

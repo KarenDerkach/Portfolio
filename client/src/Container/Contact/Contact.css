@@ -32,6 +32,8 @@
    margin-top: 105vh;
    margin-left: -55vw;
    width: 50vw;
+   animation: pulse;
+    animation-duration: 2s;
     
 }
 

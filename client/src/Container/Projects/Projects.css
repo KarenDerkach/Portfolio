@@ -1,31 +1,3 @@
-/* .p{
-    width: 30%;
-    height: 40vh;
-    margin: 20px 10px;
-   
-    border-radius: 10px 10px 0px 0px;
-    overflow: hidden;
-   
-} */
-
-/* 
-.card-img-top{
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-}
-
-.buttonModal{
-    border: transparent;
-    background-color: transparent;
-}
-
-.buttonModal:hover{
- border:none;
-  
-transform: scaleX(1.01) scaleY(1.01);
-box-shadow: 3px 3px 10px rgb(14, 11, 11);
-} */
 
 .container{
     width: 40vw;
@@ -34,6 +6,8 @@ box-shadow: 3px 3px 10px rgb(14, 11, 11);
     display: flex;
     flex-direction: row;
     justify-content: center;
+    animation: fadeIn;
+    animation-duration: 5s;
    
    
 }
