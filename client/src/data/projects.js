@@ -1,5 +1,6 @@
 import foodarity from '../assets/Projects/foodarity.jpg'
 import dog from '../assets/Projects/dog.png'
+import portfolio from '../assets/Projects/portfolio.png'
 
 const projects = [ 
   { 
@@ -45,7 +46,28 @@ const projects = [
       link: '',
       code: 'https://github.com/KarenDerkach/PI-DOGS',
     }
+  },
+  { 
+    ES:{
+    title: 'PORTAFOLIO',
+    description:
+      'Desarrollo de una página web que donde el usuario visualiza informacion relevante sobre mi experiencia profesional y personal.',
+    image: portfolio,
+    tools: "",
+    link: 'https://portfolio-rose-psi-88.vercel.app/',
+    code: 'https://github.com/KarenDerkach/Portfolio',
+    
+  },
+  EN:{
+    title: 'PORTFOLIO',
+    description:
+      'Development of a web page where the user can view relevant information about my professional and personal experience.',
+    image: portfolio,
+    tools: "",
+    link: 'https://portfolio-rose-psi-88.vercel.app/',
+    code: 'https://github.com/KarenDerkach/Portfolio',
   }
+}
   
 ]
   

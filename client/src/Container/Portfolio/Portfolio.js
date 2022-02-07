@@ -12,21 +12,28 @@ export default function Portfolio() {
         <div className="pl">
            <div className="heading">
                <h1 className="heading">{language === 'EN' ? 'My Projects' : 'Mis Proyectos'}</h1>
-               <p className="heading-p">{language === 'EN' ? 'In this section you can see some of my most recent projects, any feedback is fully received': 'En esta seccion podras ver algunos de mis proyectos más recientes, cualquier feedback es completamente recibido'}</p>
+               <p className="heading-p">{language === 'EN' ? 'In this section you can see some of my most recent projects, any feedback is fully received': 'En esta sección podrás ver algunos de mis proyectos más recientes, cualquier feedback es completamente recibido'}</p>
            </div>
              <div className="pl-list">
-                 {
+                {
                      language === 'EN' ? 
                      <Projects project={projects[0].EN} />:
                      <Projects project={projects[0].ES} />
 
                  }
+               
                  {
                     language === 'EN' ?
                     <Projects project={projects[1].EN}/> :
                     <Projects project={projects[1].ES} />
                  }
-                
+                 
+                 {
+                    language === 'EN' ?
+                    <Projects project={projects[2].EN}/> :
+                    <Projects project={projects[2].ES} />
+                 }
+               
                 
              </div>
 

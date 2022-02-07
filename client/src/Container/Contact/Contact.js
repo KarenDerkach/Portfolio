@@ -6,7 +6,7 @@ import gmail from '../../assets/Contact/gmail_png.png';
 import linkedin from '../../assets/Contact/linkedin_png.png';
 import github from '../../assets/Contact/github_png.png';
 import whatsapp from '../../assets/Contact/whatsapp.png'
-// import contact from '../../assets/Contact/contact.png'
+import contact from '../../assets/Contact/contact.png'
 import swal from 'sweetalert'
 
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -71,8 +71,10 @@ export default function Contact() {
                 <div className="c-wrapper">
                     <div className="c-left">
                         <h1 className="c-title"> {language === 'EN' ? "Let's get in touch!" : "Pongamonos en contacto!"}</h1>
+                        <img src={contact} alt="imagen background" className="imgbkg"/>
                     </div>
                         <div className="c-right">
+                            <span className="c-sub">{language === 'EN' ? 'If you are looking for a committed professional willing to make a difference, write to my email or by any of these means!':'Si estas en busca de una profesional comprometida y dispuesta a marcar diferencia, escribe a mi correo o por cualquiera de estos medios!'}</span>
                         <div className="c-info">
                             {/*EMAIL */}
                             <div className="c-info-item">
@@ -93,7 +95,7 @@ export default function Contact() {
                             {/*REDES WHATSAPP */}
                             <div className="c-info-item">
                                 <a href="https://wa.me/5493764653483?text=Hola!,%20eh%20visto%20tu%20portfolio...">
-                                    <img src={whatsapp} alt="" className="c-iconWhat" />
+                                    <img src={whatsapp} alt="" className="c-icon" />
                                 </a>
                             </div>
                         </div>
@@ -111,7 +113,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        {/* <img src={contact} alt="imagen background" className="imgbkg"/> */}
+        
         </div>
     )
 

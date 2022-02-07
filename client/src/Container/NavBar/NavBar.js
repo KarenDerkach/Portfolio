@@ -1,63 +1,79 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { BiMenu} from 'react-icons/bi';
-import {changeLanguage} from '../../react-redux/action'
+import { BiMenu } from "react-icons/bi";
+import { changeLanguage } from "../../react-redux/action";
 
-
-import ES from '../../assets/Home/ES.png'
-import EN from '../../assets/Home/EN.png'
-import './NavBar.css';
-
+import ES from "../../assets/Home/ES.png";
+import EN from "../../assets/Home/EN.png";
+import "./NavBar.css";
 
 export default function NavBar() {
+  const language = useSelector((state) => state.language);
+  const dispatch = useDispatch();
 
-    const language = useSelector((state) => state.language);
-    const dispatch = useDispatch();
-  
-    useEffect(() => {
-          if (language === 'EN') {
-              document.title = 'Karen Derkach | Portfolio';
-          } else {
-              document.title = 'Karen Derkach | Portafolio';
-          }
-      }, [language]);
-
-      function handleChangeLang(e) {
-		e.preventDefault();
-		dispatch(changeLanguage());
-	}
-
-    function handleShowMenu (){
-        const menu_items = document.querySelector('.menu-items');
-        menu_items.classList.toggle('show');
+  useEffect(() => {
+    if (language === "EN") {
+      document.title = "Karen Derkach | Portfolio";
+    } else {
+      document.title = "Karen Derkach | Portafolio";
     }
+  }, [language]);
 
+  function handleChangeLang(e) {
+    e.preventDefault();
+    dispatch(changeLanguage());
+  }
 
-    return (
-        <div >
-           
-            <nav className="navbar">
-            <div className="menu-lang">
-            <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
-					{language === 'ES' ? <img src={EN} alt='U.S' className="flat"/> : <img src={ES} alt='ES' className="flat"/>}
-				</button>
-            </div>
-            <div className="btn-menu-mobile" onClick={handleShowMenu} >
-                    <BiMenu />
-                </div>
-             
-                <ul className="menu-items">
-                <li><a href='/' className='i-home'  >{language === 'EN' ? 'Home' : 'Principal' }</a> </li>
-                <li> <a href='/AboutMe' className='i-about'  > {language === 'EN' ? 'About Me' : 'Acerca de Mi' }</a> </li>
-                <li> <a href='/Portfolio' className='i-portfolio'  > {language === 'EN' ? 'Projects' : 'Proyectos' } </a> </li>
-                <li>  <a href='/Contact' className='i-contact' > {language === 'EN' ? 'Contact' : 'Contacto' } </a></li>
-                </ul>
-             
-            </nav>
+  function handleShowMenu() {
+    const menu_items = document.querySelector(".menu-items");
+    menu_items.classList.toggle("show");
+  }
 
-   
+  return (
+    <div>
+      <nav className="navbar">
+        <div className="menu-lang">
+          <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
+            {language === "ES" ? (
+              <img src={EN} alt="U.S" className="flat" />
+            ) : (
+              <img src={ES} alt="ES" className="flat" />
+            )}
+          </button>
+        </div>
+        <div className="btn-menu-mobile" onClick={handleShowMenu}>
+          <BiMenu />
         </div>
 
-    )
-
+        <ul className="menu-items">
+          <li>
+            <a href="/" className="i-home">
+              {language === "EN" ? "HOME" : "PRINCIPAL"}
+            </a>{" "}
+          </li>
+          <li>
+            {" "}
+            <a href="/AboutMe" className="i-about">
+              {" "}
+              {language === "EN" ? "ABOUT ME" : "SOBRE MI"}
+            </a>{" "}
+          </li>
+          <li>
+            {" "}
+            <a href="/Portfolio" className="i-portfolio">
+              {" "}
+              {language === "EN" ? "PROJECTS" : "PROYECTOS"}{" "}
+            </a>{" "}
+          </li>
+          <li>
+            {" "}
+            <a href="/Contact" className="i-contact">
+              {" "}
+              {language === "EN" ? "CONTACT" : "CONTACTO"}{" "}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }

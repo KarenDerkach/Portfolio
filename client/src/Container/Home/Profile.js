@@ -24,7 +24,7 @@ export default function Profile() {
             </div>
           </div>
           <p className='i-desc'>
-            {language === 'EN' ? 'Welcome to my profile, here you can find a description of my academic background, work experience and my projects': 'Bienvenido a mi perfil, aquí podrás encontrar una descripción de mi formación académica, experiencia laboral y mis proyectos'}
+            {language === 'EN' ? 'Welcome to my profile, here you can find a description of my academic background, work experience and projects': 'Bienvenido a mi perfil, aquí podrás encontrar una descripción de mi formación académica, experiencia laboral y proyectos'}
           </p>
         </div>
       </div>

@@ -26,7 +26,7 @@ function Skills() {
                 </div>
             
             <div className='containerTech'>
-                <h3 className='titleSoft'>{language === 'EN' ? 'Technical Skills' : 'Habilidades Tecnicas'}</h3>
+                <h3 className='titleSoft'>{language === 'EN' ? 'Technical Skills' : 'Habilidades Técnicas'}</h3>
                 <div className='containerSoft'>
                     {
                         skills.technical.map((item) => (
