@@ -1,0 +1,16 @@
+.f-link{
+    text-decoration: none;
+    color: tomato;
+}
+
+@media screen and  (max-width: 480px){
+.c-footer{
+    margin-top: 5vh;
+ 
+    text-align: center;
+    text-align: center;
+ 
+}
+
+
+}

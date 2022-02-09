@@ -32,6 +32,7 @@ export default function NavBar() {
   return (
     <div>
       <nav className="navbar">
+        
         <div className="menu-lang">
           <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
             {language === "ES" ? (
@@ -44,30 +45,31 @@ export default function NavBar() {
         <div className="btn-menu-mobile" onClick={handleShowMenu}>
           <BiMenu />
         </div>
+      
 
         <ul className="menu-items">
           <li>
-            <a href="/" className="i-home">
+            <a href="/" className="i-link">
               {language === "EN" ? "HOME" : "PRINCIPAL"}
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="/AboutMe" className="i-about">
+            <a href="/AboutMe" className="i-link">
               {" "}
               {language === "EN" ? "ABOUT ME" : "SOBRE MI"}
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="/Portfolio" className="i-portfolio">
+            <a href="/Portfolio" className="i-link">
               {" "}
               {language === "EN" ? "PROJECTS" : "PROYECTOS"}{" "}
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="/Contact" className="i-contact">
+            <a href="/Contact" className="i-link">
               {" "}
               {language === "EN" ? "CONTACT" : "CONTACTO"}{" "}
             </a>

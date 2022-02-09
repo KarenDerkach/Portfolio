@@ -50,7 +50,7 @@ margin: 10px;
 text-decoration: none;
 }
 
-.menu-items, li, a{
+.menu-items, li, .i-link{
   text-decoration: none;
   color: tomato;
 }
@@ -73,6 +73,15 @@ ul.show{
 
 @media screen and (max-width: 480px) {
   
+  .navbar{
+    
+    width: 100vw;
+    margin-top: 0;
+    height: 10vh;
+  }
+  .navbar:hover{
+    background-color: rgba(255, 99, 71, 0.89);
+  }
   .btn-menu-mobile{
     display: inline-flex;
     margin-top: 1vh;
@@ -115,7 +124,7 @@ margin: 30px ;
  li:hover{
   text-decoration: none;
 }
-   .menu-items, li, a{
+   .menu-items, li, .i-link{
     text-decoration: none;
     margin-left: -1vw;
     display: flex;

@@ -152,7 +152,7 @@ margin-top: 20vh;
     }
     .resume{
         width: 100%;
-        margin-top: -5vh;
+        /* margin-top: -5vh; */
     }
     .btn-get-resume{
         margin-bottom: -10vh;
