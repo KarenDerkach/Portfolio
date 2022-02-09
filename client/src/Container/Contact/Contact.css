@@ -192,8 +192,8 @@ textarea{
     }
     .c-info{
         flex-direction: row;
-        margin-top: -2vh;
-        margin-left: 25vw;
+        /* margin-top: -2vh; */
+        margin-left: 35vw;
     }
     .c-info-item{
         margin-top: 0px;

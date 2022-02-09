@@ -33,7 +33,7 @@ const projects = [
         'Desarrollo de una SPA (Single Page Application) la cual consume datos desde una API externa con información sobre raza de perros y una base de datos propia donde se aloja información sobre las razas creadas por el propio usuario.',
       image: dog,
       tools: "Backend: NodeJS, Express, API Dogs. Frontend: React-JS y Redux, CSS modules.",
-      link: 'https://pi-dogs-six.vercel.app/',
+      link: 'https://dogs-world.vercel.app/',
       code: 'https://github.com/KarenDerkach/PI-DOGS',
       
     },
@@ -43,7 +43,7 @@ const projects = [
         'Development of a SPA (Single Page Application) where data is consumed from an external API with information about dog breeds and a database where information about the breeds created by the user is stored.',
       image: dog,
       tools: "Backend: NodeJS, Express, API Dogs. Frontend: React-JS y Redux, CSS modules.",
-      link: 'https://pi-dogs-six.vercel.app/',
+      link: 'https://dogs-world.vercel.app/',
       code: 'https://github.com/KarenDerkach/PI-DOGS',
     }
   },
