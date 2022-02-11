@@ -8,7 +8,7 @@ function Footer() {
 
 
 <div class="footer-copyright text-center py-3">© 2022 Copyright:
-  <a href="https://portfolio-rose-psi-88.vercel.app/" className='f-link'> Karen Derkach</a>
+  <a href="https://portfolio-karenderkach.vercel.app/" className='f-link'> Karen Derkach</a>
 </div>
 
 
