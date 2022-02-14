@@ -16,7 +16,7 @@ import nodejs from '../assets/Skills/nodejs.png'
 const skills = {  
     technical:[js, react, redux, sql, html, css,vscode, material, git,github, postgres, sequelize, nodejs],
     soft:{
-        ES:["Responsable","Adaptabilidad","Scrum","Creatividad","Orientada a Resultados","Resolución de problemas","Pensamiento analítico","Prensamiento crítico","Curiosa",
+        ES:["Responsable","Adaptabilidad","Scrum","Creatividad","Orientada a Resultados","Resolución de problemas","Pensamiento analítico","Pensamiento crítico","Curiosa",
     "Autodidacta","Perseverante", "Comunicativa"],
     EN:["Responsible","Adaptable","Scrum","Creative","Result Oriented","Resolve Problems","Analytical Thinking","Critical Thinking","Curiosity", "Autodidact","Perserverance","Communicative"]
     }
