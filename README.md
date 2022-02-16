@@ -1,6 +1,6 @@
 # Portfolio
 
-<h1 align="center"><img src="https://github.com/sudnyeshtalekar/sudnyeshtalekar/blob/master/Assets/Hi.gif" width="40px">💼 Welcome to my Portofolio</h1>
+<h1 align="center"><img src="https://github.com/sudnyeshtalekar/sudnyeshtalekar/blob/master/Assets/Hi.gif" width="40px">💼 Welcome to my Portfolio</h1>
 
 ## 💻 You can visit it here: https://portfolio-karenderkach.vercel.app/
 
