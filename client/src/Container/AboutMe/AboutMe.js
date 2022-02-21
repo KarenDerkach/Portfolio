@@ -26,7 +26,7 @@ export default function AboutMe() {
         </div>
         <div className="a-right">
           <h1 className="a-title">
-            {language === "EN" ? "Why program?" : "¿Por que programar?"}{" "}
+            {language === "EN" ? "Why program?" : "¿Por qué programar?"}{" "}
           </h1>
           <p className="a-sub">
             <img src={logoArg} alt="arg" className="imgArg" />{language === "EN" ? data[0].EN.sub1 : data[0].ES.sub1}  <br /> {language === "EN" ? data[0].EN.sub2 : data[0].ES.sub2}
