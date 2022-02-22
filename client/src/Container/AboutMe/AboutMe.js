@@ -3,10 +3,11 @@ import { useSelector } from "react-redux";
 import "./AboutMe.css";
 import { IconButton } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import data from '../../data/about'
+//import data from '../../data/about'
 import photo from "../../assets/Home/profilephoto-.png";
 import Skills from "./Skills";
 import logoArg from "../../assets/About/argentina.png";
+const data = require('../../data/about.json')
 
 function goDown() {
   window.scrollTo({ top: window.innerHeight + 50, behavior: "smooth" });
@@ -29,14 +30,14 @@ export default function AboutMe() {
             {language === "EN" ? "Why program?" : "¿Por qué programar?"}{" "}
           </h1>
           <p className="a-sub">
-            <img src={logoArg} alt="arg" className="imgArg" />{language === "EN" ? data[0].EN.sub1 : data[0].ES.sub1}  <br /> {language === "EN" ? data[0].EN.sub2 : data[0].ES.sub2}
+            <img src={logoArg} alt="arg" className="imgArg" />{language === "EN" ? data.EN.sub1 : data.ES.sub1}  <br /> {language === "EN" ? data.EN.sub2 : data.ES.sub2}
           </p>
           <p className="a-desc">
-            {language === "EN" ? data[0].EN.description : data[0].ES.description}
+            {language === "EN" ? data.EN.description : data.ES.description}
             <br />
-           {language === "EN" ? data[0].EN.description2 : data[0].ES.description2}
+           {language === "EN" ? data.EN.description2 : data.ES.description2}
            <br />
-            {language === "EN" ? data[0].EN.description3 : data[0].ES.description3}
+            {language === "EN" ? data.EN.description3 : data.ES.description3}
           </p>
           <div className="resume">
             <a href="CV_DERKACH KAREN-.pdf" download="KD_CV.pdf">
