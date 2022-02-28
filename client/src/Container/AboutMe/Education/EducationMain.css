@@ -1,0 +1,32 @@
+/* .Education_Experience1{
+    width: 100vw;
+    display: flex;
+
+} */
+
+.EducationExperienceTitle{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 10vh;
+font-weight: bold;
+color:tomato;
+text-shadow: 15px 5px 20px rgba(89, 74, 30, 0.30)
+
+}
+.RadioButtons{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+   
+    width: 30vw;
+    margin-left: 38vw;
+}
+
+@media screen and  (max-width: 480px){
+
+    .RadioButtons{
+        width: 100vw;
+        margin-left: 7vw;
+    }
+}

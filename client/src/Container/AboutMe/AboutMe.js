@@ -7,10 +7,11 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import photo from "../../assets/Home/profilephoto-.webp";
 import Skills from "./Skills";
 import logoArg from "../../assets/About/argentina.png";
+import EducationMain from "./Education/EducationMain";
 const data = require('../../data/about.json')
 
 function goDown() {
-  window.scrollTo({ top: window.innerHeight + 50, behavior: "smooth" });
+  window.scrollTo({ top: window.innerHeight + 1800, behavior: "smooth" });
 }
 
 export default function AboutMe() {
@@ -73,6 +74,9 @@ export default function AboutMe() {
             </IconButton>
           </div>
         </div>
+      </div>
+      <div>
+        <EducationMain/>
       </div>
       <div className="c-skills">
         <Skills />
