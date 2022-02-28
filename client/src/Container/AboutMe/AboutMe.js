@@ -4,7 +4,7 @@ import "./AboutMe.css";
 import { IconButton } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 //import data from '../../data/about'
-import photo from "../../assets/Home/profilephoto-.png";
+import photo from "../../assets/Home/profilephoto-.webp";
 import Skills from "./Skills";
 import logoArg from "../../assets/About/argentina.png";
 const data = require('../../data/about.json')

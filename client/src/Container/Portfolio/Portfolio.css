@@ -12,8 +12,8 @@
     margin-top: 80px;
     font-weight: bold;
     color:tomato;
-    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.57);
-  
+    /* text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.57); */
+    text-shadow: 15px 5px 20px rgba(89, 74, 30, 0.30)
 }
 .heading-p{
     width: 30vw;

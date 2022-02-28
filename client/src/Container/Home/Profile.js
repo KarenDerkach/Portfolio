@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import photo from '../../assets/Home/profilephoto-.png'
+import photo from '../../assets/Home/profilephoto-.webp'
 
 import './Profile.css';
 import 'animate.css'

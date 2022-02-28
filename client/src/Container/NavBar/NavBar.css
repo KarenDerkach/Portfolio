@@ -3,10 +3,19 @@
   justify-content: space-between;
   position: fixed;
   font-size: 18px;
-  /* padding: 20px;
-  width: 40vw; */
-  z-index: 999;
+  padding: 20px;
+  width: 40vw; 
+   z-index: 999; 
   margin-top: 3vh;
+
+  /* height: 14vh;
+width: 100%;
+position: fixed;
+background: #ffffff94;
+z-index: 1;
+padding-bottom: 20px;
+box-shadow: 0px 4px 8px rgba(89, 74, 30, 0.16); */
+
 }
 
 .buttonLang{
