@@ -31,12 +31,14 @@ function EducationMain() {
             onChange={(e) => {
               setSelectedRadio(e.target.value);
             }}
+            className='e-colorBtn'
           >
             <RadioGroup
               row
               aria-label="options"
               name="options"
               defaultValue="Both"
+
             >
               <FormControlLabel
                 value="Courses"
@@ -58,51 +60,51 @@ function EducationMain() {
         ></Education>
       </div>
     )
-        }
-        else{
-            return(
-                <div className="Education_Experience1">
-                  <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-                    <h1 className="EducationExperienceTitle" >
-                      Educación y experiencia
-                    </h1>
-                  </div>
-          
-                  <div className="RadioButtons">
-                    <FormControl
-                      component="fieldset"
-                      value={selectedRadio}
-                      onChange={(e) => {
-                        setSelectedRadio(e.target.value);
-                      }}
-                    >
-                      <RadioGroup
-                        row
-                        aria-label="options"
-                        name="options"
-                        defaultValue="Both"
-                      >
-                        <FormControlLabel
-                          value="Courses"
-                          control={<Radio />}
-                          label="Cursos"
-                        />
-                        <FormControlLabel
-                          value="Education"
-                          control={<Radio />}
-                          label="Educación"
-                        />
-                        <FormControlLabel value="Both" control={<Radio />} label="Ambos" />
-                      </RadioGroup>
-                    </FormControl>
-                  </div>
-          
-                  <Education
-                    selectedRadio={selectedRadio}
-                  ></Education>
-                </div>
-            )
-        }
-    }
+  }
+  else {
+    return (
+      <div className="Education_Experience1">
+        <div data-aos="fade-right" data-aos-easing="ease-in-sine">
+          <h1 className="EducationExperienceTitle" >
+            Educación y experiencia
+          </h1>
+        </div>
 
-    export default EducationMain;
+        <div className="RadioButtons">
+          <FormControl
+            component="fieldset"
+            value={selectedRadio}
+            onChange={(e) => {
+              setSelectedRadio(e.target.value);
+            }}
+          >
+            <RadioGroup
+              row
+              aria-label="options"
+              name="options"
+              defaultValue="Both"
+            >
+              <FormControlLabel
+                value="Courses"
+                control={<Radio />}
+                label="Cursos"
+              />
+              <FormControlLabel
+                value="Education"
+                control={<Radio />}
+                label="Educación"
+              />
+              <FormControlLabel value="Both" control={<Radio />} label="Ambos" />
+            </RadioGroup>
+          </FormControl>
+        </div>
+
+        <Education
+          selectedRadio={selectedRadio}
+        ></Education>
+      </div>
+    )
+  }
+}
+
+export default EducationMain;

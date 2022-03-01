@@ -1,4 +1,4 @@
-//import henry from '../assets/Education/HENRY.png'
+import titulo from '../assets/Education/cp.png'
 import polotic from '../assets/Education/PoloTic.jpg'
 import ArgPrograma1 from '../assets/Education/ArgPrograma1.pdf'
 import openenglish from '../assets/Education/openEnglish.pdf'
@@ -32,7 +32,7 @@ const timelineElements = [
             university: "Bootcamp HENRY",
             years: "09/2021- 01/2022",
             title: "Desarrollador Web FullStack",
-            description: "Bootcamp intensivo de 4 meses con mas de 800hrs de codigo, donde se desarrollan teoria y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal reuniendo todas la herramientas adquiridas durante el curso",
+            description: "Bootcamp intensivo de 4 meses. Más de 800hrs de código. Desarrollo de teoria y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal reuniendo todas la herramientas adquiridas durante el curso",
             dowload: 'https://certificates.soyhenry.com/cert?id=74220c18-0bbc-45e9-af6d-043ecf6e9e72',
             icon : "school"
         },
@@ -53,7 +53,7 @@ const timelineElements = [
             university: "Open English",
             years: "01/2021- 12/2021",
             title: "Certificado de competenecia Nivel A2",
-            description: "Curso teorico-practico con examenes en cada nivel",
+            description: "Curso teórico-práctico con exámenes en cada nivel",
             dowload: openenglish,
             icon : "course"
         },
@@ -73,7 +73,7 @@ const timelineElements = [
             university: "CESSI Argentina",
             years: "08/2021- 10/2021",
             title: "#SéProgramar",
-            description: "Curso teorico-practico sobre fundamentos de la programación y lenguaje RUBY",
+            description: "Curso teórico-práctico sobre fundamentos de la programación y lenguaje RUBY",
             dowload: ArgPrograma1,
             icon : "course"
         },
@@ -94,7 +94,7 @@ const timelineElements = [
             university: "PoloTic Misiones",
             years: "09/2020- 10/2020",
             title: "Inglés para el desarrollo de Software",
-            description: "Curso teorico de 18hr en total",
+            description: "Curso teórico de 18hr en total",
             dowload: polotic,
             icon : "course"
         },
@@ -115,7 +115,7 @@ const timelineElements = [
             years: "2015 - 2020",
             title: "Contador Público Nacional",
             description: "Promedio: 8/10.",
-            dowload: "titulo",
+            dowload: titulo,
             icon : "school"
         },
         EN: {
@@ -124,7 +124,7 @@ const timelineElements = [
             years: "03/2015 - 02/2020",
             title: "Accountant",
             description: "Average: 8/10.",
-            dowload: "titulo",
+            dowload: titulo,
             icon : "school"
         },
     },

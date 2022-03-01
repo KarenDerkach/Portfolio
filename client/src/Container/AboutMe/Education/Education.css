@@ -1,6 +1,28 @@
-
-
+.e-structure{
+    margin:10px
+}
 .e-links{
     text-decoration: none;
     color: coral;
+}
+
+.vertical-timeline::before{
+    background: #f67c50b4;
+}
+
+.vertical-timeline-element-title{
+    font-weight: bold;
+    margin: 5px;
+}
+
+.vertical-timeline-element-subtitle{
+    font-size: medium;
+    font-style: italic;
+    margin-top: 2vh;
+    color: rgb(133, 134, 136);
+}
+
+.e-description{
+    margin: 10px;
+    
 }
