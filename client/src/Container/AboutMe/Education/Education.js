@@ -62,6 +62,8 @@ function Education(props) {
                                                 <p>{elem.EN.description}</p>
                                             </VerticalTimelineElement>
                                         )
+                                    }else{
+                                        return null
                                     }
 
                                 }
@@ -85,6 +87,8 @@ function Education(props) {
                                                 <p>{elem.EN.description}</p>
                                             </VerticalTimelineElement>
                                         )
+                                    }else{
+                                        return null
                                     }
 
                                 })
@@ -126,6 +130,8 @@ function Education(props) {
                                                 <p>{elem.ES.description}</p>
                                             </VerticalTimelineElement>
                                         )
+                                    }else{
+                                        return null
                                     }
 
                                 }
@@ -147,6 +153,8 @@ function Education(props) {
                                                 <p>{elem.ES.description}</p>
                                             </VerticalTimelineElement>
                                         )
+                                    }else{
+                                        return null
                                     }
                                 }
                                 )
