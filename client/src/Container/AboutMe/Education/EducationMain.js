@@ -7,7 +7,7 @@ import {
   FormControlLabel,
   RadioGroup,
   Radio,
-} from "@material-ui/core";
+} from "@mui/material";
 import './EducationMain.css'
 
 
