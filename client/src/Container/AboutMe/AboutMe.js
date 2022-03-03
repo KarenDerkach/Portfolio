@@ -41,11 +41,12 @@ export default function AboutMe() {
             {language === "EN" ? data.EN.description3 : data.ES.description3}
           </p>
           <div className="resume">
-            <a href="CV_DERKACH KAREN-.pdf" download="KD_CV.pdf">
-              <button className="btn-get-resume">
-                {language === "EN" ? "Get Resume" : "Mi CV"}
-              </button>
-            </a>
+            {
+              language === "EN" ?
+                <a href="Karen Derkach - CV EN.pdf" download="KD_CV.pdf"> <button className="btn-get-resume">Get Resume</button> </a> :
+                <a href="Karen Derkach - CV ES.pdf" download="KD_CV.pdf"> <button className="btn-get-resume">Mi CV</button> </a>
+          
+             }
           </div>
           <p className="a-footer">
             {language === "EN"
