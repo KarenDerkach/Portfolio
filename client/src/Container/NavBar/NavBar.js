@@ -29,19 +29,16 @@ export default function NavBar() {
     menu_items.classList.toggle("show");
   }
 
+ window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle("sticky", window.scrollY > 0);
+  });
+
+
   return (
-    <div>
-      <nav className="navbar">
+ 
+      <nav >
         
-        <div className="menu-lang">
-          <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
-            {language === "ES" ? (
-              <img src={EN} alt="U.S" className="flat" />
-            ) : (
-              <img src={ES} alt="ES" className="flat" />
-            )}
-          </button>
-        </div>
         <div className="btn-menu-mobile" onClick={handleShowMenu}>
           <BiMenu />
         </div>
@@ -75,7 +72,16 @@ export default function NavBar() {
             </a>
           </li>
         </ul>
+        <div className="menu-lang">
+          <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
+            {language === "ES" ? (
+              <img src={EN} alt="U.S" className="flat" />
+            ) : (
+              <img src={ES} alt="ES" className="flat" />
+            )}
+          </button>
+        </div>
       </nav>
-    </div>
+   
   );
 }

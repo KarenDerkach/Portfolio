@@ -4,6 +4,28 @@ import portfolio from '../assets/Projects/portfolio.png'
 
 const projects = [ 
   { 
+    ES:{
+      title: 'AGENDA-FINANCIERA',
+      description:
+        "Aplicación web para la gestión de chequera, servicio de clima, calendario y calculadora.",
+      image: '',
+      tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, API Clima",
+      link: 'https://agenda-financiera.vercel.app/',
+      code: 'https://github.com/KarenDerkach/Agenda-Financiera',
+      
+    },
+   EN:{
+    title: 'FINANCIAL-CALENDAR',
+    description:
+      "Web application for checkbook management, weather service, calendar and calculator.",
+    image: '',
+    tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, Weather API ",
+    link: 'https://agenda-financiera.vercel.app/',
+    code: 'https://github.com/KarenDerkach/Agenda-Financiera',
+    
+   }
+  },
+  { 
       ES:{
         title: 'FOODARITY',
         description:

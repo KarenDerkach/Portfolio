@@ -1,47 +1,31 @@
-.navbar{
+nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   font-size: 18px;
-  padding: 20px;
-  width: 40vw; 
+  padding: 40px;
+ 
+  width: 100%; 
+  transition: 0.6s;
    z-index: 999; 
-  margin-top: 3vh;
-
-  /* height: 14vh;
-width: 100%;
-position: fixed;
-background: #ffffff94;
-z-index: 1;
-padding-bottom: 20px;
-box-shadow: 0px 4px 8px rgba(89, 74, 30, 0.16); */
+  
 
 }
 
-.buttonLang{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  padding: 20px;
-  width: 2vw;
+nav.sticky{
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.884);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
 
-  left: 90vw;
-  position: fixed;
+nav .buttonLang{
   border: none;
-  z-index: 999;
   background-color: transparent;
-
-  
- 
 } 
 
-
-
 .flat{
-  margin-top: -5vh;
-  width: 5vw;
-  height: 5vh;
+ width: 3vw;
 }
 
 .menu-items{
@@ -82,14 +66,19 @@ ul.show{
 
 @media screen and (max-width: 480px) {
   
-  .navbar{
-    
-    width: 100vw;
-    margin-top: 0;
+  nav{
+    width: 100%;
     height: 10vh;
   }
-  .navbar:hover{
+  nav:hover{
     background-color: rgba(255, 99, 71, 0.89);
+  }
+
+  nav.sticky{
+    padding: 30px 50px;
+  }
+  nav .buttonLang{
+    margin-left: 60vw;
   }
   .btn-menu-mobile{
     display: inline-flex;
@@ -100,10 +89,6 @@ ul.show{
   .menu-lang{
     display: flex;
     margin-right: 20vw;
-  }
-  .buttonLang{
-    left: 70vw;
-    margin-top: 0.2vh
   }
   .flat{
     width: 10vw;

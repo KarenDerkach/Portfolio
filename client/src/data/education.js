@@ -10,7 +10,7 @@ const timelineElements = [
         ES: {
             id: 1,
             university: "CESSI Argentina",
-            years: "02/2022- Actualemente",
+            years: "02/2022- Actualmente",
             title: "#YoProgramo",
             description: "Herramientas adquiridas, Frontend: HTML,CSS,JavaScript, Angular. Backend: Java EE, Spring Boot. Base de Datos, Dev Ops",
             dowload: "",

@@ -33,6 +33,11 @@ export default function Portfolio() {
                     <Projects project={projects[2].EN}/> :
                     <Projects project={projects[2].ES} />
                  }
+                 {
+                    language === 'EN' ?
+                    <Projects project={projects[3].EN}/> :
+                    <Projects project={projects[3].ES} />
+                 }
                
                 
              </div>
