@@ -1,6 +1,7 @@
 import foodarity from '../assets/Projects/foodarity.jpg'
 import dog from '../assets/Projects/dog.png'
 import portfolio from '../assets/Projects/portfolio.png'
+import agenda from '../assets/Projects/agenda.png'
 
 const projects = [ 
   { 
@@ -8,7 +9,7 @@ const projects = [
       title: 'AGENDA-FINANCIERA',
       description:
         "Aplicación web para la gestión de chequera, servicio de clima, calendario y calculadora.",
-      image: '',
+      image: agenda,
       tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, API Clima",
       link: 'https://agenda-financiera.vercel.app/',
       code: 'https://github.com/KarenDerkach/Agenda-Financiera',
@@ -18,7 +19,7 @@ const projects = [
     title: 'FINANCIAL-CALENDAR',
     description:
       "Web application for checkbook management, weather service, calendar and calculator.",
-    image: '',
+    image: agenda,
     tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, Weather API ",
     link: 'https://agenda-financiera.vercel.app/',
     code: 'https://github.com/KarenDerkach/Agenda-Financiera',
