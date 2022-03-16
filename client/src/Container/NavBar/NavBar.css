@@ -58,14 +58,91 @@ text-decoration: none;
   font-size: 2rem;
   cursor: pointer;
   display: none;
+  
 }
 
 ul.show{
-  top: 70px
+  top: 61px
 }
+
+
 
 @media screen and (max-width: 480px) {
   
+  nav{
+    width: 100%;
+    height: 10vh;
+  }
+  nav:hover{
+    background-color: rgba(255, 99, 71, 0.89);
+  }
+
+  nav.sticky{
+    padding: 30px 50px;
+  }
+  nav .buttonLang{
+    margin-left: 60vw;
+  }
+  .btn-menu-mobile{
+    display: inline-flex;
+   
+    left: 50vw;
+  }
+
+  .menu-lang{
+    display: flex;
+    margin-right: 20vw;
+  }
+  .flat{
+    width: 10vw;
+    height: 5vh;
+  }
+  .menu-items{
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    top:-100vh;
+    background-color: rgba(255, 99, 71, 0.89);
+    text-align: center;
+    transition: 1s;
+    flex-direction: column;
+  }
+
+  
+  .menu-items, li{
+    /* width: 100vw; */
+display: flex;
+left: 0.1vw;
+/* right: 5vw; */
+margin: 30px ;
+/* line-height: 30px; */
+
+  }
+ li:hover{
+  text-decoration: none;
+}
+   .menu-items, li, .i-link{
+    text-decoration: none;
+    margin-left: -1vw;
+    display: flex;
+    align-items: center;
+    margin-top: 5vh;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  
+  }
+ a:hover{
+  color:white;
+  text-shadow: 0 0 10px rgb(175, 16, 16);
+    text-decoration: none;
+    transform: scaleX(1.1) scaleY(1.1);
+   
+  } 
+
+}
+
+@media screen and (max-width: 620px) {
   nav{
     width: 100%;
     height: 10vh;
@@ -88,11 +165,11 @@ ul.show{
 
   .menu-lang{
     display: flex;
-    margin-right: 20vw;
+    margin-right: 10vw;
   }
   .flat{
-    width: 10vw;
-    height: 5vh;
+    width: 8vw;
+    height: 6vh;
   }
   .menu-items{
     position: fixed;

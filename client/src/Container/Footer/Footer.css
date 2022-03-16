@@ -16,8 +16,10 @@
 }
 
 @media screen and  (max-width: 480px){
-.c-footer{
+.c-footer .f-link{
   width: 100%;
+  display: contents;
+  margin: 20px;
 
  
 }

@@ -156,7 +156,43 @@ textarea{
     background-color: rgb(245, 44, 8);
   }
 
+  @media screen and  (max-width: 1000px){
+    .c-title{
+     margin-left: -20vw;
+      
+    }
+    .c-sub{
+       margin-left: -20vw;
+       
+    }
+    .imgbkg{
+        display: none;
+    }
+    .c-wrapper{
+        background-color: transparent;
+    }
+    .c-right{
+        margin-top: 5vh;
+        margin-left: 0px;
+    }
+    .containerForm{
+        width: 95vw;
+           margin-left: -18vw;
+           margin-top: 5vh;
+        box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.75);
+        background: rgba(255, 255, 255, 0.527);
+          
+       }
+       .c-info{
+        flex-direction: row;
+        /* margin-top: -2vh; */
+        
+    }
+    .buttonSend{
+        width: 100%;
+    }
 
+  }
 
   @media screen and  (max-width: 480px){
     .c{
