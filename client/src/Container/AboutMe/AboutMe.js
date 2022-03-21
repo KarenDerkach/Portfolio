@@ -11,7 +11,7 @@ import EducationMain from "./Education/EducationMain";
 const data = require('../../data/about.json')
 
 function goDown() {
-  window.scrollTo({ top: window.innerHeight + 1800, behavior: "smooth" });
+  window.scrollTo({ top: window.innerHeight + 1500, behavior: "smooth" });
 }
 
 export default function AboutMe() {

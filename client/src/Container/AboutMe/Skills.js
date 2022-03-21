@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from "react-redux";
-import skills from '../../data/skills'
+import {skills }from '../../data/skills'
 import './Skills.css'
+import TechSkills from './TechSkills';
 
 function Skills() {
 
@@ -25,17 +26,12 @@ function Skills() {
                     }
                 </div>
             
+                <h3 className='titleTech'>{language === 'EN' ? 'Technical Skills' : 'Habilidades Técnicas'}</h3>
             <div className='containerTech'>
-                <h3 className='titleSoft'>{language === 'EN' ? 'Technical Skills' : 'Habilidades Técnicas'}</h3>
-                <div className='containerSoft'>
-                    {
-                        skills.technical.map((item) => (
-
-                            <div key={item} ><img src={item} alt='img' className='itemImg'/></div>
-                        ))
-                    }
-                </div>
+               
+                    <TechSkills language={language}/>  
             </div>
+            <hr/>
         </div>
     )
 }
