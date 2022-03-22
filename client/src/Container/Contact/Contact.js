@@ -9,11 +9,9 @@ import github from '../../assets/Contact/github_png.png';
 import whatsapp from '../../assets/Contact/whatsapp.png'
 import contact from '../../assets/Contact/contact.png'
 import swal from 'sweetalert'
+const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env
 
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const USER_ID = process.env.REACT_APP_USER_ID;
-init(USER_ID);
+init(REACT_APP_USER_ID);
 
 export default function Contact() {
     const form = useRef();
@@ -46,7 +44,7 @@ export default function Contact() {
             input.user_email && 
             input.user_message
         ){
-            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current)
+            emailjs.sendForm(REACT_APP_SERVICE_ID,  REACT_APP_TEMPLATE_ID, form.current)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
