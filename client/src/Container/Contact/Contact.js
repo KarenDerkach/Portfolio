@@ -1,3 +1,4 @@
+
 import React, { useRef, useState} from "react";
 import { useSelector } from "react-redux";
 import emailjs from '@emailjs/browser';
@@ -9,9 +10,10 @@ import github from '../../assets/Contact/github_png.png';
 import whatsapp from '../../assets/Contact/whatsapp.png'
 import contact from '../../assets/Contact/contact.png'
 import swal from 'sweetalert'
-const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID} = process.env
+require('dotenv').config();
+const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env
 
-init("user_MZBbvKTeQn0CvA9gkeTuU");
+init(REACT_APP_USER_ID);
 
 export default function Contact() {
     const form = useRef();
