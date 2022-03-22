@@ -1,6 +1,7 @@
 import React, { useRef, useState} from "react";
 import { useSelector } from "react-redux";
 import emailjs from '@emailjs/browser';
+import{ init} from '@emailjs/browser';
 import './Contact.css';
 import gmail from '../../assets/Contact/gmail_png.png';
 import linkedin from '../../assets/Contact/linkedin_png.png';
@@ -12,13 +13,14 @@ import swal from 'sweetalert'
 const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
 const USER_ID = process.env.REACT_APP_USER_ID;
+init(USER_ID);
 
 export default function Contact() {
     const form = useRef();
 
     const language = useSelector((state) => state.language);
 
-    const [setDone] = useState(false);
+    //const [setDone] = useState(false);
 
     const [input, setInput] = useState({
         user_name: '',
@@ -27,7 +29,7 @@ export default function Contact() {
         user_message: ''
     })
 
-    const handleInputChange = (e) => {  //modifico mi estado input agregando lo q me pasan por input del form
+    const handleInputChange = (e) => {  
         e.preventDefault()
        setInput((input)=>{
               return {
@@ -44,14 +46,12 @@ export default function Contact() {
             input.user_email && 
             input.user_message
         ){
-            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current)
             .then((result) => {
                 console.log(result.text);
-                  setDone(true);
             }, (error) => {
                 console.log(error.text);
-            }
-            )
+            })
             language === 'EN' ? swal('Message sent!', 'I will get back to you as soon as possible', 'success') : swal('Mensaje enviado!', 'Te responderé lo antes posible', 'success');
             setInput({
                 user_name: '',
