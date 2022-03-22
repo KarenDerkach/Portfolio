@@ -11,9 +11,9 @@ import whatsapp from '../../assets/Contact/whatsapp.png'
 import contact from '../../assets/Contact/contact.png'
 import swal from 'sweetalert'
 require('dotenv').config();
-const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env
+//const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env
 
-init(REACT_APP_USER_ID);
+init("user_MZBbvKTeQn0CvA9gkeTuU");
 
 export default function Contact() {
     const form = useRef();
@@ -46,7 +46,7 @@ export default function Contact() {
             input.user_email && 
             input.user_message
         ){
-            emailjs.sendForm(REACT_APP_SERVICE_ID,  REACT_APP_TEMPLATE_ID, form.current)
+            emailjs.sendForm("service_oqcd2qc", "template_9dsxf0a", form.current)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
