@@ -8,20 +8,20 @@ const projects = [
     ES:{
       title: 'AGENDA-FINANCIERA',
       description:
-        "Aplicación web para la gestión de chequera, servicio de clima, calendario y calculadora.",
+        "EN PROGRESO.Aplicación web para la gestión de chequera, servicio de clima, calendario y calculadora.",
       image: agenda,
       tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, API Clima",
-      link: 'https://agenda-financiera.vercel.app/',
+      link: '',
       code: 'https://github.com/KarenDerkach/Agenda-Financiera',
       
     },
    EN:{
     title: 'FINANCIAL-CALENDAR',
     description:
-      "Web application for checkbook management, weather service, calendar and calculator.",
+      "IN PROGRESS.Web application for checkbook management, weather service, calendar and calculator.",
     image: agenda,
     tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, Weather API ",
-    link: 'https://agenda-financiera.vercel.app/',
+    link: '',
     code: 'https://github.com/KarenDerkach/Agenda-Financiera',
     
    }
