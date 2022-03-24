@@ -1,15 +1,15 @@
 import foodarity from '../assets/Projects/foodarity.jpg'
 import dog from '../assets/Projects/dog.png'
 import portfolio from '../assets/Projects/portfolio.png'
-import agenda from '../assets/Projects/agenda.png'
-
+//import agenda from '../assets/Projects/agenda.png'
+import progress from '../assets/Projects/inprogress.png'
 const projects = [ 
   { 
     ES:{
       title: 'AGENDA-FINANCIERA',
       description:
         "EN PROGRESO.Aplicación web para la gestión de chequera, servicio de clima, calendario y calculadora.",
-      image: agenda,
+      image: progress,
       tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, API Clima",
       link: '',
       code: 'https://github.com/KarenDerkach/Agenda-Financiera',
@@ -19,7 +19,7 @@ const projects = [
     title: 'FINANCIAL-CALENDAR',
     description:
       "IN PROGRESS.Web application for checkbook management, weather service, calendar and calculator.",
-    image: agenda,
+    image: progress,
     tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, Weather API ",
     link: '',
     code: 'https://github.com/KarenDerkach/Agenda-Financiera',

@@ -210,12 +210,13 @@ textarea{
     .c-title{
         font-size: 40px;
         margin-top: 15vh;
+        margin-left: 10vw;
         text-align: center;
     
     }
     .c-sub{
         margin-top: -2vh;
-        
+        margin-left: 5vw;
     }
     .c-right{
         margin-top: 5vh;
