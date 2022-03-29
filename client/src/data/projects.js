@@ -11,8 +11,8 @@ const projects = [
         "EN PROGRESO.Aplicación web para la gestión de chequera, servicio de clima, calendario y calculadora.",
       image: loading,
       tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, API Clima",
-      link: 'https://agenda-financiera-app.herokuapp.com/',
-      code: 'https://github.com/KarenDerkach/agenda-financiera-app',
+      link: 'https://agenda-financiera.vercel.app/',
+      code: 'https://github.com/KarenDerkach/Agenda-Financiera',
       
     },
    EN:{
@@ -21,8 +21,8 @@ const projects = [
       "IN PROGRESS.Web application for checkbook management, weather service, calendar and calculator.",
     image: loading,
     tools: "Frontend: React, Redux, Material UI, Bootstrap, TypeScript... Backend: NodeJS, MongoDB, Mongoose, Express, Weather API ",
-    link: 'https://agenda-financiera-app.herokuapp.com/',
-    code: 'https://github.com/KarenDerkach/agenda-financiera-app',
+    link: 'https://agenda-financiera.vercel.app/',
+    code: 'https://github.com/KarenDerkach/Agenda-Financiera',
     
    }
   },
