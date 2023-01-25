@@ -8,7 +8,7 @@ import photo from "../../assets/Home/profilephoto-.webp";
 import Skills from "./Skills";
 import logoArg from "../../assets/About/argentina.png";
 import EducationMain from "./Education/EducationMain";
-const data = require('../../data/about.json')
+const data = require("../../data/about.json");
 
 function goDown() {
   window.scrollTo({ top: window.innerHeight + 1500, behavior: "smooth" });
@@ -31,22 +31,37 @@ export default function AboutMe() {
             {language === "EN" ? "Why program?" : "¿Por qué programar?"}{" "}
           </h1>
           <p className="a-sub">
-            <img src={logoArg} alt="arg" className="imgArg" />{language === "EN" ? data.EN.sub1 : data.ES.sub1}  <br /> {language === "EN" ? data.EN.sub2 : data.ES.sub2}
+            {language === "EN" ? data.EN.sub1 : data.ES.sub1}{" "}
+            <img src={logoArg} alt="arg" className="imgArg" /> <br />{" "}
+            {language === "EN" ? data.EN.sub2 : data.ES.sub2}
           </p>
           <p className="a-desc">
             {language === "EN" ? data.EN.description : data.ES.description}
             <br />
-           {language === "EN" ? data.EN.description2 : data.ES.description2}
-           <br />
+            {language === "EN" ? data.EN.description2 : data.ES.description2}
+            <br />
             {language === "EN" ? data.EN.description3 : data.ES.description3}
           </p>
           <div className="resume">
-            {
-              language === "EN" ?
-                <a href="Karen Derkach - CV EN.pdf" download="KD_CV.pdf" style={{textDecoration: 'none'}}> <button className="btn-get-resume">Get Resume</button> </a> :
-                <a href="Karen Derkach - CV ES.pdf" download="KD_CV.pdf" style={{textDecoration: 'none'}}> <button className="btn-get-resume">Mi CV</button> </a>
-          
-             }
+            {language === "EN" ? (
+              <a
+                href="Karen Derkach - CV EN.pdf"
+                download="KD_CV.pdf"
+                style={{ textDecoration: "none" }}
+              >
+                {" "}
+                <button className="btn-get-resume">Get Resume</button>{" "}
+              </a>
+            ) : (
+              <a
+                href="Karen Derkach - CV ES.pdf"
+                download="KD_CV.pdf"
+                style={{ textDecoration: "none" }}
+              >
+                {" "}
+                <button className="btn-get-resume">Mi CV</button>{" "}
+              </a>
+            )}
           </div>
           <p className="a-footer">
             {language === "EN"
@@ -77,7 +92,7 @@ export default function AboutMe() {
         </div>
       </div>
       <div>
-        <EducationMain/>
+        <EducationMain />
       </div>
       <div className="c-skills">
         <Skills />
