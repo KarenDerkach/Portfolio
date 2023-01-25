@@ -1,7 +1,6 @@
 import foodarity from '../assets/Projects/foodarity.jpg'
 import dog from '../assets/Projects/dog.png'
 import portfolio from '../assets/Projects/portfolio.png'
-//import agenda from '../assets/Projects/agenda.png'
 import loading from '../assets/Projects/loadign.gif'
 const projects = [ 
   { 

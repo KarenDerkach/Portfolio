@@ -59,7 +59,6 @@ margin-top: 20vh;
 .a-title{
     font-weight: bold;
     color:tomato;
-    /* text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.57); */
     text-shadow: 15px 5px 20px rgba(89, 74, 30, 0.30)
 }
 
@@ -73,6 +72,7 @@ margin-top: 20vh;
 
 .a-desc{
     font-weight: 300;
+    padding: 0 20px;
 }
 .a-footer{
     margin-top: 8vh;
@@ -154,8 +154,7 @@ margin-top: 20vh;
         margin-top: 10vh;
     }
     .a-title{
-        /* margin-top: 4vh; */
-       
+         
         text-align: center;
     }
     .a-sub{
