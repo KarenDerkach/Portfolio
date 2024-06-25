@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,24 +9,24 @@ import {
   timeLineCourses,
   timeLineWorks,
   timeLineAll,
-} from "../../../data/education";
+} from "../../data/education";
 import { MdSchool } from "react-icons/md";
 import { BsPaperclip } from "react-icons/bs";
 import { MdWork } from "react-icons/md";
 import "./Education.css";
 
 function Education(props) {
-  const language = useSelector((state) => state.language);
+ 
 
   //styles
-  let schoolIconStyles = { background: "#3B707D", color: "#fff" };
-  let courseIconStyles = { background: "#FF5412", color: "#fff" };
-  let worksIconStyles = { background: "#e5e5dc", color: "#fff" };
+  let schoolIconStyles = { background: "var(--light-brown)", color: "#fff" };
+  let courseIconStyles = { background: "#fcbf49", color: "#fff" };
+  let worksIconStyles = { background: "var(--dark-green)", color: "#fff" };
 
   return (
     <div>
       <VerticalTimeline>
-        {language === "EN"
+        {props.language === "EN"
           ? //ENGLISH
             //if botton == both?
             props.selectedRadio === "All"
@@ -66,8 +65,6 @@ function Education(props) {
                 if (elem.EN.icon === "school") {
                   return (
                     <VerticalTimelineElement
-                      // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                      // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                       key={elem.EN.id}
                       date={elem.EN.years}
                       iconStyle={schoolIconStyles}
@@ -94,8 +91,6 @@ function Education(props) {
                 if (elem.EN.icon === "course") {
                   return (
                     <VerticalTimelineElement
-                      // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                      // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                       key={elem.EN.id}
                       date={elem.EN.years}
                       iconStyle={courseIconStyles}
@@ -120,8 +115,6 @@ function Education(props) {
                 if (elem.EN.icon === "work") {
                   return (
                     <VerticalTimelineElement
-                      // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                      // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                       key={elem.EN.id}
                       date={elem.EN.years}
                       iconStyle={worksIconStyles}
@@ -178,8 +171,6 @@ function Education(props) {
               if (elem.ES.icon === "school") {
                 return (
                   <VerticalTimelineElement
-                    // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                     key={elem.ES.id}
                     date={elem.ES.years}
                     iconStyle={schoolIconStyles}
@@ -205,8 +196,6 @@ function Education(props) {
               if (elem.ES.icon === "course") {
                 return (
                   <VerticalTimelineElement
-                    // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                     key={elem.ES.id}
                     date={elem.ES.years}
                     iconStyle={courseIconStyles}
@@ -231,8 +220,6 @@ function Education(props) {
               if (elem.ES.icon === "work") {
                 return (
                   <VerticalTimelineElement
-                    // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    // contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                     key={elem.ES.id}
                     date={elem.ES.years}
                     iconStyle={worksIconStyles}

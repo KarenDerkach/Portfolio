@@ -3,11 +3,10 @@
 }
 .e-links{
     text-decoration: none;
-    color: coral;
+    color: var(--btn);
 }
-
-.vertical-timeline::before{
-    background: #f67c50b4;
+.e-links:hover{
+    color:var(--btn-hover)
 }
 
 .vertical-timeline-element-title{

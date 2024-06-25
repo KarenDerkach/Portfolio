@@ -1,0 +1,15 @@
+
+.education{
+    position: relative;
+    background-color: var(--white);
+}
+
+.projects{
+   height: 120vh;
+    background-color: var(--white);
+}
+.contact{
+    position: relative;
+    background-color: var(--white);
+}
+

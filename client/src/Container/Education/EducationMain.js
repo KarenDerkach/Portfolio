@@ -1,6 +1,4 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useState } from "react";
+import React, {useState } from "react";
 import Education from "./Education";
 import {
   FormControl,
@@ -10,13 +8,12 @@ import {
 } from "@mui/material";
 import "./EducationMain.css";
 
-function EducationMain() {
+function EducationMain({language}) {
   const [selectedRadio, setSelectedRadio] = useState("All");
-  const language = useSelector((state) => state.language);
 
   if (language === "EN") {
     return (
-      <div className="Education_Experience1">
+      <section id='education'className="Education_Experience" >
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
           <h1 className="EducationExperienceTitle">Education and Experience</h1>
         </div>
@@ -52,12 +49,12 @@ function EducationMain() {
           </FormControl>
         </div>
 
-        <Education selectedRadio={selectedRadio}></Education>
-      </div>
+        <Education language={language} selectedRadio={selectedRadio}></Education>
+      </section>
     );
   } else {
     return (
-      <div className="Education_Experience1">
+      <section className="Education_Experience" id='education'>
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
           <h1 className="EducationExperienceTitle">Educación y experiencia</h1>
         </div>
@@ -96,8 +93,8 @@ function EducationMain() {
           </FormControl>
         </div>
 
-        <Education selectedRadio={selectedRadio}></Education>
-      </div>
+        <Education language={language} selectedRadio={selectedRadio}></Education>
+      </section>
     );
   }
 }

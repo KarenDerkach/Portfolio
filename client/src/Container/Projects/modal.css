@@ -1,0 +1,100 @@
+.css-1wnsr1i {
+    border-radius: 20px;
+    width: 530px;
+    height: 500px;
+}
+.closeButton{
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+}
+.m-sub{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+.m-box{
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.m-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+.m-title{
+    font-size: 30px;
+    color: var(--dark-green);
+}
+.m-text{
+    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green-solid);
+}
+
+.m-icons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+.skill-icon{
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px;
+
+}
+.m-element{
+    width: auto;
+    display: flex;
+    margin: 5px 15px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-name{
+    font-size: 12px;
+}
+
+.m-buttons{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+
+}
+.m-buttons button{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--green-solid);
+    
+}
+.m-buttons button:hover{
+    background-color: var(--dark-green);
+}
+.m-buttons a{
+    background-color: transparent;
+    color:var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}

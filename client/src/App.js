@@ -1,32 +1,24 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import { BrowserRouter,  Route, Routes } from 'react-router-dom'
-import NavBar from './Container/NavBar/NavBar';
-import Home from './Container/Home/Profile';
-import AboutMe from './Container/AboutMe/AboutMe';
-import Portfolio from './Container/Portfolio/Portfolio';
-import Contact from './Container/Contact/Contact';
-import Footer from './Container/Footer/Footer';
+import NavBar from './Container/NavBar';
+import Home from './Container/Home';
 
 
+import { useSelector } from "react-redux";
 
 function App() {
+  const language = useSelector((state) => state.language);
   return (
    <BrowserRouter>
     <Routes> 
-     <Route path='*' element={<NavBar/>}/>
+     <Route path='*' element={<NavBar language={language}/>}/>
     </Routes>
    
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/Portfolio' element={<Portfolio/>}/>
-      <Route path='/AboutMe' element={<AboutMe/>}/>
-      <Route path='/Contact' element={<Contact/>}/>
+      <Route path='/' element={<Home language={language} />}/>
+    </Routes>
    
-    </Routes>
-    <Routes> 
-     <Route path='*' element={<Footer/>}/>
-    </Routes>
     </BrowserRouter>
   );
 }
