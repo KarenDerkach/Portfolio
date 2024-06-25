@@ -1,9 +1,10 @@
 nav{
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  font-size: 18px;
+  font-size: 20px;
   padding: 40px;
  
   width: 100%; 
@@ -14,8 +15,8 @@ nav{
 }
 
 nav.sticky{
-  padding: 20px 20px;
-  background-color: rgba(255, 255, 255, 0.884);
+  padding: 0px 20px;
+      background-color: rgb(255 255 255);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -39,20 +40,45 @@ nav .buttonLang{
 
 .menu-items, li{
 margin: 10px;
-
 text-decoration: none;
 }
 
 .menu-items, li, .i-link{
   text-decoration: none;
-  color: tomato;
+  color: var(--green-solid);
+  position: relative;
+}
+.i-link::after{
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: var(--green-solid);
+  position: absolute;
+  bottom: -6px;
+  right: 50%;
+  transition: all .5s;
+  will-change: width;
+}
+
+.i-link:hover::after{
+  width: 100%;
+  right: 0;
 }
 .menu-items, li:hover, a:hover{
-  color: rgb(201, 46, 18);
+  /* color: rgb(201, 46, 18); */
+  color: var(--green-solid);
   text-decoration: none;
-  transform: scaleX(1.1) scaleY(1.1);
+ 
 
 }
+
+.menu-items li.active{
+  border-bottom: 5px solid var(--green-solid);
+  color: var(--green-solid);
+  font-weight: bold;
+
+}
+
 
 .btn-menu-mobile{
   font-size: 2rem;
@@ -62,7 +88,7 @@ text-decoration: none;
 }
 
 ul.show{
-  top: 61px
+  top: 40px
 }
 
 
@@ -72,6 +98,7 @@ ul.show{
   nav{
     width: 100%;
     height: 10vh;
+    flex-direction: row-reverse;
   }
   nav:hover{
     background-color: rgba(255, 99, 71, 0.89);
@@ -80,9 +107,7 @@ ul.show{
   nav.sticky{
     padding: 30px 50px;
   }
-  nav .buttonLang{
-    margin-left: 60vw;
-  }
+ 
   .btn-menu-mobile{
     display: inline-flex;
    
@@ -123,7 +148,7 @@ margin: 30px ;
 }
    .menu-items, li, .i-link{
     text-decoration: none;
-    margin-left: -1vw;
+    margin-left: 0;
     display: flex;
     align-items: center;
     margin-top: 5vh;
@@ -147,16 +172,14 @@ margin: 30px ;
     width: 100%;
     height: 10vh;
   }
-  nav:hover{
+  /* nav:hover{
     background-color: rgba(255, 99, 71, 0.89);
-  }
+  } */
 
   nav.sticky{
     padding: 30px 50px;
   }
-  nav .buttonLang{
-    margin-left: 60vw;
-  }
+
   .btn-menu-mobile{
     display: inline-flex;
     margin-top: 1vh;
@@ -197,7 +220,7 @@ margin: 30px ;
 }
    .menu-items, li, .i-link{
     text-decoration: none;
-    margin-left: -1vw;
+    margin-left: 0;
     display: flex;
     align-items: center;
     margin-top: 5vh;

@@ -1,0 +1,48 @@
+
+.Education_Experience{
+    padding: 50px ;
+}
+.EducationExperienceTitle{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 10vh;
+font-weight: bold;
+color:var(--green-solid);
+
+
+}
+.RadioButtons{
+    width: 100%;
+    
+}
+.RadioButtons >fieldset{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+.RadioButtons >fieldset >div > label>.MuiRadio-root{
+    color:var(--green-solid)
+}
+
+.RadioButtons >fieldset >div > label>.MuiRadio-root:hover{
+    background-color:#dde3b35b
+}
+.vertical-timeline::before {
+    background: var(--bg-color);
+}
+
+
+@media screen and  (max-width: 480px){
+    .Education_Experience{
+        padding: 0;
+    }
+    .EducationExperienceTitle{
+        margin: 40px 0 20px;
+    }
+    .RadioButtons{
+        width: 100vw;
+        margin-left: 7vw;
+    }
+}

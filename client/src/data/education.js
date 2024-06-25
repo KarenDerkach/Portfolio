@@ -7,18 +7,18 @@ export const timeLineWorks = [
   {
     ES: {
       id: 7,
-      university: "Mawoo Pets",
+      university: "Mawoo Pets - Delaware EEUU",
       years: "06/2022- actualmente",
-      title: "Desarrollador web full stack",
+      title: "Desarrollador Web Full Stack",
       description: "",
       dowload: "",
       icon: "work",
     },
     EN: {
       id: 72,
-      university: "Mawoo Pets",
+      university: "Mawoo Pets - Delaware EEUU",
       years: "06/2022- currently",
-      title: "Web full stack Developer",
+      title: "Full stack Web Developer",
       description: "",
       dowload: "",
       icon: "work",
@@ -94,7 +94,7 @@ export const timeLineEducation = [
   {
     ES: {
       id: 2,
-      university: "Bootcamp HENRY",
+      university: "Bootcamp HENRY - Buenos Aires Argentina",
       years: "09/2021- 01/2022",
       title: "Desarrollador Web FullStack",
       description:
@@ -105,7 +105,7 @@ export const timeLineEducation = [
     },
     EN: {
       id: 22,
-      university: "Bootcamp HENRY",
+      university: "Bootcamp HENRY - Buenos Aires Argentina",
       years: "09/2021- 01/2022",
       title: "FullStack Web Developer",
       description:
@@ -119,7 +119,7 @@ export const timeLineEducation = [
   {
     ES: {
       id: 3,
-      university: "Universidad Nacional Misiones (UNAM)",
+      university: "Universidad Nacional Misiones (UNAM) - Misiones Argentina",
       years: "2015 - 2020",
       title: "Contador Público Nacional",
       description: "Promedio: 8/10.",
@@ -128,7 +128,7 @@ export const timeLineEducation = [
     },
     EN: {
       id: 32,
-      university: "National University of Misiones (UNAM)",
+      university: "National University of Misiones (UNAM) - Misiones Argentina",
       years: "03/2015 - 02/2020",
       title: "Accountant",
       description: "Average: 8/10.",
@@ -142,18 +142,18 @@ export const timeLineAll = [
   {
     ES: {
       id: 7,
-      university: "Mawoo Pets",
+      university: "Mawoo Pets - Delaware EEUU",
       years: "06/2022- actualmente",
-      title: "Desarrollador web full stack",
+      title: "Desarrollador Web Full Stack",
       description: "",
       dowload: "",
       icon: "work",
     },
     EN: {
       id: 72,
-      university: "Mawoo Pets",
+      university: "Mawoo Pets - Delaware EEUU",
       years: "06/2022- currently",
-      title: "Web full stack Developer",
+      title: "Full stack Web Developer",
       description: "",
       dowload: "",
       icon: "work",
@@ -163,7 +163,7 @@ export const timeLineAll = [
   {
     ES: {
       id: 2,
-      university: "Bootcamp HENRY",
+      university: "Bootcamp HENRY - Buenos Aires Argentina",
       years: "09/2021- 01/2022",
       title: "Desarrollador Web FullStack",
       description:
@@ -174,7 +174,7 @@ export const timeLineAll = [
     },
     EN: {
       id: 22,
-      university: "Bootcamp HENRY",
+      university: "Bootcamp HENRY - Buenos Aires Argentina",
       years: "09/2021- 01/2022",
       title: "FullStack Web Developer",
       description:
@@ -251,7 +251,7 @@ export const timeLineAll = [
   {
     ES: {
       id: 3,
-      university: "Universidad Nacional Misiones (UNAM)",
+      university: "Universidad Nacional Misiones (UNAM) - Misiones Argentina",
       years: "2015 - 2020",
       title: "Contador Público Nacional",
       description: "Promedio: 8/10.",
@@ -260,7 +260,7 @@ export const timeLineAll = [
     },
     EN: {
       id: 32,
-      university: "National University of Misiones (UNAM)",
+      university: "National University of Misiones (UNAM) - Misiones Argentina",
       years: "03/2015 - 02/2020",
       title: "Accountant",
       description: "Average: 8/10.",
