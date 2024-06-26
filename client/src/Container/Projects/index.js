@@ -21,36 +21,16 @@ const [openModal1, setOpenModal1] = useState(false)
 const [openModal2, setOpenModal2] = useState(false)
 const [openModal3, setOpenModal3] = useState(false)
 const [openModal4, setOpenModal4] = useState(false)
-console.log(projects[3])
+
   return (
     
     <div className="p-container" >
       <h1 className="p-title">{language === 'EN' ? 'Projects' : 'Proyectos'}</h1>
-      <section className="p-swiper">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-        {/* AGENDA */}
-        <SwiperSlide>
-          <div className='p-card' >
+
+      <div id="carouselExampleControls" class="carousel slide custom-carousel" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active"data-bs-interval="10000">
+    <div className='p-card' >
             <img className='image'src={slide_image_1} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal1(true)}} >
@@ -59,10 +39,9 @@ console.log(projects[3])
               </div>
             </div>
           {openModal1 && <Modal project={projects[0]} openModal={openModal1} setOpenModal={setOpenModal1} />}
-        </SwiperSlide>
-        {/* MUNDO PERROS */}
-        <SwiperSlide>
-        <div className='p-card' >
+    </div>
+    <div class="carousel-item">
+    <div className='p-card' >
         <img src={slide_image_2} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal2(true)}} >
@@ -71,11 +50,9 @@ console.log(projects[3])
               </div>
             </div>
           {openModal2 && <Modal project={projects[2]} openModal={openModal2} setOpenModal={setOpenModal2} />}
-
-        </SwiperSlide>
-        {/* FOODARITY */}
-        <SwiperSlide>
-        <div className='p-card' >
+    </div>
+    <div class="carousel-item">
+    <div className='p-card' >
         <img src={slide_image_3} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal3(true)}} >
@@ -84,13 +61,9 @@ console.log(projects[3])
               </div>
             </div>
           {openModal3 && <Modal project={projects[1]} openModal={openModal3} setOpenModal={setOpenModal3} />}
-        </SwiperSlide>  
-         {/* FOODARITY */}
-       
-        {/* PORTFOLIO */}
-        <SwiperSlide>
-        <div className='p-card' >
-        
+    </div>
+    <div class="carousel-item">
+    <div className='p-card' >
         <img src={slide_image_5} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal4(true)}} >
@@ -99,12 +72,21 @@ console.log(projects[3])
               </div>
             </div>
           {openModal4 && <Modal project={projects[3]} openModal={openModal4} setOpenModal={setOpenModal4} />}
-
-        </SwiperSlide>
-      </Swiper>
-      </section>
     </div>
-  );
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+  )
+
+  
 }
 
 export default Portfolio;

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BiMenu } from "react-icons/bi";
 import { changeLanguage } from "../../react-redux/action";
-
 import ES from "../../assets/Home/ES.png";
 import EN from "../../assets/Home/EN.png";
 import "./NavBar.css";
@@ -11,10 +10,7 @@ export default function NavBar({ language }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Use template literals for dynamic title
-    document.title = `Karen Derkach | ${
-      language === "EN" ? "Portfolio" : "Portafolio"
-    }`;
+    document.title = `Karen Derkach | ${language === "EN" ? "Portfolio" : "Portafolio"}`;
   }, [language]);
 
   function handleChangeLang(e) {
@@ -23,12 +19,25 @@ export default function NavBar({ language }) {
   }
 
   function handleShowMenu() {
-    const menu_items = document.querySelector(".menu-items");
-    menu_items.classList.toggle("show");
+    const menuIcon = document.getElementById('menu-icon');
+    const menuItems = document.getElementById('menu-items');
+    
+    menuIcon.addEventListener('click', () => {
+              menuIcon.classList.toggle('change');
+              menuItems.classList.toggle('show');
+          });
   }
+//   document.addEventListener('DOMContentLoaded', () => {
+//     const menuIcon = document.getElementById('menu-icon');
+//     const menuItems = document.getElementById('menu-items');
+
+//     menuIcon.addEventListener('click', () => {
+//         menuIcon.classList.toggle('change');
+//         menuItems.classList.toggle('show');
+//     });
+// });
 
   useEffect(() => {
-    // Use a separate function for scroll event handling
     function handleScroll() {
       const nav = document.querySelector("nav");
       nav.classList.toggle("sticky", window.scrollY > 50);
@@ -37,18 +46,13 @@ export default function NavBar({ language }) {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      // Clean up the event listener when the component is unmounted
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    // Use a function to observe the sections for IntersectionObserver
     function observeSections() {
-      const sections = document.querySelectorAll("section")
-        ? document.querySelectorAll("section")
-        : undefined;
-      console.log("SECTION :", sections);
+      const sections = document.querySelectorAll("section");
       const nav = document.querySelector("nav");
       const navList = document.querySelectorAll(".menu-items li");
 
@@ -59,19 +63,9 @@ export default function NavBar({ language }) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Changing navbar style on scroll to next section
-            if (entry.target.id !== "main") {
-              nav.classList.add("active");
-            } else {
-              nav.classList.remove("active");
-            }
-
-            // Section Indicator
+            nav.classList.toggle("active", entry.target.id !== "main");
             navList.forEach((link) => {
-              link.classList.remove("active");
-              if (entry.target.id === link.dataset.nav) {
-                link.classList.add("active");
-              }
+              link.classList.toggle("active", entry.target.id === link.dataset.nav);
             });
           }
         });
@@ -87,52 +81,35 @@ export default function NavBar({ language }) {
 
   return (
     <nav>
-      <div className="btn-menu-mobile" onClick={handleShowMenu}>
-        <BiMenu />
-      </div>
+     
+      <div class="menu-icon" id="menu-icon" onClick={()=>{handleShowMenu()}}>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+     
 
-      <ul className="menu-items">
+      <ul class="menu-items"id="menu-items">
         <li data-nav="main">
-          <a href="#main" className="i-link">
-            {language === "EN" ? "HOME" : "PRINCIPAL"}
-          </a>{" "}
+          <a href="#main" className="i-link">{language === "EN" ? "HOME" : "PRINCIPAL"}</a>
         </li>
         <li data-nav="aboutme">
-          {" "}
-          <a href="#aboutme" className="i-link">
-            {" "}
-            {language === "EN" ? "ABOUT ME" : "SOBRE MI"}
-          </a>{" "}
+          <a href="#aboutme" className="i-link">{language === "EN" ? "ABOUT ME" : "SOBRE MI"}</a>
         </li>
         <li data-nav="education">
-          {" "}
-          <a href="#education" className="i-link">
-            {" "}
-            {language === "EN" ? "EDUCATION" : "EDUCACIÓN"}{" "}
-          </a>
+          <a href="#education" className="i-link">{language === "EN" ? "EDUCATION" : "EDUCACIÓN"}</a>
         </li>
         <li data-nav="projects">
-          {" "}
-          <a href="#projects" className="i-link">
-            {" "}
-            {language === "EN" ? "PROJECTS" : "PROYECTOS"}{" "}
-          </a>{" "}
+          <a href="#projects" className="i-link">{language === "EN" ? "PROJECTS" : "PROYECTOS"}</a>
         </li>
         <li data-nav="contact">
-          {" "}
-          <a href="#contact" className="i-link">
-            {" "}
-            {language === "EN" ? "CONTACT" : "CONTACTO"}{" "}
-          </a>{" "}
+          <a href="#contact" className="i-link">{language === "EN" ? "CONTACT" : "CONTACTO"}</a>
         </li>
       </ul>
+      
       <div className="menu-lang">
-        <button onClick={(e) => handleChangeLang(e)} className="buttonLang">
-          {language === "ES" ? (
-            <img src={EN} alt="U.S" className="flat" />
-          ) : (
-            <img src={ES} alt="ES" className="flat" />
-          )}
+        <button onClick={handleChangeLang} className="buttonLang">
+          <img src={language === "ES" ? EN : ES} alt={language === "ES" ? "U.S" : "ES"} className="flat" />
         </button>
       </div>
     </nav>
