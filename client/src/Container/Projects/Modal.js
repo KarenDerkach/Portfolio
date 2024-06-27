@@ -6,23 +6,7 @@ import Fade from '@mui/material/Fade';
 import close from '../../assets/Projects/close-modal-grey.svg'
 import './modal.css' 
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
 
-  width: '650px',
-  height: '650px',
-  display:'flex',
-  alingItem:'center',
-  flexDirection:'column',
-  overflow: 'auto'
-};
 export default function Projects({ project, openModal, setOpenModal }) {
   return (
     <div>
@@ -41,7 +25,7 @@ export default function Projects({ project, openModal, setOpenModal }) {
         }}
       >
         <Fade in={openModal}>
-          <Box sx={style}>
+          <Box className="style-box">
           <div className='closeButton' onClick={()=> setOpenModal(false)}><img src={close} alt='close icon'/></div>
            <h1 className='m-title'>{project.ES.title}</h1>
            <p className='m-description'>{project.ES.description}</p>

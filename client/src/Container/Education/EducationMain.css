@@ -8,6 +8,7 @@
 align-items: center;
 justify-content: center;
 margin-top: 10vh;
+margin-bottom: 3rem;
 font-weight: bold;
 color:var(--green-solid);
 
@@ -35,8 +36,8 @@ color:var(--green-solid);
 
 
 @media screen and  (max-width: 480px){
-    .Education_Experience{
-        padding: 0;
+    .Education_Experience {
+        padding: 1rem;
     }
     .EducationExperienceTitle{
         margin: 40px 0 20px;

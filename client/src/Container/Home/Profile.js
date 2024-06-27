@@ -123,7 +123,7 @@ export default function Profile({ language }) {
               <h3> {language === "EN" ? "Goal" : "Objetivo"}</h3>
             </div>
             <div className="face back">
-              <p> {language === "EN" ? "Keep growing in this exciting field, creating scalable and efficient applications that offer an exceptional user experience." : "Seguir creciendo en este apasionante campo, creando aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}</p>
+              <p> {language === "EN" ? "Create scalable and efficient applications that offer an exceptional user experience." : "Crear aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}</p>
             </div>
             </div>
 
@@ -134,7 +134,7 @@ export default function Profile({ language }) {
               <h3> {language === "EN" ? "Philosophy" : "Filosofía"}</h3>
             </div>
             <div className="face back">
-              <p> {language === "EN" ? "My work philosophy is all about adding value by developing scalable, flexible, and clean software, always based on best practices and constant learning." : "Mi filosofía de trabajo se basa en aportar valor desarrollando software escalable, flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
+              <p> {language === "EN" ? "Adding value by developing scalable, flexible, and clean software, always based on best practices and constant learning." : "Aportar valor desarrollando software escalable, flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
             </div>
             </div>
            </div>

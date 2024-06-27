@@ -196,6 +196,7 @@ animation-duration: 1s;
     text-align: start;
     font-weight: bold;
     color: var(--green-solid);
+    margin-bottom: 3rem;
     
 }
 .gretting{
@@ -378,7 +379,97 @@ transform: perspective(600px)  rotateY(180deg);
     background-color: var(--white);
 }
 
-@media screen and  (max-width: 1245px){
+@media screen and  (max-width: 880px){
+    .container{
+     padding: 0;
+    }
+     
+     .introduction{
+         padding: 0;
+         justify-content: flex-start;
+         margin-top: 100px;
+         
+     }
+     .i-bg{
+         width: 100%;
+     }
+     .i-mobile{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+     }
+     .i-title{
+         display: none;
+     }
+     .i-social{
+         display: none;
+     }
+     .section-right{
+         bottom: 0px;
+         display: flex;
+         position: absolute;
+         align-items: center;
+         justify-content: center;
+         top: auto;
+         width: auto;
+         height: auto;
+     }
+     .presentation{
+         height: auto;
+     }
+     .title{
+         margin: 10px 0;
+          padding: 0 20px;
+          font-size: 25px;
+         text-align: center;
+     }
+
+     .cards-section{
+        flex-direction: column;
+           
+        }
+    .card{
+        margin: 10px;
+    }
+     .purposes-section{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 16px;
+         padding-left: 0;
+         padding: 20px;
+     }
+     .purposes-section p{
+         text-align: center;
+     }
+     .number-exp{
+         width: 90px;
+         height: 90px;
+     }
+    .descrip-exp, .number-exp{
+     font-size: 14px;
+    }
+    .button {
+        --width: 300px;
+        --height: 50px;
+        box-shadow: none 
+      }
+
+    .resume{
+     margin: 30px 0;
+    }
+    .button-wrapper, .text{
+     font-size: 18px;
+    }
+   .gretting {
+    color: var(--black);
+    opacity: 0.5;
+    font-size: 18px;
+    text-align: center;
+}
+ }
+@media screen and  (max-width: 768px){
     .section-left{ 
         
         height: 50%;
@@ -399,85 +490,7 @@ transform: perspective(600px)  rotateY(180deg);
         
 }
 
-@media screen and  (max-width: 880px){
-   .container{
-    padding: 0;
-   }
-    .section-left{
-        /* display: none; */
-    }
-    .introduction{
-        padding: 0;
-        justify-content: flex-start;
-        margin-top: 150px;
-        height: 85vh;
-    }
-    .i-bg{
-        width: 100%;
-    }
-    .i-mobile{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .i-title{
-        display: none;
-    }
-    .i-social{
-        display: none;
-    }
-    .section-right{
-        bottom: 0px;
-        display: flex;
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-        top: auto;
-        width: auto;
-        height: auto;
-    }
-    .presentation{
-        height: auto;
-    }
-    .title{
-        margin: 10px 0;
-         padding: 0 20px;
-         font-size: 25px;
-        text-align: center;
-    }
-    .purposes-section{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        padding-left: 0;
-        padding: 20px;
-    }
-    .purposes-section p{
-        text-align: center;
-    }
-    .number-exp{
-        width: 90px;
-        height: 90px;
-    }
-   .descrip-exp, .number-exp{
-    font-size: 14px;
-   }
-   .resume{
-    margin: 30px 0;
-   }
-   .button-wrapper, .text{
-    font-size: 18px;
-   }
-   .slogan{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-size: 14px;
-   }
-}
+
 
 
 
@@ -549,7 +562,7 @@ transform: perspective(600px)  rotateY(180deg);
 }
 
 .presentation[id]{
-    scroll-margin-top: 50px;
+    scroll-margin-top: 80px;
     scroll-behavior:smooth;
    }
 
