@@ -23,6 +23,10 @@
     width: 530px;
     height: 500px;
 }
+.css-79ws1d-MuiModal-root{
+    z-index: 99999999 !important;
+    overflow: scroll !important;
+}
 .closeButton{
     position: absolute;
     right: 12px;

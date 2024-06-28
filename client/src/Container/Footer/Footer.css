@@ -36,8 +36,8 @@
 
 }
 .css-i4bv87-MuiSvgIcon-root{
-  width: 42px!important;
-  height: 42px !important;
+  width: 65px!important;
+  height: 50px !important;
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
@@ -126,4 +126,8 @@
  .footer{
   padding: 20px 20px;
  }
+ .css-i4bv87-MuiSvgIcon-root{
+  width: 40px!important;
+  height: 40px !important;
+}
 }
