@@ -38,7 +38,7 @@ export default function Footer({language}) {
           <li class="menu__item"><a class="menu__link" href="#projects">{language === 'EN' ?'Projects':'Proyectos'}</a></li>
     
         </ul>
-        <p>&copy; {language === 'EN' ? '2023 Karen Derkach | All Rights Reserved' : '2023 Karen Derkach | Todos los derechos reservados' }</p>
+        <p>&copy; {language === 'EN' ? '2024 Karen Derkach | All Rights Reserved' : '2024 Karen Derkach | Todos los derechos reservados' }</p>
       </footer>
     )
 
