@@ -92,7 +92,7 @@ export default function Profile({ language }) {
               Welcome and thank you for your interest in my profile!
               </p>
               <p>
-              I'm Karen, a web developer from Argentina with a passion that has grown over 3 years of experience in the field. 
+              I'm Karen, web developer from Argentina with a passion that has grown over 3 years of experience in the field. 
               <br/>
                My journey began in the accounting world, where I studied and earned my degree as a public accountant. 
               <br/>

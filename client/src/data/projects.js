@@ -1,4 +1,4 @@
-import foodarity from "../assets/Projects/foodarity.jpg";
+import foodarity from "../assets/Projects/foodarity.png";
 import dog from "../assets/Projects/dog.png";
 import portfolio from "../assets/Projects/portfolio.png";
 import loading from "../assets/Projects/loading.gif";
@@ -21,7 +21,7 @@ const projects = [
     ES: {
       title: "AGENDA-FINANCIERA",
       description:
-        "EN PROGRESO. Aplicación web para la gestión de chequera almacenando y capturando información de base de dato no relacional, servicio de clima manipulado a travez de API externa, calendario y calculadora.",
+        "Aplicación web para la gestión de chequera almacenando y capturando información de base de dato no relacional, servicio de clima manipulado a travez de API externa, calendario y calculadora.",
       image: loading,
       tools: {
         front: [
@@ -44,7 +44,7 @@ const projects = [
     EN: {
       title: "FINANCIAL-CALENDAR",
       description:
-        "IN PROGRESS.Web application for checkbook management, weather service, calendar and calculator.",
+        "Web application for checkbook management, weather service, calendar and calculator.",
       image: loading,
       tools: {
         front: [

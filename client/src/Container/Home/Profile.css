@@ -157,6 +157,7 @@ animation-duration: 1s;
     object-fit: cover;
     animation: fadeInRight;
     animation-duration: 2s;
+
 }
 
     
@@ -417,7 +418,10 @@ transform: perspective(600px)  rotateY(180deg);
      }
      .presentation{
          height: auto;
+         animation: none;
+         animation-name:none
      }
+ 
      .title{
          margin: 10px 0;
           padding: 0 20px;
@@ -519,6 +523,10 @@ transform: perspective(600px)  rotateY(180deg);
        animation: slideInUp;
        animation-duration: 2s;
        position: relative;
+       max-width: 100%; /* La imagen no crecerá más allá de su tamaño original */
+       height: auto; /* Permite que la imagen mantenga su proporción de aspecto */
+       display: block; /* Asegura que no haya espacio adicional debajo de la imagen */
+       margin: 0 auto; 
    }
 
    .a-left{

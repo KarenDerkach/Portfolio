@@ -15,6 +15,7 @@
   --error-message:  #e44f4fd1;
   --toast-error: #e44f4ffa;
   --toast-shadow:  #9c9c9ce3;
+  --toast-grey:  #e1ddddae;
   --toast-success: #0CBFAE;
   --loader-color: #0CBFAE
 }
@@ -27,6 +28,7 @@ html {
 body {
   margin: 0;
   overflow-y: overlay;
+  overflow-x: hidden;
   font-family: "Poppins Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

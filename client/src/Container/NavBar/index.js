@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BiMenu } from "react-icons/bi";
 import { changeLanguage } from "../../react-redux/action";
 import ES from "../../assets/Home/ES.png";
 import EN from "../../assets/Home/EN.png";
@@ -27,15 +26,7 @@ export default function NavBar({ language }) {
               menuItems.classList.toggle('show');
           });
   }
-//   document.addEventListener('DOMContentLoaded', () => {
-//     const menuIcon = document.getElementById('menu-icon');
-//     const menuItems = document.getElementById('menu-items');
 
-//     menuIcon.addEventListener('click', () => {
-//         menuIcon.classList.toggle('change');
-//         menuItems.classList.toggle('show');
-//     });
-// });
 
   useEffect(() => {
     function handleScroll() {
