@@ -8,7 +8,7 @@ import './modal.css'
 
 
 export default function Projects({ project, openModal, setOpenModal, language }) {
-  console.log("LANGAGE", language)
+
   if(language === 'ES'){
     return (
       <div>
@@ -66,7 +66,7 @@ export default function Projects({ project, openModal, setOpenModal, language })
              </div>: null}
              </section>
              <div className='m-buttons'>
-              <button> <a href={project.ES.code} target='_blank' rel='noreferrer'>CODIGO</a></button>
+              <button> <a href={project.ES.code} target='_blank' rel='noreferrer'>CÓDIGO</a></button>
               <button> <a href={project.ES.link}target='_blank' rel='noreferrer'>SITIO WEB</a></button>
              </div>
             </Box>

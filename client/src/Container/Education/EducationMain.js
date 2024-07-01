@@ -15,7 +15,7 @@ function EducationMain({language}) {
     return (
       <section id='education'className="Education_Experience" >
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-          <h1 className="EducationExperienceTitle">Education and Experience</h1>
+          <h1 className="EducationExperienceTitle">Education and experience</h1>
         </div>
 
         <div className="RadioButtons">

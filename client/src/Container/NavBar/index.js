@@ -4,6 +4,7 @@ import { changeLanguage } from "../../react-redux/action";
 import ES from "../../assets/Home/ES.png";
 import EN from "../../assets/Home/EN.png";
 import "./NavBar.css";
+import { Button } from "@mui/material";
 
 export default function NavBar({ language }) {
   const dispatch = useDispatch();
@@ -99,9 +100,7 @@ export default function NavBar({ language }) {
       </ul>
       
       <div className="menu-lang">
-        <button onClick={handleChangeLang} className="buttonLang">
-          <img src={language === "ES" ? EN : ES} alt={language === "ES" ? "U.S" : "ES"} className="flat" />
-        </button>
+          {language === "ES" ? <button onClick={handleChangeLang} className="buttonLang">ES</button> : <button onClick={handleChangeLang} className="buttonLang">EN</button>}
       </div>
     </nav>
   );

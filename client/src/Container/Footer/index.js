@@ -21,7 +21,7 @@ export default function Footer({language}) {
           <li class="social-icon__item"><a class="social-icon__link"  href='mailto:derkach.m.karen@gmail.com?body=Hola Karen!' >
              < MailOutlineIcon />
             </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://wa.me/5493764653483?text=Hola!,%20eh%20visto%20tu%20portfolio..." target='_blank' rel='noreferrer'>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://wa.me/5493764653483?text=Hola!,%20He%20visto%20tu%20portfolio..." target='_blank' rel='noreferrer'>
               <WhatsAppIcon/>
             </a></li>
           <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/karen-derkach/" target='_blank' rel='noreferrer'>

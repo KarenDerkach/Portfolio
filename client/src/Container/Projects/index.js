@@ -39,7 +39,7 @@ const [openModal4, setOpenModal4] = useState(false)
         <img src={slide_image_2} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal2(true)}} >
-              View More
+            {language === 'EN' ? 'View More' : 'Ver Más'}
               </button>
               </div>
             </div>
@@ -50,7 +50,7 @@ const [openModal4, setOpenModal4] = useState(false)
         <img src={slide_image_3} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal3(true)}} >
-              View More
+            {language === 'EN' ? 'View More' : 'Ver Más'}
               </button>
               </div>
             </div>
@@ -61,7 +61,7 @@ const [openModal4, setOpenModal4] = useState(false)
         <img src={slide_image_5} alt="slide_image" />
            <div className='p-content'>
             <button className='btn-view' onClick={()=>{setOpenModal4(true)}} >
-              View More
+            {language === 'EN' ? 'View More' : 'Ver Más'}
               </button>
               </div>
             </div>

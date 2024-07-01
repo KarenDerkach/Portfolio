@@ -24,6 +24,7 @@ animation-duration: 1s;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 
@@ -210,6 +211,9 @@ animation-duration: 1s;
     font-size: 20px;
     padding-right:20px ;
 }
+p{
+    font-size: 18px;
+}
 /*----------------------CARD SECTION----------------*/
 .cards-section{
 
@@ -262,6 +266,7 @@ transition: 1s;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 .card .back p{
     position: absolute;
@@ -269,6 +274,7 @@ transition: 1s;
     text-align: center;
     padding: 10px;
     margin: 0;
+    font-size: 18px;
 }
 
 .card:hover .front{
@@ -415,6 +421,9 @@ transform: perspective(600px)  rotateY(180deg);
          top: auto;
          width: auto;
          height: auto;
+     }
+     .i-bg{
+background-color: transparent;
      }
      .presentation{
          height: auto;

@@ -75,7 +75,7 @@ export const timeLineCourses = [
       university: "PoloTic Misiones",
       years: "09/2020- 10/2020",
       title: "Inglés para el desarrollo de Software",
-      description: "Curso teórico de 18hr en total",
+      description: "Curso teórico de 18 hr. en total",
       dowload: polotic,
       icon: "course",
     },
@@ -83,7 +83,7 @@ export const timeLineCourses = [
       id: 62,
       university: "PoloTic Misiones",
       years: "09/2020- 10/2020",
-      title: "English for Software Develompent",
+      title: "English for Software Development",
       description: "Theoretical course of 18 hours in total",
       dowload: polotic,
       icon: "course",
@@ -98,7 +98,7 @@ export const timeLineEducation = [
       years: "09/2021- 01/2022",
       title: "Desarrollador Web FullStack",
       description:
-        "Bootcamp intensivo de 4 meses. Más de 800hrs de código. Desarrollo de teoria y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal reuniendo todas la herramientas adquiridas durante el curso",
+        "Bootcamp intensivo de 4 meses. Más de 800 hrs. de código. Desarrollo de teoria y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal reuniendo todas la herramientas adquiridas durante el curso",
       dowload:
         "https://certificates.soyhenry.com/cert?id=74220c18-0bbc-45e9-af6d-043ecf6e9e72",
       icon: "school",
@@ -109,7 +109,7 @@ export const timeLineEducation = [
       years: "09/2021- 01/2022",
       title: "FullStack Web Developer",
       description:
-        "Intensive bootcamp of 4 months with more than 800 hours of code, where theory is developed and then a laboratory period in which a SPA is developed as an individual project and a group final project gathering all the tools acquired during the course.",
+        "Intensive bootcamp of 4 months with more than 800 hours. of code, where theory is developed and then a laboratory period in which a SPA is developed as an individual project and a group final project gathering all the tools acquired during the course.",
       dowload:
         "https://certificates.soyhenry.com/cert?id=74220c18-0bbc-45e9-af6d-043ecf6e9e72",
       icon: "school",
@@ -153,7 +153,7 @@ export const timeLineAll = [
       id: 72,
       university: "Mawoo Pets - Delaware EEUU",
       years: "06/2022- currently",
-      title: "Full stack Web Developer",
+      title: "Full Stack Web Developer",
       description: "",
       dowload: "",
       icon: "work",
@@ -165,9 +165,9 @@ export const timeLineAll = [
       id: 2,
       university: "Bootcamp HENRY - Buenos Aires Argentina",
       years: "09/2021- 01/2022",
-      title: "Desarrollador Web FullStack",
+      title: "Desarrollador Web Full Stack",
       description:
-        "Bootcamp intensivo de 4 meses. Más de 800hrs de código. Desarrollo de teoria y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal reuniendo todas la herramientas adquiridas durante el curso",
+        "Bootcamp intensivo de 4 meses. Más de 800 hrs. de código. Desarrollo de teoría y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto individual y un proyecto final grupal reuniendo todas las herramientas adquiridas durante el curso",
       dowload:
         "https://certificates.soyhenry.com/cert?id=74220c18-0bbc-45e9-af6d-043ecf6e9e72",
       icon: "school",
@@ -176,7 +176,7 @@ export const timeLineAll = [
       id: 22,
       university: "Bootcamp HENRY - Buenos Aires Argentina",
       years: "09/2021- 01/2022",
-      title: "FullStack Web Developer",
+      title: "Full Stack Web Developer",
       description:
         "Intensive bootcamp of 4 months with more than 800 hours of code, where theory is developed and then a laboratory period in which a SPA is developed as an individual project and a group final project gathering all the tools acquired during the course.",
       dowload:
@@ -189,7 +189,7 @@ export const timeLineAll = [
       id: 4,
       university: "Open English",
       years: "01/2021- 12/2021",
-      title: "Certificado de competenecia Nivel A2",
+      title: "Certificado de competencia Nivel A2",
       description: "Curso teórico-práctico con exámenes en cada nivel",
       dowload: openenglish,
       icon: "course",
@@ -233,7 +233,7 @@ export const timeLineAll = [
       university: "PoloTic Misiones",
       years: "09/2020- 10/2020",
       title: "Inglés para el desarrollo de Software",
-      description: "Curso teórico de 18hr en total",
+      description: "Curso teórico de 18 hr. en total",
       dowload: polotic,
       icon: "course",
     },

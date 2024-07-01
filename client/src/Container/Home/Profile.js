@@ -39,7 +39,7 @@ export default function Profile({ language }) {
           </h2>
           <h1 className="i-name">Karen Derkach</h1>
           <span className="i-mobile">
-            {language === "EN" ? "- Developer Web -" : "- Desarrolladora Web -"}
+            {language === "EN" ? "- Web Developer -" : "- Desarrolladora Web -"}
           </span>
           <div className="i-title">
             <div className="i-title-wrapper">
@@ -53,7 +53,7 @@ export default function Profile({ language }) {
           </div>
           <div className="i-social">
             <a
-              href="https://wa.me/5493764653483?text=Hola!,%20eh%20visto%20tu%20portfolio..."
+              href="https://wa.me/5493764653483?text=Hola!,%20He%20visto%20tu%20portfolio..."
               target="_blank"
               rel="noreferrer"
             >
@@ -81,7 +81,7 @@ export default function Profile({ language }) {
         <section className="presentation" id="aboutme" ref={sectionRef}>
           <h1 className="title">
             {language === "EN"
-              ? "From Argentina to 🌎🚀"
+              ? "From Argentina to the 🌎🚀"
               : "De Argentina al 🌎🚀"}
           </h1>
 
@@ -92,7 +92,7 @@ export default function Profile({ language }) {
               Welcome and thank you for your interest in my profile!
               </p>
               <p>
-              I'm Karen, web developer from Argentina with a passion that has grown over 3 years of experience in the field. 
+              I'm Karen, web developer a with a passion that has grown over 3 years of experience in the field. 
               <br/>
                My journey began in the accounting world, where I studied and earned my degree as a public accountant. 
               <br/>
@@ -105,7 +105,7 @@ export default function Profile({ language }) {
                 ¡Bienvenido y gracias por tu interés en mi perfil!
               </p>
               <p>
-             Soy Karen, desarrolladora web argentina con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
+             Soy Karen, desarrolladora web con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
              <br/>
              Mi trayectoria comenzó en el mundo contable, donde estudié y me titulé como contadora pública.
              <br/>
@@ -134,7 +134,7 @@ export default function Profile({ language }) {
               <h3> {language === "EN" ? "Philosophy" : "Filosofía"}</h3>
             </div>
             <div className="face back">
-              <p> {language === "EN" ? "Adding value by developing scalable, flexible, and clean software, always based on best practices and constant learning." : "Aportar valor desarrollando software escalable, flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
+              <p> {language === "EN" ? "Adding value by developing flexible and clean software, always based on best practices and constant learning." : "Aportar valor desarrollando software flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
             </div>
             </div>
            </div>

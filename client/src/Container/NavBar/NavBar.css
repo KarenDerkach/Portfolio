@@ -19,8 +19,18 @@ nav.sticky {
 }
 
 .buttonLang {
-  border: none;
-  background-color: transparent;
+  box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--black);
+    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.20);
 }
 
 .menu-items {
@@ -127,10 +137,14 @@ ul.show {
   }
 /* ------------ */
 .menu-items {
-  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--green-transp);
+  text-align: center;
+  transition: 1s;
   flex-direction: column;
-  width: 100%;
-  background-color: var(--white);
+  display: none;
 }
 
 .menu-items.show {
@@ -163,7 +177,7 @@ ul.show {
 
   .menu-lang {
     display: flex;
-    margin-right: 20vw;
+    margin: 5vw;
   }
 
   .flat {
