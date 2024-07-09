@@ -81,7 +81,7 @@ export default function NavBar({ language }) {
 
       <ul class="menu-items"id="menu-items">
         <li data-nav="main">
-          <a href="#main" className="i-link">{language === "EN" ? "HOME" : "PRINCIPAL"}</a>
+          <a href="#main" className="i-link">{language === "EN" ? "HOME" : "INICIO"}</a>
         </li>
         <li data-nav="aboutme">
           <a href="#aboutme" className="i-link">{language === "EN" ? "ABOUT ME" : "SOBRE MI"}</a>

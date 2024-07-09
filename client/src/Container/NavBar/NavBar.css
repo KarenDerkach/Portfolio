@@ -30,7 +30,7 @@ nav.sticky {
     font-size: 30px;
     font-weight: bold;
     color: var(--black);
-    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.20);
+    text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.10);
 }
 
 .menu-items {

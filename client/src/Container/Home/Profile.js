@@ -106,7 +106,7 @@ export default function Profile({ language }) {
               <p>
              Soy Karen, desarrolladora web con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
              <br/>
-             Mi trayectoria comenzó en el mundo contable, donde estudié y me titulé como contadora pública.
+             Comencé mi trayectoria profesional en el ámbito contable, donde estudié y me titulé como contadora pública.
              <br/>
              Mi interés por automatizar tareas repetitivas me llevó a descubrir el fascinante mundo del desarrollo web, y desde entonces no he mirado atrás.
               </p>

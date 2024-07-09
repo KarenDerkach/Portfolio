@@ -98,7 +98,7 @@ export const timeLineEducation = [
       years: "09/2021- 01/2022",
       title: "Desarrollador Web FullStack",
       description:
-        "Bootcamp intensivo de 4 meses. Más de 800 hrs. de código. Desarrollo de teoria y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal reuniendo todas la herramientas adquiridas durante el curso",
+        "Bootcamp intensivo de 4 meses. Más de 800 hrs. de código. Desarrollo de teoría y luego un periodo de laboratorio en el cual se desarrolla una SPA como proyecto indivual y un proyecto final grupal, reuniendo todas la herramientas adquiridas durante el curso.",
       dowload:
         "https://certificates.soyhenry.com/cert?id=74220c18-0bbc-45e9-af6d-043ecf6e9e72",
       icon: "school",
@@ -109,7 +109,7 @@ export const timeLineEducation = [
       years: "09/2021- 01/2022",
       title: "FullStack Web Developer",
       description:
-        "Intensive bootcamp of 4 months with more than 800 hours. of code, where theory is developed and then a laboratory period in which a SPA is developed as an individual project and a group final project gathering all the tools acquired during the course.",
+        "Intensive bootcamp of 4 months with more than 800 hours. of code, where theory is developed and then a laboratory period in which a SPA is developed as an individual project and a group final project, gathering all the tools acquired during the course.",
       dowload:
         "https://certificates.soyhenry.com/cert?id=74220c18-0bbc-45e9-af6d-043ecf6e9e72",
       icon: "school",
