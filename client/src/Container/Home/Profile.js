@@ -13,7 +13,6 @@ export default function Profile({ language }) {
     const handleScroll = () => {
       const rect = sectionElement.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      // Ajusta el valor de 'threshold' según tus necesidades para controlar cuándo se dispara el efecto.
       const threshold = 0.5;
 
       if (rect.top <= windowHeight * (1 - threshold)) {

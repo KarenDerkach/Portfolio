@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../react-redux/action";
-import ES from "../../assets/Home/ES.png";
-import EN from "../../assets/Home/EN.png";
 import "./NavBar.css";
-import { Button } from "@mui/material";
+
 
 export default function NavBar({ language }) {
   const dispatch = useDispatch();

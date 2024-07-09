@@ -125,7 +125,7 @@ margin-bottom: 3rem;
         justify-content: center;
         opacity: 1;
         transition: none;
-        border-radius: 15px;
+        border-radius: 0 0 15px 15px;
         bottom: 0;
     }
     .btn-view{
@@ -133,7 +133,7 @@ margin-bottom: 3rem;
       color:var(--white);
       font-size: 15px;
       font-weight: bold;
-      border-radius: 20px;
+      border-radius: 20px 20px 0 0;
     }
     .p-card:hover .p-content{ 
       opacity: 0;
@@ -142,6 +142,12 @@ margin-bottom: 3rem;
   }
   
   @media (max-width: 480px) {
+    .p-title{
+      margin: 40px 0;
+        padding: 0 20px;
+        font-size: 25px;
+        text-align: center;
+    }
     .custom-carousel .carousel-inner {
       height: 300px; /* Altura del carrusel en dispositivos muy pequeños */
     }

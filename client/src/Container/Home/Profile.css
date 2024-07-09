@@ -24,7 +24,7 @@ animation-duration: 1s;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 
@@ -500,6 +500,13 @@ background-color: transparent;
             animation: fadeIn;
             animation-duration: 8s;
         }
+        p{
+            font-size: 16px;
+        }
+        .gretting{
+        
+            font-size: 14px;
+        }
         
 }
 
@@ -512,17 +519,29 @@ background-color: transparent;
         flex-direction: column;
       
     }
+    .introduction{
+        align-items: center;
+    }
     .i-intro{
         margin-top: 3vh;
+        font-size: 30px;
     }
     .i-intro, .i-name, .i-desc{
         text-align: center;
        
     }
- 
+    .i-name{
+        font-size: 32px;
+    }
+    .i-mobile{
+        font-size: 18px;
+    }
     .i-left{
         margin-top: 10vh;
         height: 50vh;
+    }
+    .section-right{
+        width: 100%;
     }
     .i-bg{
         background-color: transparent;
@@ -532,15 +551,17 @@ background-color: transparent;
        animation: slideInUp;
        animation-duration: 2s;
        position: relative;
-       max-width: 100%; /* La imagen no crecerá más allá de su tamaño original */
-       height: auto; /* Permite que la imagen mantenga su proporción de aspecto */
-       display: block; /* Asegura que no haya espacio adicional debajo de la imagen */
+       max-width: 100%; 
+       width: 100%;
+       height: auto; 
+       display: block; 
        margin: 0 auto; 
    }
 
    .a-left{
     display: none;
 }
+
 
 .a-title{
     /* margin-top: 4vh; */
