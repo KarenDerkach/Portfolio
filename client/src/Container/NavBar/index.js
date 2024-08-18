@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { changeLanguage } from "../../react-redux/action";
 import "./NavBar.css";
 
-
 export default function NavBar({ language }) {
   const dispatch = useDispatch();
 
@@ -16,16 +15,21 @@ export default function NavBar({ language }) {
     dispatch(changeLanguage());
   }
 
-  function handleShowMenu() {
+  function toggleMenu() {
     const menuIcon = document.getElementById('menu-icon');
     const menuItems = document.getElementById('menu-items');
-    
-    menuIcon.addEventListener('click', () => {
-              menuIcon.classList.toggle('change');
-              menuItems.classList.toggle('show');
-          });
+
+    menuIcon.classList.toggle('change');
+    menuItems.classList.toggle('show');
   }
 
+  function closeMenu() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menuItems = document.getElementById('menu-items');
+
+    menuIcon.classList.remove('change');
+    menuItems.classList.remove('show');
+  }
 
   useEffect(() => {
     function handleScroll() {
@@ -71,34 +75,36 @@ export default function NavBar({ language }) {
 
   return (
     <nav>
-     
-      <div class="menu-icon" id="menu-icon" onClick={()=>{handleShowMenu()}}>
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-     
+      <div className="menu-icon" id="menu-icon" onClick={toggleMenu}>
+        <div className="bar1"></div>
+        <div className="bar2"></div>
+        <div className="bar3"></div>
+      </div>
 
-      <ul class="menu-items"id="menu-items">
-        <li data-nav="main">
+      <ul className="menu-items" id="menu-items">
+        <li data-nav="main" onClick={closeMenu}>
           <a href="#main" className="i-link">{language === "EN" ? "HOME" : "INICIO"}</a>
         </li>
-        <li data-nav="aboutme">
+        <li data-nav="aboutme" onClick={closeMenu}>
           <a href="#aboutme" className="i-link">{language === "EN" ? "ABOUT ME" : "SOBRE MI"}</a>
         </li>
-        <li data-nav="education">
+        <li data-nav="education" onClick={closeMenu}>
           <a href="#education" className="i-link">{language === "EN" ? "EDUCATION" : "EDUCACIÓN"}</a>
         </li>
-        <li data-nav="projects">
+        <li data-nav="projects" onClick={closeMenu}>
           <a href="#projects" className="i-link">{language === "EN" ? "PROJECTS" : "PROYECTOS"}</a>
         </li>
-        <li data-nav="contact">
+        <li data-nav="contact" onClick={closeMenu}>
           <a href="#contact" className="i-link">{language === "EN" ? "CONTACT" : "CONTACTO"}</a>
         </li>
       </ul>
-      
+
       <div className="menu-lang">
-          {language === "ES" ? <button onClick={handleChangeLang} className="buttonLang">ES</button> : <button onClick={handleChangeLang} className="buttonLang">EN</button>}
+        {language === "ES" ? (
+          <button onClick={handleChangeLang} className="buttonLang">ES</button>
+        ) : (
+          <button onClick={handleChangeLang} className="buttonLang">EN</button>
+        )}
       </div>
     </nav>
   );

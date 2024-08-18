@@ -439,7 +439,7 @@ background-color: transparent;
      }
 
      .cards-section{
-        flex-direction: column;
+        flex-direction: row;
            
         }
     .card{
@@ -561,7 +561,17 @@ background-color: transparent;
    .a-left{
     display: none;
 }
-
+.card{
+    width: 150px;
+    height: 150px;
+    
+}
+.card .front h3{
+    font-size: 18px;
+}
+.card .back p {
+    font-size: 11px;
+}
 
 .a-title{
     /* margin-top: 4vh; */

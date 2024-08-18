@@ -8,7 +8,7 @@ export const timeLineWorks = [
     ES: {
       id: 7,
       university: "Mawoo Pets - Delaware EEUU",
-      years: "06/2022- actualmente",
+      years: "06/2022 - 06/2024",
       title: "Desarrollador Web Full Stack",
       description: "",
       dowload: "",
@@ -17,7 +17,7 @@ export const timeLineWorks = [
     EN: {
       id: 72,
       university: "Mawoo Pets - Delaware EEUU",
-      years: "06/2022- currently",
+      years: "06/2022 - 06/2024",
       title: "Full stack Web Developer",
       description: "",
       dowload: "",
@@ -143,7 +143,7 @@ export const timeLineAll = [
     ES: {
       id: 7,
       university: "Mawoo Pets - Delaware EEUU",
-      years: "06/2022- actualmente",
+      years: "06/2022 - 06/2024",
       title: "Desarrollador Web Full Stack",
       description: "",
       dowload: "",
@@ -152,7 +152,7 @@ export const timeLineAll = [
     EN: {
       id: 72,
       university: "Mawoo Pets - Delaware EEUU",
-      years: "06/2022- currently",
+      years: "06/2022 - 06/2024",
       title: "Full Stack Web Developer",
       description: "",
       dowload: "",
