@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import Education from "./Education";
 import {
   FormControl,
@@ -8,12 +8,12 @@ import {
 } from "@mui/material";
 import "./EducationMain.css";
 
-function EducationMain({language}) {
+function EducationMain({ language }) {
   const [selectedRadio, setSelectedRadio] = useState("All");
 
   if (language === "EN") {
     return (
-      <section id='education'className="Education_Experience" >
+      <section id='education' className="Education_Experience" >
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
           <h1 className="EducationExperienceTitle">Education and experience</h1>
         </div>

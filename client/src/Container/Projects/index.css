@@ -21,8 +21,7 @@ margin-bottom: 3rem;
   }  
   .custom-carousel {
     width: 100%; 
-    max-width: 1200px; 
-    margin: auto; 
+   
   }
   
   .custom-carousel .carousel-inner {

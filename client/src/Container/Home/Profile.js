@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import photo from "../../assets/Home/profilephoto-.webp";
 
 import "./Profile.css";
@@ -7,26 +7,26 @@ import "animate.css";
 export default function Profile({ language }) {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const sectionElement = sectionRef.current;
+  // useEffect(() => {
+  //   const sectionElement = sectionRef.current;
 
-    const handleScroll = () => {
-      const rect = sectionElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const threshold = 0.5;
+  //   const handleScroll = () => {
+  //     const rect = sectionElement.getBoundingClientRect();
+  //     const windowHeight = window.innerHeight;
+  //     const threshold = 0.5;
 
-      if (rect.top <= windowHeight * (1 - threshold)) {
-        sectionElement.classList.add("animate__animated", "animate__fadeIn");
-      } else {
-        sectionElement.classList.remove("animate__animated", "animate__fadeOut");
-      }
-    };
+  //     if (rect.top <= windowHeight * (1 - threshold)) {
+  //       sectionElement.classList.add("animate__animated", "animate__fadeIn");
+  //     } else {
+  //       sectionElement.classList.remove("animate__animated", "animate__fadeOut");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
 
   return (
@@ -87,56 +87,56 @@ export default function Profile({ language }) {
           <div className="purposes-section">
             {language === "EN" ? (
               <div>
-              <p>             
-              Welcome and thank you for your interest in my profile!
-              </p>
-              <p>
-              I'm Karen, web developer a with a passion that has grown over 3 years of experience in the field. 
-              <br/>
-               My journey began in the accounting world, where I studied and earned my degree as a public accountant. 
-              <br/>
-              My interest in automating repetitive tasks led me to discover the fascinating world of web development, and I haven't looked back since.
-              </p>
+                <p>
+                  Welcome and thank you for your interest in my profile!
+                </p>
+                <p>
+                  I'm Karen, web developer a with a passion that has grown over 3 years of experience in the field.
+                  <br />
+                  My journey began in the accounting world, where I studied and earned my degree as a public accountant.
+                  <br />
+                  My interest in automating repetitive tasks led me to discover the fascinating world of web development, and I haven't looked back since.
+                </p>
               </div>
             ) : (
               <div>
-              <p>
-                ¡Bienvenido y gracias por tu interés en mi perfil!
-              </p>
-              <p>
-             Soy Karen, desarrolladora web con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
-             <br/>
-             Comencé mi trayectoria profesional en el ámbito contable, donde estudié y me titulé como contadora pública.
-             <br/>
-             Mi interés por automatizar tareas repetitivas me llevó a descubrir el fascinante mundo del desarrollo web, y desde entonces no he mirado atrás.
-              </p>
-              
+                <p>
+                  ¡Bienvenido y gracias por tu interés en mi perfil!
+                </p>
+                <p>
+                  Soy Karen, desarrolladora web con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
+                  <br />
+                  Comencé mi trayectoria profesional en el ámbito contable, donde estudié y me titulé como contadora pública.
+                  <br />
+                  Mi interés por automatizar tareas repetitivas me llevó a descubrir el fascinante mundo del desarrollo web, y desde entonces no he mirado atrás.
+                </p>
+
               </div>
             )}
           </div>
 
           <div className="cards-section">
-           <div className="card">
-            <div className="face front">
-           
-              <h3> {language === "EN" ? "Goal" : "Objetivo"}</h3>
-            </div>
-            <div className="face back">
-              <p> {language === "EN" ? "Create scalable and efficient applications that offer an exceptional user experience." : "Crear aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}</p>
-            </div>
+            <div className="card">
+              <div className="face front">
+
+                <h3> {language === "EN" ? "Goal" : "Objetivo"}</h3>
+              </div>
+              <div className="face back">
+                <p> {language === "EN" ? "Create scalable and efficient applications that offer an exceptional user experience." : "Crear aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}</p>
+              </div>
             </div>
 
-         
-           <div className="card">
-            <div className="face front">
-           
-              <h3> {language === "EN" ? "Philosophy" : "Filosofía"}</h3>
+
+            <div className="card">
+              <div className="face front">
+
+                <h3> {language === "EN" ? "Philosophy" : "Filosofía"}</h3>
+              </div>
+              <div className="face back">
+                <p> {language === "EN" ? "Adding value by developing flexible and clean software, always based on best practices and constant learning." : "Aportar valor desarrollando software flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
+              </div>
             </div>
-            <div className="face back">
-              <p> {language === "EN" ? "Adding value by developing flexible and clean software, always based on best practices and constant learning." : "Aportar valor desarrollando software flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
-            </div>
-            </div>
-           </div>
+          </div>
 
           <div className="resume">
             {language === "EN" ? (
@@ -175,7 +175,7 @@ export default function Profile({ language }) {
               ? "I hope you enjoy exploring my portfolio!"
               : "¡Espero que disfrutes explorando mi portafolio!"}
           </p>
-           </section>
+        </section>
       </div>
       <div className="section-right" >
         <div className="i-bg">

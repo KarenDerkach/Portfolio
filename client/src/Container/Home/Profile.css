@@ -13,8 +13,8 @@
 .section-left{
 display: flex;
 flex-direction: column;
-animation: fadeIn;
-animation-duration: 1s;
+/* animation: fadeIn;
+animation-duration: 1s; */
 
 }
 
@@ -225,8 +225,8 @@ justify-content: space-between;
 }
 .card{
     position: relative;
-    width: 250px;
-    height: 200px;
+    width: 220px;
+    height: 180px;
     border-radius: 10px;
     border-color: transparent;
     margin: 0 10px;
@@ -257,6 +257,7 @@ transition: 1s;
     color: var(--white);
     text-align: center;
     padding: 15px;
+    font-size: 20px;
 }
 
 .card .back{
@@ -274,7 +275,7 @@ transition: 1s;
     text-align: center;
     padding: 10px;
     margin: 0;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .card:hover .front{
@@ -427,8 +428,7 @@ background-color: transparent;
      }
      .presentation{
          height: auto;
-         animation: none;
-         animation-name:none
+    
      }
  
      .title{
