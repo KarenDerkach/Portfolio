@@ -7,27 +7,6 @@ import "animate.css";
 export default function Profile({ language }) {
   const sectionRef = useRef(null);
 
-  // useEffect(() => {
-  //   const sectionElement = sectionRef.current;
-
-  //   const handleScroll = () => {
-  //     const rect = sectionElement.getBoundingClientRect();
-  //     const windowHeight = window.innerHeight;
-  //     const threshold = 0.5;
-
-  //     if (rect.top <= windowHeight * (1 - threshold)) {
-  //       sectionElement.classList.add("animate__animated", "animate__fadeIn");
-  //     } else {
-  //       sectionElement.classList.remove("animate__animated", "animate__fadeOut");
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
 
   return (
     <div className="container" >
@@ -179,7 +158,7 @@ export default function Profile({ language }) {
       </div>
       <div className="section-right" >
         <div className="i-bg">
-          <img src={photo} alt="" className="i-img" />
+          <img src={photo} alt="Karen Derkach" className="i-img" />
         </div>
       </div>
     </div>
