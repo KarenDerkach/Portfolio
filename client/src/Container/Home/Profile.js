@@ -1,18 +1,19 @@
 import React, { useRef, useState, useEffect } from "react";
 import photo from "../../assets/Home/profilephoto-.webp";
-
 import "./Profile.css";
-import "animate.css";
 
 export default function Profile({ language }) {
-  const sectionRef = useRef(null);
-  // Lista de textos para el efecto máquina de escribir
+  // Dynamically load animate.css only on mount (performance)
+  useEffect(() => {
+    import("animate.css");
+  }, []);
+
+  // Typewriter effect
   const titles = [
     language === "EN" ? "Web Developer" : "Desarrolladora Web",
     "Front End",
-    "Back End"
+    "Back End",
   ];
-
   const [currentTitle, setCurrentTitle] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -22,12 +23,10 @@ export default function Profile({ language }) {
     let typeSpeed = isDeleting ? 100 : 120;
 
     if (!isDeleting && typedText === fullText) {
-      // Espera antes de borrar
       typeSpeed = 1000;
-      setTimeout(() => setIsDeleting(true), typeSpeed);
-      return;
+      const timeout = setTimeout(() => setIsDeleting(true), typeSpeed);
+      return () => clearTimeout(timeout);
     } else if (isDeleting && typedText === "") {
-      // Cambia al siguiente título
       setIsDeleting(false);
       setCurrentTitle((prev) => (prev + 1) % titles.length);
       return;
@@ -44,10 +43,34 @@ export default function Profile({ language }) {
     return () => clearTimeout(timeout);
   }, [typedText, isDeleting, currentTitle, titles]);
 
+  // Social links data
+  const socials = [
+    {
+      href: "https://wa.me/5493764653483?text=Hola!,%20He%20visto%20tu%20portfolio...",
+      className: "wp-icon",
+      label: "WhatsApp",
+    },
+    {
+      href: "mailto:derkach.m.karen@gmail.com?body=Hola Karen!",
+      className: "gmail-icon",
+      label: "Gmail",
+    },
+    {
+      href: "https://github.com/KarenDerkach",
+      className: "git-icon",
+      label: "GitHub",
+    },
+    {
+      href: "https://www.linkedin.com/in/karen-derkach/",
+      className: "linkedin-icon",
+      label: "LinkedIn",
+    },
+  ];
+
   return (
-    <div className="container" >
+    <div className="container">
       <div className="section-left">
-        <section className="introduction" id="main" ref={sectionRef}>
+        <section className="introduction" id="main">
           <h2 className="i-intro">
             {language === "EN" ? "Hi there, I'm" : "Hola, soy"}
           </h2>
@@ -59,52 +82,38 @@ export default function Profile({ language }) {
             <div className="i-title-wrapper">
               <div className="i-title-item typewriter">
                 {typedText}
-                <span className="typewriter-cursor">|</span>
+                <span className="typewriter-cursor" aria-hidden="true">
+                  |
+                </span>
               </div>
             </div>
           </div>
-          <div className="i-social">
-            <a
-              href="https://wa.me/5493764653483?text=Hola!,%20He%20visto%20tu%20portfolio..."
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="wp-icon" />
-            </a>
-            <a href="mailto:derkach.m.karen@gmail.com?body=Hola Karen!">
-              <div className="gmail-icon" />
-            </a>
-            <a
-              href="https://github.com/KarenDerkach"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="git-icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/karen-derkach/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="linkedin-icon" />
-            </a>
+          <div className="i-social" aria-label="Social links">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={s.label}
+              >
+                <div className={s.className} />
+              </a>
+            ))}
           </div>
         </section>
-        <section className="presentation" id="aboutme" ref={sectionRef}>
+        <section className="presentation" id="aboutme">
           <h1 className="title">
             {language === "EN"
               ? "From Argentina to the 🌎🚀"
               : "De Argentina al 🌎🚀"}
           </h1>
-
           <div className="purposes-section">
             {language === "EN" ? (
               <div>
+                <p>Welcome and thank you for your interest in my profile!</p>
                 <p>
-                  Welcome and thank you for your interest in my profile!
-                </p>
-                <p>
-                  I'm Karen, web developer a with a passion that has grown over 3 years of experience in the field.
+                  I'm Karen, web developer with a passion that has grown over 3 years of experience in the field.
                   <br />
                   My journey began in the accounting world, where I studied and earned my degree as a public accountant.
                   <br />
@@ -113,9 +122,7 @@ export default function Profile({ language }) {
               </div>
             ) : (
               <div>
-                <p>
-                  ¡Bienvenido y gracias por tu interés en mi perfil!
-                </p>
+                <p>¡Bienvenido y gracias por tu interés en mi perfil!</p>
                 <p>
                   Soy Karen, desarrolladora web con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
                   <br />
@@ -123,66 +130,53 @@ export default function Profile({ language }) {
                   <br />
                   Mi interés por automatizar tareas repetitivas me llevó a descubrir el fascinante mundo del desarrollo web, y desde entonces no he mirado atrás.
                 </p>
-
               </div>
             )}
           </div>
-
           <div className="cards-section">
             <div className="card">
               <div className="face front">
-
-                <h3> {language === "EN" ? "Goal" : "Objetivo"}</h3>
+                <h3>{language === "EN" ? "Goal" : "Objetivo"}</h3>
               </div>
               <div className="face back">
-                <p> {language === "EN" ? "Create scalable and efficient applications that offer an exceptional user experience." : "Crear aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}</p>
+                <p>
+                  {language === "EN"
+                    ? "Create scalable and efficient applications that offer an exceptional user experience."
+                    : "Crear aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}
+                </p>
               </div>
             </div>
-
-
             <div className="card">
               <div className="face front">
-
-                <h3> {language === "EN" ? "Philosophy" : "Filosofía"}</h3>
+                <h3>{language === "EN" ? "Philosophy" : "Filosofía"}</h3>
               </div>
               <div className="face back">
-                <p> {language === "EN" ? "Adding value by developing flexible and clean software, always based on best practices and constant learning." : "Aportar valor desarrollando software flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}</p>
+                <p>
+                  {language === "EN"
+                    ? "Adding value by developing flexible and clean software, always based on best practices and constant learning."
+                    : "Aportar valor desarrollando software flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}
+                </p>
               </div>
             </div>
           </div>
-
           <div className="resume">
-            {language === "EN" ? (
-              <a
-                href="CV KD nf.pdf"
-                download="KD_CV.pdf"
-                style={{ textDecoration: "none" }}
-              >
-                {" "}
-                <div className="button">
-                  <div className="button-wrapper">
-                    <div className="text">Resume</div>
-                    <span className="icon">Download</span>
+            <a
+              href="CV KD nf.pdf"
+              download="KD_CV.pdf"
+              style={{ textDecoration: "none" }}
+            >
+              <div className="button">
+                <div className="button-wrapper">
+                  <div className="text">
+                    {language === "EN" ? "Resume" : "Curriculum"}
                   </div>
+                  <span className="icon">
+                    {language === "EN" ? "Download" : "Descargar"}
+                  </span>
                 </div>
-              </a>
-            ) : (
-              <a
-                href="CV KD nf.pdf"
-                download="KD_CV.pdf"
-                style={{ textDecoration: "none" }}
-              >
-                {" "}
-                <div class="button">
-                  <div class="button-wrapper">
-                    <div class="text">Curriculum</div>
-                    <span class="icon">Descargar</span>
-                  </div>
-                </div>
-              </a>
-            )}
+              </div>
+            </a>
           </div>
-
           <p className="gretting">
             {language === "EN"
               ? "I hope you enjoy exploring my portfolio!"
@@ -190,7 +184,7 @@ export default function Profile({ language }) {
           </p>
         </section>
       </div>
-      <div className="section-right" >
+      <div className="section-right">
         <div className="i-bg">
           <img src={photo} alt="Karen Derkach" className="i-img" />
         </div>

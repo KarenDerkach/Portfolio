@@ -13,7 +13,7 @@ function EducationMain({ language }) {
 
   if (language === "EN") {
     return (
-      <section id='education' className="Education_Experience" >
+      <section id="education" className="Education_Experience" >
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
           <h1 className="EducationExperienceTitle">Education and experience</h1>
         </div>
@@ -54,7 +54,7 @@ function EducationMain({ language }) {
     );
   } else {
     return (
-      <section className="Education_Experience" id='education'>
+      <section className="Education_Experience">
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
           <h1 className="EducationExperienceTitle">Educación y experiencia</h1>
         </div>

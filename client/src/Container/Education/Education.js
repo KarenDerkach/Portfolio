@@ -24,7 +24,7 @@ function Education(props) {
   let worksIconStyles = { background: "var(--dark-green)", color: "#fff" };
 
   return (
-    <div>
+    <div >
       <VerticalTimeline>
         {props.language === "EN"
           ? //ENGLISH

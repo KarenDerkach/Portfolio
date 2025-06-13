@@ -51,7 +51,7 @@ export default function NavBar({ language }) {
       const navList = document.querySelectorAll(".menu-items li");
 
       const options = {
-        threshold: 0.6,
+        threshold: 0.2,
       };
 
       const observer = new IntersectionObserver((entries) => {
