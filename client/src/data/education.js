@@ -6,6 +6,26 @@ import openenglish from "../assets/Education/openEnglish.pdf";
 export const timeLineWorks = [
   {
     ES: {
+      id: 8,
+      university: "Nuromedia GmbH - Colonia, Alemania",
+      years: "03/2025 - actualidad",
+      title: "Frontend Web Developer",
+      description: "",
+      dowload: "",
+      icon: "work",
+    },
+    EN: {
+      id: 82,
+      university: "Nuromedia GmbH - Cologne, Germany",
+      years: "03/2025 - present",
+      title: "Frontend Web Developer",
+      description: "",
+      dowload: "",
+      icon: "work",
+    },
+  },
+  {
+    ES: {
       id: 7,
       university: "Mawoo Pets - Delaware EEUU",
       years: "06/2022 - 06/2024",
@@ -23,7 +43,7 @@ export const timeLineWorks = [
       dowload: "",
       icon: "work",
     },
-  },
+  }
 ];
 export const timeLineCourses = [
   {
@@ -139,6 +159,26 @@ export const timeLineEducation = [
 ];
 
 export const timeLineAll = [
+  {
+    ES: {
+      id: 8,
+      university: "Nuromedia GmbH - Colonia, Alemania",
+      years: "03/2025 - actualidad",
+      title: "Frontend Web Developer",
+      description: "",
+      dowload: "",
+      icon: "work",
+    },
+    EN: {
+      id: 82,
+      university: "Nuromedia GmbH - Cologne, Germany",
+      years: "03/2025 - present",
+      title: "Frontend Web Developer",
+      description: "",
+      dowload: "",
+      icon: "work",
+    },
+  },
   {
     ES: {
       id: 7,

@@ -16,7 +16,7 @@ import { MdWork } from "react-icons/md";
 import "./Education.css";
 
 function Education(props) {
- 
+
 
   //styles
   let schoolIconStyles = { background: "var(--light-brown)", color: "#fff" };
@@ -28,40 +28,42 @@ function Education(props) {
       <VerticalTimeline>
         {props.language === "EN"
           ? //ENGLISH
-            //if botton == both?
-            props.selectedRadio === "All"
+          //if botton == both?
+          props.selectedRadio === "All"
             ? timeLineAll.map((elem) => {
-                return (
-                  <VerticalTimelineElement
-                    key={elem.EN.id}
-                    date={elem.EN.years}
-                    iconStyle={
-                      (elem.EN.icon === "school" && schoolIconStyles) ||
-                      (elem.EN.icon === "course" && courseIconStyles) ||
-                      (elem.EN.icon === "work" && worksIconStyles)
-                    }
-                    icon={
-                      (elem.EN.icon === "school" && <MdSchool />) ||
-                      (elem.EN.icon === "course" && <BsPaperclip />) ||
-                      (elem.EN.icon === "work" && <MdWork />)
-                    }
-                    className="e-structure"
-                  >
-                    <a href={elem.EN.dowload} className="e-links">
-                      <h3 className="vertical-timeline-element-title">
-                        {elem.EN.title}
-                      </h3>
-                    </a>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {elem.EN.university}
-                    </h4>
-                    <p className="e-description">{elem.EN.description}</p>
-                  </VerticalTimelineElement>
-                );
-              })
+              return (
+                <VerticalTimelineElement
+                  key={elem.EN.id}
+                  date={elem.EN.years}
+                  iconStyle={
+                    (elem.EN.icon === "school" && schoolIconStyles) ||
+                    (elem.EN.icon === "course" && courseIconStyles) ||
+                    (elem.EN.icon === "work" && worksIconStyles)
+                  }
+                  icon={
+                    (elem.EN.icon === "school" && <MdSchool />) ||
+                    (elem.EN.icon === "course" && <BsPaperclip />) ||
+                    (elem.EN.icon === "work" && <MdWork />)
+                  }
+                  className="e-structure"
+                >
+                  {elem.EN.dowload ? <a href={elem.EN.dowload} className="e-links">
+                    <h3 className="vertical-timeline-element-title">
+                      {elem.EN.title}
+                    </h3> </a> : <h3 className="vertical-timeline-element-title">
+                    {elem.EN.title}
+                  </h3>}
+
+                  <h4 className="vertical-timeline-element-subtitle">
+                    {elem.EN.university}
+                  </h4>
+                  <p className="e-description">{elem.EN.description}</p>
+                </VerticalTimelineElement>
+              );
+            })
             : //else botton == Education or Courses
             props.selectedRadio === "Education"
-            ? timeLineEducation.map((elem) => {
+              ? timeLineEducation.map((elem) => {
                 if (elem.EN.icon === "school") {
                   return (
                     <VerticalTimelineElement
@@ -85,59 +87,61 @@ function Education(props) {
                   return null;
                 }
               })
-            : //button === courses
-            props.selectedRadio === "Courses"
-            ? timeLineCourses.map((elem) => {
-                if (elem.EN.icon === "course") {
-                  return (
-                    <VerticalTimelineElement
-                      key={elem.EN.id}
-                      date={elem.EN.years}
-                      iconStyle={courseIconStyles}
-                      icon={<BsPaperclip />}
-                    >
-                      <a href={elem.EN.dowload} className="e-links">
-                        <h3 className="vertical-timeline-element-title">
+              : //button === courses
+              props.selectedRadio === "Courses"
+                ? timeLineCourses.map((elem) => {
+                  if (elem.EN.icon === "course") {
+                    return (
+                      <VerticalTimelineElement
+                        key={elem.EN.id}
+                        date={elem.EN.years}
+                        iconStyle={courseIconStyles}
+                        icon={<BsPaperclip />}
+                      >
+                        <a href={elem.EN.dowload} className="e-links">
+                          <h3 className="vertical-timeline-element-title">
+                            {elem.EN.title}
+                          </h3>
+                        </a>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          {elem.EN.university}
+                        </h4>
+                        <p>{elem.EN.description}</p>
+                      </VerticalTimelineElement>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
+                : timeLineWorks.map((elem) => {
+                  if (elem.EN.icon === "work") {
+                    return (
+                      <VerticalTimelineElement
+                        key={elem.EN.id}
+                        date={elem.EN.years}
+                        iconStyle={worksIconStyles}
+                        icon={<MdWork />}
+                      >
+                        {elem.EN.dowload ? <a href={elem.EN.dowload} className="e-links">
+                          <h3 className="vertical-timeline-element-title">
+                            {elem.EN.title}
+                          </h3>
+                        </a> : <h3 className="vertical-timeline-element-title">
                           {elem.EN.title}
-                        </h3>
-                      </a>
-                      <h4 className="vertical-timeline-element-subtitle">
-                        {elem.EN.university}
-                      </h4>
-                      <p>{elem.EN.description}</p>
-                    </VerticalTimelineElement>
-                  );
-                } else {
-                  return null;
-                }
-              })
-            : timeLineWorks.map((elem) => {
-                if (elem.EN.icon === "work") {
-                  return (
-                    <VerticalTimelineElement
-                      key={elem.EN.id}
-                      date={elem.EN.years}
-                      iconStyle={worksIconStyles}
-                      icon={<MdWork />}
-                    >
-                      <a href={elem.EN.dowload} className="e-links">
-                        <h3 className="vertical-timeline-element-title">
-                          {elem.EN.title}
-                        </h3>
-                      </a>
-                      <h4 className="vertical-timeline-element-subtitle">
-                        {elem.EN.university}
-                      </h4>
-                      <p>{elem.EN.description}</p>
-                    </VerticalTimelineElement>
-                  );
-                } else {
-                  return null;
-                }
-              })
+                        </h3>}
+                        <h4 className="vertical-timeline-element-subtitle">
+                          {elem.EN.university}
+                        </h4>
+                        <p>{elem.EN.description}</p>
+                      </VerticalTimelineElement>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
           : //ESPAÑOL
           props.selectedRadio === "All"
-          ? timeLineAll.map((elem) => {
+            ? timeLineAll.map((elem) => {
               return (
                 <VerticalTimelineElement
                   key={elem.ES.id}
@@ -154,11 +158,13 @@ function Education(props) {
                   }
                   className="e-structure"
                 >
-                  <a href={elem.ES.dowload} className="e-links">
+                  {elem.ES.dowload ? <a href={elem.ES.dowload} className="e-links">
                     <h3 className="vertical-timeline-element-title">
                       {elem.ES.title}
                     </h3>
-                  </a>
+                  </a> : <h3 className="vertical-timeline-element-title">
+                    {elem.ES.title}
+                  </h3>}
                   <h4 className="vertical-timeline-element-subtitle">
                     {elem.ES.university}
                   </h4>
@@ -166,80 +172,82 @@ function Education(props) {
                 </VerticalTimelineElement>
               );
             })
-          : props.selectedRadio === "Education"
-          ? timeLineEducation.map((elem) => {
-              if (elem.ES.icon === "school") {
-                return (
-                  <VerticalTimelineElement
-                    key={elem.ES.id}
-                    date={elem.ES.years}
-                    iconStyle={schoolIconStyles}
-                    icon={<MdSchool />}
-                  >
-                    <a href={elem.ES.dowload} className="e-links">
-                      <h3 className="vertical-timeline-element-title">
-                        {elem.ES.title}
-                      </h3>
-                    </a>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {elem.ES.university}
-                    </h4>
-                    <p>{elem.ES.description}</p>
-                  </VerticalTimelineElement>
-                );
-              } else {
-                return null;
-              }
-            })
-          : props.selectedRadio === "Courses"
-          ? timeLineCourses.map((elem) => {
-              if (elem.ES.icon === "course") {
-                return (
-                  <VerticalTimelineElement
-                    key={elem.ES.id}
-                    date={elem.ES.years}
-                    iconStyle={courseIconStyles}
-                    icon={<BsPaperclip />}
-                  >
-                    <a href={elem.ES.dowload} className="e-links">
-                      <h3 className="vertical-timeline-element-title">
-                        {elem.ES.title}
-                      </h3>
-                    </a>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {elem.ES.university}
-                    </h4>
-                    <p>{elem.ES.description}</p>
-                  </VerticalTimelineElement>
-                );
-              } else {
-                return null;
-              }
-            })
-          : timeLineWorks.map((elem) => {
-              if (elem.ES.icon === "work") {
-                return (
-                  <VerticalTimelineElement
-                    key={elem.ES.id}
-                    date={elem.ES.years}
-                    iconStyle={worksIconStyles}
-                    icon={<MdWork />}
-                  >
-                    <a href={elem.ES.dowload} className="e-links">
-                      <h3 className="vertical-timeline-element-title">
-                        {elem.ES.title}
-                      </h3>
-                    </a>
-                    <h4 className="vertical-timeline-element-subtitle">
-                      {elem.ES.university}
-                    </h4>
-                    <p>{elem.ES.description}</p>
-                  </VerticalTimelineElement>
-                );
-              } else {
-                return null;
-              }
-            })}
+            : props.selectedRadio === "Education"
+              ? timeLineEducation.map((elem) => {
+                if (elem.ES.icon === "school") {
+                  return (
+                    <VerticalTimelineElement
+                      key={elem.ES.id}
+                      date={elem.ES.years}
+                      iconStyle={schoolIconStyles}
+                      icon={<MdSchool />}
+                    >
+                      <a href={elem.ES.dowload} className="e-links">
+                        <h3 className="vertical-timeline-element-title">
+                          {elem.ES.title}
+                        </h3>
+                      </a>
+                      <h4 className="vertical-timeline-element-subtitle">
+                        {elem.ES.university}
+                      </h4>
+                      <p>{elem.ES.description}</p>
+                    </VerticalTimelineElement>
+                  );
+                } else {
+                  return null;
+                }
+              })
+              : props.selectedRadio === "Courses"
+                ? timeLineCourses.map((elem) => {
+                  if (elem.ES.icon === "course") {
+                    return (
+                      <VerticalTimelineElement
+                        key={elem.ES.id}
+                        date={elem.ES.years}
+                        iconStyle={courseIconStyles}
+                        icon={<BsPaperclip />}
+                      >
+                        <a href={elem.ES.dowload} className="e-links">
+                          <h3 className="vertical-timeline-element-title">
+                            {elem.ES.title}
+                          </h3>
+                        </a>
+                        <h4 className="vertical-timeline-element-subtitle">
+                          {elem.ES.university}
+                        </h4>
+                        <p>{elem.ES.description}</p>
+                      </VerticalTimelineElement>
+                    );
+                  } else {
+                    return null;
+                  }
+                })
+                : timeLineWorks.map((elem) => {
+                  if (elem.ES.icon === "work") {
+                    return (
+                      <VerticalTimelineElement
+                        key={elem.ES.id}
+                        date={elem.ES.years}
+                        iconStyle={worksIconStyles}
+                        icon={<MdWork />}
+                      >
+                        {elem.ES.dowload ? <a href={elem.ES.dowload} className="e-links">
+                          <h3 className="vertical-timeline-element-title">
+                            {elem.ES.title}
+                          </h3>
+                        </a> : <h3 className="vertical-timeline-element-title">
+                          {elem.ES.title}
+                        </h3>}
+                        <h4 className="vertical-timeline-element-subtitle">
+                          {elem.ES.university}
+                        </h4>
+                        <p>{elem.ES.description}</p>
+                      </VerticalTimelineElement>
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
       </VerticalTimeline>
     </div>
   );

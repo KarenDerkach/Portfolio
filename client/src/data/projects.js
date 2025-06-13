@@ -139,7 +139,7 @@ export const projectsData = [
         { img: html, name: "HTML" },
       ]
     },
-    link: "https://dercon-srl.vercel.app/",
+    link: null,
     code: "https://github.com/KarenDerkach/DERCON_SRL",
   },
 ];

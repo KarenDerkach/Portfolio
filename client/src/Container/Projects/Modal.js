@@ -66,11 +66,14 @@ export default function Projects({ project, openModal, setOpenModal, language })
                   {language === 'EN' ? 'CODE' : 'CÓDIGO'}
                 </a>
               </button>
-              <button>
-                <a href={project.link} target='_blank' rel='noreferrer'>
-                  {language === 'EN' ? 'WEB SITE' : 'SITIO WEB'}
-                </a>
-              </button>
+              {project.link && (
+                <button>
+                  <a href={project.link} target='_blank' rel='noreferrer'>
+                    {language === 'EN' ? 'WEB SITE' : 'SITIO WEB'}
+                  </a>
+                </button>
+              )}
+
             </div>
           </Box>
         </Fade>

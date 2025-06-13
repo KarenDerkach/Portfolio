@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import photo from "../../assets/Home/profilephoto-.webp";
 
 import "./Profile.css";
@@ -6,7 +6,43 @@ import "animate.css";
 
 export default function Profile({ language }) {
   const sectionRef = useRef(null);
+  // Lista de textos para el efecto máquina de escribir
+  const titles = [
+    language === "EN" ? "Web Developer" : "Desarrolladora Web",
+    "Front End",
+    "Back End"
+  ];
 
+  const [currentTitle, setCurrentTitle] = useState(0);
+  const [typedText, setTypedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const fullText = titles[currentTitle];
+    let typeSpeed = isDeleting ? 100 : 120;
+
+    if (!isDeleting && typedText === fullText) {
+      // Espera antes de borrar
+      typeSpeed = 1000;
+      setTimeout(() => setIsDeleting(true), typeSpeed);
+      return;
+    } else if (isDeleting && typedText === "") {
+      // Cambia al siguiente título
+      setIsDeleting(false);
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setTypedText((prev) =>
+        isDeleting
+          ? fullText.substring(0, prev.length - 1)
+          : fullText.substring(0, prev.length + 1)
+      );
+    }, typeSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [typedText, isDeleting, currentTitle, titles]);
 
   return (
     <div className="container" >
@@ -21,12 +57,10 @@ export default function Profile({ language }) {
           </span>
           <div className="i-title">
             <div className="i-title-wrapper">
-              <div className="i-title-item">
-                {" "}
-                {language === "EN" ? "Web Developer" : "Desarrolladora Web"}
+              <div className="i-title-item typewriter">
+                {typedText}
+                <span className="typewriter-cursor">|</span>
               </div>
-              <div className="i-title-item"> Front End </div>
-              <div className="i-title-item"> Back End </div>
             </div>
           </div>
           <div className="i-social">
@@ -120,7 +154,7 @@ export default function Profile({ language }) {
           <div className="resume">
             {language === "EN" ? (
               <a
-                href="Karen Derkach - CV EN.pdf"
+                href="CV KD nf.pdf"
                 download="KD_CV.pdf"
                 style={{ textDecoration: "none" }}
               >
@@ -134,14 +168,14 @@ export default function Profile({ language }) {
               </a>
             ) : (
               <a
-                href="Karen Derkach - CV ES.pdf"
+                href="CV KD nf.pdf"
                 download="KD_CV.pdf"
                 style={{ textDecoration: "none" }}
               >
                 {" "}
                 <div class="button">
                   <div class="button-wrapper">
-                    <div class="text">Mi CV</div>
+                    <div class="text">Curriculum</div>
                     <span class="icon">Descargar</span>
                   </div>
                 </div>

@@ -2,10 +2,10 @@
 
 .container{
     display: flex;
-    width: 100%;
-    max-width: 1430px;
+    width: 100vw;
+    max-width: none;
     height: 100%;
-    margin: auto 0 0 auto;
+    margin: 0 0 0 0;
     padding-right: 0;
     padding-top: 0;
  
@@ -19,7 +19,7 @@ animation-duration: 1s; */
 }
 
 .introduction{
-    padding: 150px 0;
+    padding: 15rem 0 15rem 5rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -50,24 +50,16 @@ animation-duration: 1s; */
 }
 
 /*ANIMACION A LOS ITEM*/
-.i-title-wrapper{
-   height: 100%;
-   animation: move 5s ease-in-out infinite alternate;
 
+.typewriter-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 0.7s steps(1) infinite;
 }
 
-@keyframes move {
-   25%{
-       transform: translateY(-50px);
-   }
-   50%{
-       transform: translateY(-100px);
-   }
- 100%{
-       transform: translateY(-150px);
-   }
-   
-
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 .i-title-item{
     height: 60px;
@@ -140,7 +132,7 @@ animation-duration: 1s; */
 /*---------------------------------------------*/
 
 .section-right{
-    width: 100%;
+    
     height: -moz-fit-content;
     height: 100vh;
     position: sticky;
@@ -185,6 +177,7 @@ animation-duration: 1s; */
 
 /*---------------------------------------------------*/
 .presentation{
+    padding: 0 5rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -428,6 +421,7 @@ background-color: transparent;
      }
      .presentation{
          height: auto;
+            padding: 0 20px;
     
      }
  
@@ -451,7 +445,7 @@ background-color: transparent;
          align-items: center;
          font-size: 16px;
          padding-left: 0;
-         padding: 20px;
+        
      }
      .purposes-section p{
          text-align: center;

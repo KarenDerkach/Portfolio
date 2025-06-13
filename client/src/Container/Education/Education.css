@@ -12,6 +12,7 @@
 .vertical-timeline-element-title{
     font-weight: bold;
     margin: 5px;
+    color: var(--btn);
 }
 
 .vertical-timeline-element-subtitle{

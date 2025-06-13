@@ -1,9 +1,9 @@
 import { CHANGE_LANGUAGE } from './action'
 
 const initialState = {
-  language: 'ES'
+  language: 'EN'
 }
-export default function rootReducer (state = initialState, action) {
+export default function rootReducer(state = initialState, action) {
   switch (action.type) {
     case CHANGE_LANGUAGE:
       if (state.language === 'ES') {
