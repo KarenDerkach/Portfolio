@@ -36,8 +36,8 @@
 
 }
 .css-i4bv87-MuiSvgIcon-root{
-  width: 65px!important;
-  height: 50px !important;
+width: 5rem !important;
+    height: 3rem !important;
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
@@ -121,14 +121,22 @@
     background-positon-x: 0px;
   }
 }
-
+@media  screen and (max-width:768px) {
+  .menu__link {
+  font-size: 1rem;
+}
+  .css-i4bv87-MuiSvgIcon-root{
+width: 3rem !important;
+    height: 2rem !important;
+}
+}
 @media screen and  (max-width: 480px){
  .footer{
   padding: 20px 20px;
  }
- .css-i4bv87-MuiSvgIcon-root{
-  width: 60px!important;
-  height: 60px !important;
+.css-i4bv87-MuiSvgIcon-root{
+width: 3rem !important;
+    height: 2rem !important;
 }
 .footer p {
   text-align: center;

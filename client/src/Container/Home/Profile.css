@@ -19,7 +19,7 @@ animation-duration: 1s; */
 }
 
 .introduction{
-    padding: 15rem 0 15rem 5rem;
+    padding: 10rem 0 10rem 5rem;
     height: 100vh;
     display: flex;
     flex-direction: column;

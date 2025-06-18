@@ -34,28 +34,37 @@ function Portfolio({ language }) {
     };
   };
 
-
-
-
   return (
     <div className="p-container">
       <h1 className="p-title">{language === 'EN' ? 'Projects' : 'Proyectos'}</h1>
 
-      <div id="carouselExampleControls" className="carousel slide custom-carousel" data-bs-ride="carousel">
+      {/* Grid Desktop */}
+      <div className="projects-grid desktop-only">
+        {projectsData.map((project, index) => (
+          <div key={project.id || index} className="p-card grid-card">
+            <img className="image" src={images[index]} alt={`slide_image_${index}`} />
+            <div className="p-content" onClick={() => handleOpenModal(index)}>
+              <button className="btn-view" >
+                {language === 'EN' ? 'View More' : 'Ver Más'}
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Carousel Mobile */}
+      <div id="carouselExampleControls" className="carousel slide custom-carousel mobile-only" data-bs-ride="carousel">
         <div className="carousel-inner">
           {projectsData.map((project, index) => (
             <div key={project.id || index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="10000">
-              <div className='p-card'>
-                <img className='image' src={images[index]} alt={`slide_image_${index}`} />
-                <div className='p-content'>
-                  <button className='btn-view' onClick={() => handleOpenModal(index)}>
+              <div className="p-card">
+                <img className="image" src={images[index]} alt={`slide_image_${index}`} />
+                <div className="p-content">
+                  <button className="btn-view" onClick={() => handleOpenModal(index)}>
                     {language === 'EN' ? 'View More' : 'Ver Más'}
                   </button>
                 </div>
               </div>
-              {openModalIndex === index && (
-                <Modal project={language === 'EN' ? getProjectDataByLanguage(project, 'EN') : getProjectDataByLanguage(project, 'ES')} openModal={true} setOpenModal={handleCloseModal} language={language} />
-              )}
             </div>
           ))}
         </div>
@@ -68,6 +77,16 @@ function Portfolio({ language }) {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
+      {/* Modal */}
+      {openModalIndex !== null && (
+        <Modal
+          project={language === 'EN' ? getProjectDataByLanguage(projectsData[openModalIndex], 'EN') : getProjectDataByLanguage(projectsData[openModalIndex], 'ES')}
+          openModal={true}
+          setOpenModal={handleCloseModal}
+          language={language}
+        />
+      )}
     </div>
   );
 }
