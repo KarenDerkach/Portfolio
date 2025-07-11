@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import photo from "../../assets/Home/profilephoto-.webp";
 import "./Profile.css";
 
@@ -9,11 +9,11 @@ export default function Profile({ language }) {
   }, []);
 
   // Typewriter effect
-  const titles = [
+  const titles = React.useMemo(() => [
     language === "EN" ? "Web Developer" : "Desarrolladora Web",
     "Front End",
     "Back End",
-  ];
+  ], [language]);
   const [currentTitle, setCurrentTitle] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

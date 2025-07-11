@@ -18,7 +18,10 @@ import typescript from "../assets/Skills/typescript.png";
 import mongo from "../assets/Skills/mongodb.png";
 import next from "../assets/Skills/nextjs.png"
 import bootstrap from "../assets/Skills/bootstrap.png"
-
+import firebase from "../assets/Skills/firebase.png"
+import tailwind from "../assets/Skills/Tailwind.png"
+import gemini from "../assets/Skills/gemini.png"
+import tripSync from "../assets/Projects/tripSync.png";
 export const projectsData = [
   {
     id: 1,
@@ -141,6 +144,31 @@ export const projectsData = [
     },
     link: null,
     code: "https://github.com/KarenDerkach/DERCON_SRL",
+  },
+  {
+    id: 6,
+    title: { ES: "TripSync", EN: "TripSync" },
+    description: {
+
+      ES: "Desarrollo de una aplicación web para la gestión de viajes, permitiendo a los usuarios planificar, organizar y compartir sus itinerarios de viaje.",
+      EN: "Development of a web application for travel management, allowing users to plan, organize, and share their travel itineraries.",
+    },
+    image: tripSync,
+    tools: {
+      front: [
+        { img: react, name: "React" },
+        { img: bootstrap, name: "Bootstrap" },
+        { img: js, name: "JavaScript" },
+        { img: css, name: "CSS" },
+        { img: html, name: "HTML" },
+        { img: firebase, name: "Firebase" },
+        { img: tailwind, name: "Tailwind" },
+        { img: gemini, name: "Gemini AI" },
+
+      ]
+    },
+    link: "https://trip-sync-planner.vercel.app/",
+    code: "https://github.com/KarenDerkach/TripSync-planner",
   },
 ];
 
