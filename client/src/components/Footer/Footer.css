@@ -109,7 +109,7 @@ width: 5rem !important;
     background-position-x: 1000px;
   }
   100% {
-    background-positon-x: 0px;
+    background-position-x: 0px;
   }
 }
 
@@ -118,7 +118,7 @@ width: 5rem !important;
     background-position-x: -1000px;
   }
   100% {
-    background-positon-x: 0px;
+    background-position-x: 0px;
   }
 }
 @media  screen and (max-width:768px) {
