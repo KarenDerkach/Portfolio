@@ -13,12 +13,12 @@ function EducationMain({ language }) {
 
   if (language === "EN") {
     return (
-      <section id="education" className="Education_Experience" >
+      <div >
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-          <h1 className="EducationExperienceTitle">Education and experience</h1>
+          <h1 className="educationExperienceTitle">Education and experience</h1>
         </div>
 
-        <div className="RadioButtons">
+        <div className="radioButtons">
           <FormControl
             component="fieldset"
             value={selectedRadio}
@@ -50,16 +50,16 @@ function EducationMain({ language }) {
         </div>
 
         <Education language={language} selectedRadio={selectedRadio}></Education>
-      </section>
+      </div>
     );
   } else {
     return (
-      <section className="Education_Experience">
+      <div>
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-          <h1 className="EducationExperienceTitle">Educación y experiencia</h1>
+          <h1 className="educationExperienceTitle">Educación y experiencia</h1>
         </div>
 
-        <div className="RadioButtons">
+        <div className="radioButtons">
           <FormControl
             component="fieldset"
             value={selectedRadio}
@@ -94,7 +94,7 @@ function EducationMain({ language }) {
         </div>
 
         <Education language={language} selectedRadio={selectedRadio}></Education>
-      </section>
+      </div>
     );
   }
 }

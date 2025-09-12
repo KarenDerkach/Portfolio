@@ -1,8 +1,8 @@
 
-.Education_Experience{
+#education{
     padding: 50px ;
 }
-.EducationExperienceTitle{
+.educationExperienceTitle{
     display: flex;
     flex-direction: column;
 align-items: center;
@@ -14,20 +14,20 @@ color:var(--green-solid);
 
 
 }
-.RadioButtons{
+.radioButtons{
     width: 100%;
     
 }
-.RadioButtons >fieldset{
+.radioButtons >fieldset{
     display: flex;
     align-items:center ;
     justify-content: center;
 }
-.RadioButtons >fieldset >div > label>.MuiRadio-root{
+.radioButtons >fieldset >div > label>.MuiRadio-root{
     color:var(--green-solid)
 }
 
-.RadioButtons >fieldset >div > label>.MuiRadio-root:hover{
+.radioButtons >fieldset >div > label>.MuiRadio-root:hover{
     background-color:#dde3b35b
 }
 .vertical-timeline::before {
@@ -36,10 +36,10 @@ color:var(--green-solid);
 
 
 @media screen and  (max-width: 480px){
-    .Education_Experience {
+    #education {
         padding: 1rem;
     }
-    .EducationExperienceTitle{
+    .educationExperienceTitle{
         margin: 10px 0;
         padding: 0 20px;
         font-size: 25px;
@@ -47,7 +47,7 @@ color:var(--green-solid);
     
     
     }
-    .RadioButtons{
+    .radioButtons{
         width: auto;
         margin-left: 7vw;
     }

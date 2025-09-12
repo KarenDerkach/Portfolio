@@ -161,8 +161,8 @@ export default function Profile({ language }) {
           </div>
           <div className="resume">
             <a
-              href="CV KD nf.pdf"
-              download="KD_CV.pdf"
+              href="CV Karen Derkach.pdf"
+              download="CV Karen Derkach.pdf"
               style={{ textDecoration: "none" }}
             >
               <div className="button">

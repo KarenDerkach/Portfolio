@@ -30,10 +30,10 @@ export default function NavBar({ language }) {
     menuIcon.classList.remove('change');
     menuItems.classList.remove('show');
   }
-
+  // Navbar scroll effect
   useEffect(() => {
     function handleScroll() {
-      const nav = document.querySelector("nav");
+      const nav = document.querySelector(".navbarContainer");
       nav.classList.toggle("sticky", window.scrollY > 50);
     }
 
@@ -44,10 +44,12 @@ export default function NavBar({ language }) {
     };
   }, []);
 
+  // Section observation 
+
   useEffect(() => {
     function observeSections() {
       const sections = document.querySelectorAll("section");
-      const nav = document.querySelector("nav");
+      const nav = document.querySelector(".navbarContainer");
       const navList = document.querySelectorAll(".menu-items li");
 
       const options = {
@@ -66,6 +68,7 @@ export default function NavBar({ language }) {
       }, options);
 
       sections.forEach((section) => {
+        console.log("SECTION", section);
         observer.observe(section);
       });
     }
@@ -73,8 +76,9 @@ export default function NavBar({ language }) {
     observeSections();
   }, []);
 
+
   return (
-    <nav>
+    <nav className="navbarContainer">
       <div className="menu-icon" id="menu-icon" onClick={toggleMenu}>
         <div className="bar1"></div>
         <div className="bar2"></div>

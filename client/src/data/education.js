@@ -8,7 +8,7 @@ export const timeLineWorks = [
     ES: {
       id: 8,
       university: "Nuromedia GmbH - Colonia, Alemania",
-      years: "03/2025 - actualidad",
+      years: "03/2025 - 08/2025",
       title: "Frontend Web Developer",
       description: "",
       dowload: "",
@@ -17,7 +17,7 @@ export const timeLineWorks = [
     EN: {
       id: 82,
       university: "Nuromedia GmbH - Cologne, Germany",
-      years: "03/2025 - present",
+      years: "03/2025 - 08/2025",
       title: "Frontend Web Developer",
       description: "",
       dowload: "",
@@ -163,7 +163,7 @@ export const timeLineAll = [
     ES: {
       id: 8,
       university: "Nuromedia GmbH - Colonia, Alemania",
-      years: "03/2025 - actualidad",
+      years: "03/2025 - 08/2025",
       title: "Frontend Web Developer",
       description: "",
       dowload: "",
@@ -172,7 +172,7 @@ export const timeLineAll = [
     EN: {
       id: 82,
       university: "Nuromedia GmbH - Cologne, Germany",
-      years: "03/2025 - present",
+      years: "03/2025 - 08/2025",
       title: "Frontend Web Developer",
       description: "",
       dowload: "",
