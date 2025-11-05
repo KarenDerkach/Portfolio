@@ -72,7 +72,8 @@ export const projectsData = [
         { img: sequelize, name: "Sequelize" },
       ],
     },
-    link: "https://dogs-world.vercel.app/",
+    // link: "https://dogs-world.vercel.app/",
+    link: null,
     code: "https://github.com/KarenDerkach/PI-DOGS",
   },
   {
@@ -99,33 +100,34 @@ export const projectsData = [
         { img: sql, name: "SQL" },
       ],
     },
-    link: "http://foodarity.herokuapp.com/",
+    // link: "http://foodarity.herokuapp.com/",
+    link: null,
     code: "https://github.com/KarenDerkach/foodarity-app",
   },
+  // {
+  //   id: 4,
+  //   title: { ES: "PORTAFOLIO", EN: "PORTFOLIO" },
+  //   description: {
+
+  //     ES: "Desarrollo de una página web donde el usuario visualiza información relevante sobre mi experiencia profesional y personal.",
+  //     EN: "Development of a web page where the user can view relevant information about my professional and personal experience.",
+  //   },
+  //   image: portfolio,
+  //   tools: {
+  //     front: [
+  //       { img: react, name: "React" },
+  //       { img: redux, name: "Redux" },
+  //       { img: material, name: "MaterialUI" },
+  //       { img: js, name: "JavaScript" },
+  //       { img: css, name: "CSS" },
+  //       { img: html, name: "HTML" },
+  //     ],
+  //   },
+  //   link: "https://portfolio-karenderkach.vercel.app/",
+  //   code: "https://github.com/KarenDerkach/Portfolio",
+  // },
   {
     id: 4,
-    title: { ES: "PORTAFOLIO", EN: "PORTFOLIO" },
-    description: {
-
-      ES: "Desarrollo de una página web donde el usuario visualiza información relevante sobre mi experiencia profesional y personal.",
-      EN: "Development of a web page where the user can view relevant information about my professional and personal experience.",
-    },
-    image: portfolio,
-    tools: {
-      front: [
-        { img: react, name: "React" },
-        { img: redux, name: "Redux" },
-        { img: material, name: "MaterialUI" },
-        { img: js, name: "JavaScript" },
-        { img: css, name: "CSS" },
-        { img: html, name: "HTML" },
-      ],
-    },
-    link: "https://portfolio-karenderkach.vercel.app/",
-    code: "https://github.com/KarenDerkach/Portfolio",
-  },
-  {
-    id: 5,
     title: { ES: "DERCON SRL", EN: "DERCON SRL" },
     description: {
 
@@ -142,11 +144,11 @@ export const projectsData = [
         { img: html, name: "HTML" },
       ]
     },
-    link: null,
+    link: "https://dercon-srl.vercel.app/",
     code: "https://github.com/KarenDerkach/DERCON_SRL",
   },
   {
-    id: 6,
+    id: 5,
     title: { ES: "TripSync", EN: "TripSync" },
     description: {
 

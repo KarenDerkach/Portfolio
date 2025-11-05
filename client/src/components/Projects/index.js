@@ -4,13 +4,13 @@ import { projectsData } from '../../data/projects';
 import slide_image_1 from '../../assets/Projects/agenda.png';
 import slide_image_2 from '../../assets/Projects/dog.png';
 import slide_image_3 from '../../assets/Projects/foodarity.png';
-import slide_image_5 from '../../assets/Projects/portfolio.png';
+//import slide_image_5 from '../../assets/Projects/portfolio.png';
 import slide_image_6 from '../../assets/Projects/dercon.png';
 import slide_image_7 from '../../assets/Projects/tripSync.png';
 import './index.css';
 import Modal from './Modal';
 
-const images = [slide_image_1, slide_image_2, slide_image_3, slide_image_5, slide_image_6, slide_image_7];
+const images = [slide_image_1, slide_image_2, slide_image_3, slide_image_6, slide_image_7];
 
 function Portfolio({ language }) {
   const [openModalIndex, setOpenModalIndex] = useState(null);

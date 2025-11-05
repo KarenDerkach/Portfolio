@@ -3,9 +3,21 @@ import photo from "../../assets/Home/profilephoto-.webp";
 import "./Profile.css";
 
 export default function Profile({ language }) {
-  // Dynamically load animate.css only on mount (performance)
+  // Preload image for instant animation start
   useEffect(() => {
-    import("animate.css");
+    const img = new Image();
+    img.src = photo;
+    
+    // Load animate.css only if needed (for fallback animations)
+    const loadAnimateCSS = async () => {
+      try {
+        await import("animate.css");
+      } catch (error) {
+        console.warn("Failed to load animate.css:", error);
+      }
+    };
+    
+    loadAnimateCSS();
   }, []);
 
   // Typewriter effect
@@ -111,71 +123,116 @@ export default function Profile({ language }) {
           <div className="purposes-section">
             {language === "EN" ? (
               <div>
-                <p>Welcome and thank you for your interest in my profile!</p>
-                <p>
-                  I'm Karen, web developer with a passion that has grown over 3 years of experience in the field.
+                <p className="welcome-text">Welcome! I'm thrilled you're here to explore my journey.</p>
+                <p className="intro-text">
+                  I'm Karen, a passionate full-stack developer with 3+ years of expertise crafting digital solutions that matter.
                   <br />
-                  My journey began in the accounting world, where I studied and earned my degree as a public accountant.
+                  My unique journey began in accounting, where I developed analytical thinking and attention to detail—skills that now drive my code quality.
                   <br />
-                  My interest in automating repetitive tasks led me to discover the fascinating world of web development, and I haven't looked back since.
+                  What started as curiosity about automation evolved into a deep passion for creating intuitive, scalable applications that solve real-world problems.
                 </p>
               </div>
             ) : (
               <div>
-                <p>¡Bienvenido y gracias por tu interés en mi perfil!</p>
-                <p>
-                  Soy Karen, desarrolladora web con una pasión que se ha cultivado a lo largo de 3 años de experiencia en el sector.
+                <p className="welcome-text">¡Bienvenido! Me emociona que estés aquí para conocer mi trayectoria.</p>
+                <p className="intro-text">
+                  Soy Karen, desarrolladora full-stack apasionada con más de 3 años de experiencia creando soluciones digitales que importan.
                   <br />
-                  Comencé mi trayectoria profesional en el ámbito contable, donde estudié y me titulé como contadora pública.
+                  Mi viaje único comenzó en contabilidad, donde desarrollé pensamiento analítico y atención al detalle—habilidades que ahora impulsan la calidad de mi código.
                   <br />
-                  Mi interés por automatizar tareas repetitivas me llevó a descubrir el fascinante mundo del desarrollo web, y desde entonces no he mirado atrás.
+                  Lo que empezó como curiosidad por la automatización evolucionó hacia una pasión profunda por crear aplicaciones intuitivas y escalables que resuelven problemas reales.
                 </p>
               </div>
             )}
           </div>
-          <div className="cards-section">
-            <div className="card">
-              <div className="face front">
-                <h3>{language === "EN" ? "Goal" : "Objetivo"}</h3>
+          <div className="modern-cards-section">
+            <div className="modern-card expertise-card">
+              <div className="card-icon">
+                <span className="icon-symbol">🎯</span>
               </div>
-              <div className="face back">
-                <p>
+              <div className="card-content">
+                <h3 className="card-title">
+                  {language === "EN" ? "My Mission" : "Mi Misión"}
+                </h3>
+                <p className="card-description">
                   {language === "EN"
-                    ? "Create scalable and efficient applications that offer an exceptional user experience."
-                    : "Crear aplicaciones escalables y eficientes que ofrezcan una experiencia de usuario excepcional."}
+                    ? "Transform complex business challenges into elegant, user-centric digital solutions that drive measurable impact and exceptional experiences."
+                    : "Transformar desafíos empresariales complejos en soluciones digitales elegantes y centradas en el usuario que generen impacto medible y experiencias excepcionales."}
                 </p>
               </div>
+              <div className="card-gradient-overlay"></div>
             </div>
-            <div className="card">
-              <div className="face front">
-                <h3>{language === "EN" ? "Philosophy" : "Filosofía"}</h3>
+            
+            <div className="modern-card values-card">
+              <div className="card-icon">
+                <span className="icon-symbol">⚡</span>
               </div>
-              <div className="face back">
-                <p>
+              <div className="card-content">
+                <h3 className="card-title">
+                  {language === "EN" ? "Core Values" : "Valores Fundamentales"}
+                </h3>
+                <p className="card-description">
                   {language === "EN"
-                    ? "Adding value by developing flexible and clean software, always based on best practices and constant learning."
-                    : "Aportar valor desarrollando software flexible y limpio, siempre fundamentado en buenas prácticas y actualización constante."}
+                    ? "Continuous learning, clean architecture, and collaborative innovation. I believe in code that not only works today, but evolves gracefully tomorrow."
+                    : "Aprendizaje continuo, arquitectura limpia e innovación colaborativa. Creo en código que no solo funciona hoy, sino que evoluciona elegantemente mañana."}
                 </p>
               </div>
+              <div className="card-gradient-overlay"></div>
+            </div>
+            
+            <div className="modern-card impact-card">
+              <div className="card-icon">
+                <span className="icon-symbol">🚀</span>
+              </div>
+              <div className="card-content">
+                <h3 className="card-title">
+                  {language === "EN" ? "What Drives Me" : "Lo que me Impulsa"}
+                </h3>
+                <p className="card-description">
+                  {language === "EN"
+                    ? "Creating digital experiences that empower users and businesses alike. Every line of code is an opportunity to make someone's day better."
+                    : "Crear experiencias digitales que empoderen tanto a usuarios como empresas. Cada línea de código es una oportunidad para mejorar el día de alguien."}
+                </p>
+              </div>
+              <div className="card-gradient-overlay"></div>
             </div>
           </div>
-          <div className="resume">
-            <a
-              href="CV Karen Derkach.pdf"
-              download="CV Karen Derkach.pdf"
-              style={{ textDecoration: "none" }}
-            >
-              <div className="button">
-                <div className="button-wrapper">
-                  <div className="text">
-                    {language === "EN" ? "Resume" : "Curriculum"}
-                  </div>
-                  <span className="icon">
-                    {language === "EN" ? "Download" : "Descargar"}
-                  </span>
+          <div className="resume-section">
+            <div className="cv-download-container">
+              <a
+                href="CV Karen Derkach.pdf"
+                download="CV Karen Derkach.pdf"
+                className="premium-cv-button"
+                aria-label={language === "EN" ? "Download Karen's Resume" : "Descargar CV de Karen"}
+              >
+                <div className="button-background">
+                  <div className="button-border"></div>
+                  <div className="button-ripple"></div>
                 </div>
-              </div>
-            </a>
+                <div className="button-content">
+                  <div className="icon-container">
+                    <svg className="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2V16M12 16L7 11M12 16L17 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3 20H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div className="text-container">
+                    <span className="button-main-text">
+                      {language === "EN" ? "Download Resume" : "Descargar CV"}
+                    </span>
+                    <span className="button-sub-text">
+                      {language === "EN" ? "PDF • Updated 2025" : "PDF • Actualizado 2025"}
+                    </span>
+                  </div>
+                </div>
+                <div className="success-overlay">
+                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>{language === "EN" ? "Downloaded!" : "¡Descargado!"}</span>
+                </div>
+              </a>
+            </div>
           </div>
           <p className="gretting">
             {language === "EN"
@@ -186,7 +243,14 @@ export default function Profile({ language }) {
       </div>
       <div className="section-right">
         <div className="i-bg">
-          <img src={photo} alt="Karen Derkach" className="i-img" />
+          <img 
+            src={photo} 
+            alt="Karen Derkach" 
+            className="i-img"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
       </div>
     </div>
