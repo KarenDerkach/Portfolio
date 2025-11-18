@@ -1,5 +1,4 @@
 
-import React from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -7,8 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import './Footer.css'
 
 export default function Footer({ language }) {
-
-
+const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="waves">
@@ -38,7 +36,7 @@ export default function Footer({ language }) {
         <li className="menu__item"><a className="menu__link" href="#projects">{language === 'EN' ? 'Projects' : 'Proyectos'}</a></li>
 
       </ul>
-      <p>&copy; {language === 'EN' ? '2024 Karen Derkach | All Rights Reserved' : '2024 Karen Derkach | Todos los derechos reservados'}</p>
+      <p>&copy; {language === 'EN' ? `${currentYear} Karen Derkach | All Rights Reserved` : '2024 Karen Derkach | Todos los derechos reservados'}</p>
     </footer>
   )
 

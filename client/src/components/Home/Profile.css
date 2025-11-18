@@ -340,9 +340,12 @@ p{
     border-radius: 20px;
     padding: 2rem;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, box-shadow;
-  
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    /* Promote to GPU layer */
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
 .modern-card::before {

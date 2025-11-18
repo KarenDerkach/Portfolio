@@ -8,6 +8,9 @@ import store from './react-redux/store'
 const container = document.getElementById('root')
 const root = createRoot(container)
 
+// Add class to indicate React is loaded
+document.documentElement.classList.add('react-loaded')
+
 root.render(
   <Provider store={store}>
     <React.StrictMode>

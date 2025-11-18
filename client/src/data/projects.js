@@ -1,8 +1,9 @@
-import foodarity from "../assets/Projects/foodarity.png";
-import dog from "../assets/Projects/dog.png";
-import portfolio from "../assets/Projects/portfolio.png";
-import loading from "../assets/Projects/loading.gif";
-import dercon from "../assets/Projects/dercon.png"
+import foodarity from "../assets/Projects/foodarity-original.webp";
+import dog from "../assets/Projects/dog-original.webp";
+import agenda from "../assets/Projects/agenda-original.webp";
+import dercon from "../assets/Projects/dercon-original.webp";
+import tripSync from "../assets/Projects/tripSync-original.webp";
+
 
 import js from "../assets/Skills/javascript-logo.png";
 import react from "../assets/Skills/react-icon.png";
@@ -21,7 +22,7 @@ import bootstrap from "../assets/Skills/bootstrap.png"
 import firebase from "../assets/Skills/firebase.png"
 import tailwind from "../assets/Skills/Tailwind.png"
 import gemini from "../assets/Skills/gemini.png"
-import tripSync from "../assets/Projects/tripSync.png";
+
 export const projectsData = [
   {
     id: 1,
@@ -30,7 +31,7 @@ export const projectsData = [
       ES: "Aplicación web para la gestión de chequera almacenando y capturando información de base de dato no relacional, servicio de clima manipulado a través de API externa, calendario y calculadora.",
       EN: "Web application for checkbook management, weather service, calendar and calculator."
     },
-    image: loading,
+    image: agenda,
     tools: {
       front: [
         { img: react, name: "React" },

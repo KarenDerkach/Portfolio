@@ -8,8 +8,6 @@ import './modal.css';
 
 export default function Projects({ project, openModal, setOpenModal, language }) {
 
-  console.log(project);
-
   return (
     <div>
       <Modal

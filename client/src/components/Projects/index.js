@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { projectsData } from '../../data/projects';
 
-import slide_image_1 from '../../assets/Projects/agenda.png';
-import slide_image_2 from '../../assets/Projects/dog.png';
-import slide_image_3 from '../../assets/Projects/foodarity.png';
+import slide_image_1 from '../../assets/Projects/agenda-original.webp';
+import slide_image_2 from '../../assets/Projects/dog-original.webp';
+import slide_image_3 from '../../assets/Projects/foodarity-original.webp';
 //import slide_image_5 from '../../assets/Projects/portfolio.png';
-import slide_image_6 from '../../assets/Projects/dercon.png';
-import slide_image_7 from '../../assets/Projects/tripSync.png';
+import slide_image_6 from '../../assets/Projects/dercon-original.webp';
+import slide_image_7 from '../../assets/Projects/tripSync-original.webp';
 import './index.css';
 import Modal from './Modal';
 
-const images = [slide_image_1, slide_image_2, slide_image_3, slide_image_6, slide_image_7];
+//const images = [slide_image_1, slide_image_2, slide_image_3, slide_image_6, slide_image_7];
 
 function Portfolio({ language }) {
   const [openModalIndex, setOpenModalIndex] = useState(null);
@@ -42,7 +42,7 @@ function Portfolio({ language }) {
       <div className="projects-grid desktop-only">
         {projectsData.map((project, index) => (
           <div key={project.id || index} className="p-card grid-card">
-            <img className="image" src={images[index]} alt={`slide_image_${index}`} />
+            <img className="image" src={project.image} alt={project.title} />
             <div className="p-content" onClick={() => handleOpenModal(index)}>
               <button className="btn-view" >
                 {language === 'EN' ? 'View More' : 'Ver Más'}
@@ -58,7 +58,7 @@ function Portfolio({ language }) {
           {projectsData.map((project, index) => (
             <div key={project.id || index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="10000">
               <div className="p-card">
-                <img className="image" src={images[index]} alt={`slide_image_${index}`} />
+                <img className="image" src={project.image} alt={project.image} />
                 <div className="p-content">
                   <button className="btn-view" onClick={() => handleOpenModal(index)}>
                     {language === 'EN' ? 'View More' : 'Ver Más'}
