@@ -55,6 +55,15 @@ export default function Profile({ language }) {
     return () => clearTimeout(timeout);
   }, [typedText, isDeleting, currentTitle, titles]);
 
+const handleDownload = (e) => {
+  const button = e.target.closest('.premium-cv-button');
+  button.classList.add('downloaded');
+  
+  setTimeout(() => {
+    button.classList.remove('downloaded');
+  }, 2000); // 2 segundos
+};
+
   // Social links data
   const socials = [
     {
@@ -200,6 +209,7 @@ export default function Profile({ language }) {
           <div className="resume-section">
             <div className="cv-download-container">
               <a
+                onClick={handleDownload}
                 href="CV Karen Derkach.pdf"
                 download="CV Karen Derkach.pdf"
                 className="premium-cv-button"
@@ -234,11 +244,7 @@ export default function Profile({ language }) {
               </a>
             </div>
           </div>
-          <p className="gretting">
-            {language === "EN"
-              ? "I hope you enjoy exploring my portfolio!"
-              : "¡Espero que disfrutes explorando mi portafolio!"}
-          </p>
+       
         </section>
       </div>
       <div className="section-right">

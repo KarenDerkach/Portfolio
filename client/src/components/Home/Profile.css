@@ -8,11 +8,12 @@
     margin: 0 0 0 0;
     padding-right: 0;
     padding-top: 0;
- 
 }
 .section-left{
 display: flex;
 flex-direction: column;
+flex: 1;
+min-width: 0; /* Permite que el flex item se reduzca */
 /* Performance optimization for animated elements */
 contain: layout;
 /* animation: fadeIn;
@@ -220,7 +221,9 @@ animation-duration: 1s; */
 /*---------------------------------------------*/
 
 .section-right{
-    
+    flex: 0 0 auto;
+    width: 30%;
+    min-width: 450px;
     height: -moz-fit-content;
     height: 100vh;
     position: sticky;
@@ -293,11 +296,7 @@ animation-duration: 1s; */
     /* margin-bottom: 3rem; */
     
 }
-.gretting{
-    color: var(--black);
-    opacity: 0.5;
-    font-size: 18px;
-}
+
 
 .purposes-section{
     font-size: 20px;
@@ -436,7 +435,7 @@ p{
         transparent 100%);
     transition: left 0.6s ease;
     z-index: 0;
-    onclick: none;
+    pointer-events: none;
 }
 
 .modern-card:hover .card-gradient-overlay {
@@ -459,7 +458,6 @@ p{
 
 /*----------------------PREMIUM CV BUTTON----------------*/
 .resume-section {
-    margin: 3rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -482,11 +480,11 @@ p{
     will-change: transform;
 }
 
-.premium-cv-button:hover {
+.resume-section:hover {
     transform: translateY(-2px) scale(1.02);
 }
 
-.premium-cv-button:active {
+.resume-sectionr:active {
     transform: translateY(0) scale(0.98);
 }
 
@@ -569,13 +567,13 @@ p{
 }
 
 .premium-cv-button:hover .icon-container {
-    transform: rotate(360deg) scale(1.1);
+    /* transform: rotate(360deg) scale(1.1); */
     box-shadow: 0 8px 20px rgba(238, 193, 112, 0.4);
 }
 
-.premium-cv-button:hover .download-icon {
+/* .premium-cv-button:hover .download-icon {
     transform: translateY(2px);
-}
+} */
 
 .text-container {
     flex: 1;
@@ -614,7 +612,7 @@ p{
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
+    background: linear-gradient(135deg, #92b9a0da, #16a34a);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -626,6 +624,10 @@ p{
     transform: scale(0.8);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 3;
+}
+.premium-cv-button.downloaded .success-overlay {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .check-icon {
@@ -658,6 +660,81 @@ p{
 .section{
     position: relative;
     background-color: var(--white);
+}
+
+/* Media query for medium screens like 1200x800 */
+@media screen and (max-width: 1200px) and (min-width: 881px) {
+    .container {
+        padding: 0;
+    }
+    
+    .introduction {
+        padding: 8rem 0 8rem 3rem;
+        height: 100vh;
+    }
+    
+    .i-name {
+        font-size: 50px;
+    }
+    
+    .i-intro {
+        font-size: 26px;
+    }
+    
+    .i-title-item {
+        font-size: 26px;
+    }
+    
+    .section-right {
+        height: 100vh;
+        width: 45%;
+        min-width: 400px;
+    }
+    
+    .i-bg {
+        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 50%);
+        width: 100%;
+        height: 100%;
+    }
+    
+    .i-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .presentation {
+        padding: 0 3rem;
+        height: 100vh;
+    }
+    
+    .title {
+        font-size: 32px;
+    }
+    
+    .purposes-section {
+        padding: 0 4rem;
+    }
+    
+    .modern-cards-section {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        max-width: 900px;
+    }
+    
+    .modern-card {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .premium-cv-button .button-content {
+        min-width: 260px;
+        padding: 1rem 1.8rem;
+    }
 }
 
 @media screen and  (max-width: 880px){
@@ -696,6 +773,7 @@ p{
          top: auto;
          width: auto;
          height: auto;
+         min-width: auto;
      }
      .i-bg{
 background-color: transparent;
