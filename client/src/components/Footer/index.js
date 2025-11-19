@@ -36,7 +36,7 @@ const currentYear = new Date().getFullYear();
         <li className="menu__item"><a className="menu__link" href="#projects">{language === 'EN' ? 'Projects' : 'Proyectos'}</a></li>
 
       </ul>
-      <p>&copy; {language === 'EN' ? `${currentYear} Karen Derkach | All Rights Reserved` : '2024 Karen Derkach | Todos los derechos reservados'}</p>
+      <p>&copy; {language === 'EN' ? `${currentYear} Karen Derkach | All Rights Reserved` : `${currentYear} Karen Derkach | Todos los derechos reservados`}</p>
     </footer>
   )
 

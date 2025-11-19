@@ -43,6 +43,9 @@ export default defineConfig({
                         if (id.includes('bootstrap')) {
                             return 'bootstrap';
                         }
+                        if (id.includes('@emotion')) {
+                            return 'emotion';
+                        }
                         if (id.includes('react-vertical-timeline')) {
                             return 'timeline';
                         }
@@ -108,7 +111,14 @@ export default defineConfig({
             'react/jsx-runtime',
             'framer-motion',
             '@mui/material',
-            'bootstrap'
+            '@mui/material/styles',
+            '@mui/material/Box',
+            '@mui/material/Modal',
+            '@mui/material/Backdrop',
+            '@mui/material/Fade',
+            '@emotion/react',
+            '@emotion/styled',
+            'bootstrap/dist/css/bootstrap.min.css'
         ]
     },
     css: {
