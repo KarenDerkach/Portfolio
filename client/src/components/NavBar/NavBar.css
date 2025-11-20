@@ -47,6 +47,7 @@
 .menu-items a {
   color: var(--green-solid);
   text-decoration: none;
+  font-weight: 600;
 }
 
 .menu-icon {
@@ -80,6 +81,7 @@
   text-decoration: none;
   color: var(--green-solid);
   position: relative;
+  font-weight: 600;
 }
 .i-link::after{
   content: "";
@@ -91,6 +93,7 @@
   right: 50%;
   transition: all .5s;
   will-change: width;
+  font-weight: bold;
 }
 
 .i-link:hover::after{
@@ -98,16 +101,16 @@
   right: 0;
 }
 .menu-items, li:hover, a:hover{
-  color: var(--green-solid);
+  color: var(--green-solid) !important;
   text-decoration: none;
- 
+ font-weight: bold;
 
 }
 
 .menu-items li.active{
   border-bottom: 5px solid var(--green-solid);
   color: var(--green-solid);
-  font-weight: bold;
+  font-weight: 700;
 
 }
 
@@ -212,6 +215,8 @@ ul.show {
     width: 0;
     height: 0px;
   }
+
+
   .buttonLang {
 
     text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.10);
@@ -224,6 +229,7 @@ ul.show {
     width: 100%;
     height: 10vh;
     padding: 0;
+    z-index: 20;
   }
 
  .navbarContainer.sticky {
@@ -246,7 +252,7 @@ ul.show {
     height: 100%;
     background-color: var(--green-transp);
     text-align: center;
-    transition: 1s;
+    transition: 0.5s;
     flex-direction: column;
   }
 
@@ -256,6 +262,7 @@ ul.show {
         left: 0.1vw;
         margin: 20px 0;
         top: 45px;
+        color: white;
   }
 
   .i-link {
@@ -269,9 +276,10 @@ ul.show {
   }
 
   .i-link:hover {
-    color: white;
+    color: white !important;
     text-shadow: 0 0 10px var(--dark-green);
     transform: scaleX(1.2) scaleY(1.2);
+    transition: 0.5s;
   }
   .menu-icon{
     width: 30px;

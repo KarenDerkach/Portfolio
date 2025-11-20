@@ -36,7 +36,7 @@ function Portfolio({ language }) {
 
   return (
     <div className="p-container">
-      <h1 className="p-title">{language === 'EN' ? 'Projects' : 'Proyectos'}</h1>
+      <h2 className="p-title">{language === 'EN' ? 'Projects' : 'Proyectos'}</h2>
 
       {/* Grid Desktop */}
       <div className="projects-grid desktop-only">

@@ -92,10 +92,10 @@ const handleDownload = (e) => {
     <div className="container">
       <div className="section-left">
         <section className="introduction" id="main">
-          <h2 className="i-intro">
+          <h1 className="i-intro">
             {language === "EN" ? "Hi there, I'm" : "Hola, soy"}
-          </h2>
-          <h1 className="i-name">Karen Derkach</h1>
+          </h1>
+          <h2 className="i-name">Karen Derkach</h2>
           <span className="i-mobile">
             {language === "EN" ? "- Web Developer -" : "- Desarrolladora Web -"}
           </span>
@@ -124,11 +124,11 @@ const handleDownload = (e) => {
           </div>
         </section>
         <section className="presentation" id="aboutme">
-          <h1 className="title">
+          <h2 className="title">
             {language === "EN"
               ? "From Argentina to the 🌎🚀"
               : "De Argentina al 🌎🚀"}
-          </h1>
+          </h2>
           <div className="purposes-section">
             {language === "EN" ? (
               <div>
@@ -251,11 +251,17 @@ const handleDownload = (e) => {
         <div className="i-bg">
           <img 
             src={photo} 
-            alt="Karen Derkach" 
+            alt="Karen Derkach - Desarrolladora Full Stack" 
             className="i-img"
             loading="eager"
             decoding="async"
             fetchpriority="high"
+            width="945"
+            height="945"
+            style={{
+              aspectRatio: '1 / 1',
+              objectFit: 'cover'
+            }}
           />
         </div>
       </div>

@@ -15,7 +15,7 @@ function EducationMain({ language }) {
     return (
       <div >
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-          <h1 className="educationExperienceTitle">Education and experience</h1>
+          <h2 className="educationExperienceTitle">Education and experience</h2>
         </div>
 
         <div className="radioButtons">
@@ -56,7 +56,7 @@ function EducationMain({ language }) {
     return (
       <div>
         <div data-aos="fade-right" data-aos-easing="ease-in-sine">
-          <h1 className="educationExperienceTitle">Educación y experiencia</h1>
+          <h2 className="educationExperienceTitle">Educación y experiencia</h2>
         </div>
 
         <div className="radioButtons">

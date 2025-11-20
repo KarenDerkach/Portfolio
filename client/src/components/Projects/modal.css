@@ -31,9 +31,9 @@
 }
 
 /* Header Section */
-.modal-header {
+.modal-header-btn {
   position: relative;
-  padding: 1.5rem 2rem 0;
+  padding: 1rem;
   display: flex;
   justify-content: flex-end;
 }

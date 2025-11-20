@@ -9,27 +9,21 @@ export default function Footer({ language }) {
 const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
-      <div className="waves">
-        <div className="wave" id="wave1"></div>
-        <div className="wave" id="wave2"></div>
-        <div className="wave" id="wave3"></div>
-        <div className="wave" id="wave4"></div>
-      </div>
       <ul className="social-icon">
-        <li className="social-icon__item"><a className="social-icon__link" href='mailto:derkach.m.karen@gmail.com?body=Hola Karen!' >
+        <li className="social-icon__item"><a className="social-icon__link" href='mailto:derkach.m.karen@gmail.com?body=Hola Karen!' aria-label='Gmail Icon' >
           < MailOutlineIcon />
         </a></li>
-        <li className="social-icon__item"><a className="social-icon__link" href="https://wa.me/5493764653483?text=Hola!,%20He%20visto%20tu%20portfolio..." target='_blank' rel='noreferrer'>
+        <li className="social-icon__item"><a className="social-icon__link" href="https://wa.me/5493764653483?text=Hola!,%20He%20visto%20tu%20portfolio..." target='_blank' rel='noreferrer' aria-label='WhatsApp Icon'>
           <WhatsAppIcon />
         </a></li>
-        <li className="social-icon__item"><a className="social-icon__link" href="https://www.linkedin.com/in/karen-derkach/" target='_blank' rel='noreferrer'>
+        <li className="social-icon__item"><a className="social-icon__link" href="https://www.linkedin.com/in/karen-derkach/" target='_blank' rel='noreferrer' aria-label='LinkedIn Icon'>
           <LinkedInIcon />
         </a></li>
-        <li className="social-icon__item"><a className="social-icon__link" href="https://github.com/KarenDerkach" target='_blank' rel='noreferrer'>
+        <li className="social-icon__item"><a className="social-icon__link" href="https://github.com/KarenDerkach" target='_blank' rel='noreferrer' aria-label='GitHub Icon'>
           < GitHubIcon />
         </a></li>
       </ul>
-      <ul class="menu">
+      <ul className="menu">
         <li className="menu__item"><a className="menu__link" href="#main">{language === 'EN' ? 'Home' : 'Inicio'}</a></li>
         <li className="menu__item"><a className="menu__link" href="#aboutme">{language === 'EN' ? 'About' : 'Sobre Mi'}</a></li>
         <li className="menu__item"><a className="menu__link" href="#education">{language === 'EN' ? 'Education' : 'Educación'}</a></li>

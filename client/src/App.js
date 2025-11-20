@@ -11,14 +11,17 @@ function App() {
   const language = useSelector((state) => state.language);
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='*' element={<NavBar language={language} />} />
-      </Routes>
-
-      <Routes>
-        <Route path='/' element={<Home language={language} />} />
-      </Routes>
-
+      <div className="App">
+        <header>
+          <Routes>
+            <Route path='*' element={<NavBar language={language} />} />
+          </Routes>
+        </header>
+        
+        <Routes>
+          <Route path='/' element={<Home language={language} />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

@@ -67,11 +67,15 @@ export default defineConfig({
                     if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp)$/i.test(assetInfo.name)) {
                         return `assets/images/[name]-[hash].${extType}`
                     }
-                    if (/\.(css)$/i.test(assetInfo.name)) {
-                        return `assets/css/[name]-[hash].${extType}`
-                    }
                     if (/\.(woff|woff2|eot|ttf|otf)$/i.test(assetInfo.name)) {
                         return `assets/fonts/[name]-[hash].${extType}`
+                    }
+                    if (/\.(css)$/i.test(assetInfo.name)) {
+                        // Keep font-related CSS in a separate chunk for better caching
+                        if (assetInfo.name.includes('font') || assetInfo.name.includes('poppins')) {
+                            return `assets/fonts/[name]-[hash].${extType}`
+                        }
+                        return `assets/css/[name]-[hash].${extType}`
                     }
                     return `assets/[name]-[hash].${extType}`
                 }

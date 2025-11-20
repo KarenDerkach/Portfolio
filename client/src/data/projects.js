@@ -5,23 +5,26 @@ import dercon from "../assets/Projects/dercon-original.webp";
 import tripSync from "../assets/Projects/tripSync-original.webp";
 
 
-import js from "../assets/Skills/javascript-logo.png";
-import react from "../assets/Skills/react-icon.png";
-import redux from "../assets/Skills/redux.png";
-import sql from "../assets/Skills/sql.png";
-import html from "../assets/Skills/html-icon.png";
-import css from "../assets/Skills/css-icon.png";
-import postgres from "../assets/Skills/postgres.png";
-import sequelize from "../assets/Skills/sequelize.png";
-import material from "../assets/Skills/material-ui.png";
-import nodejs from "../assets/Skills/nodejs.png";
-import typescript from "../assets/Skills/typescript.png";
-import mongo from "../assets/Skills/mongodb.png";
-import next from "../assets/Skills/nextjs.png"
-import bootstrap from "../assets/Skills/bootstrap.png"
-import firebase from "../assets/Skills/firebase.png"
-import tailwind from "../assets/Skills/Tailwind.png"
-import gemini from "../assets/Skills/gemini.png"
+const bootstrapURL = "https://api.iconify.design/skill-icons:bootstrap.svg";
+const cssURL = "https://api.iconify.design/skill-icons:css.svg";
+const firebaseURL = "https://api.iconify.design/logos:firebase-icon.svg";
+const geminiURL = "https://api.iconify.design/logos:google-gemini.svg";
+const htmlURL = "https://api.iconify.design/skill-icons:html.svg";
+const javascriptURL = "https://api.iconify.design/skill-icons:javascript.svg";
+const materialUIURL = "https://api.iconify.design/devicon:materialui.svg";
+const mongodbURL = "https://api.iconify.design/skill-icons:mongodb.svg";
+const nextURL = "https://api.iconify.design/logos:nextjs-icon.svg";
+const nodejsURL = "https://api.iconify.design/logos:nodejs.svg";
+const postgresURL = "https://api.iconify.design/devicon:postgresql-wordmark.svg";
+const reactURL = "https://api.iconify.design/skill-icons:react-dark.svg";
+const reduxURL = "https://api.iconify.design/skill-icons:redux.svg";
+const sequelizeURL = "https://api.iconify.design/devicon:sequelize.svg";
+const sqlURL = "https://api.iconify.design/hugeicons:sql.svg";
+const tailwindURL = "https://api.iconify.design/logos:tailwindcss-icon.svg";
+const typescriptURL = "https://api.iconify.design/skill-icons:typescript.svg";
+
+
+
 
 export const projectsData = [
   {
@@ -34,17 +37,17 @@ export const projectsData = [
     image: agenda,
     tools: {
       front: [
-        { img: react, name: "React" },
-        { img: redux, name: "Redux" },
-        { img: material, name: "MaterialUI" },
-        { img: typescript, name: "TypeScript" },
-        { img: js, name: "JavaScript" },
-        { img: css, name: "CSS" },
-        { img: html, name: "HTML" },
+        { img: reactURL, name: "React" },
+        { img: reduxURL, name: "Redux" },
+        { img: materialUIURL, name: "MaterialUI" },
+        { img: typescriptURL, name: "TypeScript" },
+        { img: javascriptURL, name: "JavaScript" },
+        { img: cssURL, name: "CSS" },
+        { img: htmlURL, name: "HTML" },
       ],
       back: [
-        { img: nodejs, name: "NodeJS" },
-        { img: mongo, name: "MongoDB" },
+        { img: nodejsURL, name: "NodeJS" },
+        { img: mongodbURL, name: "MongoDB" },
       ],
     },
     link: "https://agenda-financiera.vercel.app/",
@@ -60,17 +63,17 @@ export const projectsData = [
     image: dog,
     tools: {
       front: [
-        { img: react, name: "React" },
-        { img: redux, name: "Redux" },
-        { img: material, name: "MaterialUI" },
-        { img: js, name: "JavaScript" },
-        { img: css, name: "CSS" },
-        { img: html, name: "HTML" },
+        { img: reactURL, name: "React" },
+        { img: reduxURL, name: "Redux" },
+        { img: materialUIURL, name: "MaterialUI" },
+        { img: javascriptURL, name: "JavaScript" },
+        { img: cssURL, name: "CSS" },
+        { img: htmlURL, name: "HTML" },
       ],
       back: [
-        { img: nodejs, name: "NodeJS" },
-        { img: postgres, name: "Postgress" },
-        { img: sequelize, name: "Sequelize" },
+        { img: nodejsURL, name: "NodeJS" },
+        { img: postgresURL, name: "Postgress" },
+        { img: sequelizeURL, name: "Sequelize" },
       ],
     },
     // link: "https://dogs-world.vercel.app/",
@@ -88,17 +91,17 @@ export const projectsData = [
     image: foodarity,
     tools: {
       front: [
-        { img: react, name: "React" },
-        { img: redux, name: "Redux" },
-        { img: material, name: "MaterialUI" },
-        { img: js, name: "JavaScript" },
-        { img: css, name: "CSS" },
-        { img: html, name: "HTML" },
+        { img: reactURL, name: "React" },
+        { img: reduxURL, name: "Redux" },
+        { img: materialUIURL, name: "MaterialUI" },
+        { img: javascriptURL, name: "JavaScript" },
+        { img: cssURL, name: "CSS" },
+        { img: htmlURL, name: "HTML" },
       ],
       back: [
-        { img: nodejs, name: "NodeJS" },
-        { img: postgres, name: "Postgress" },
-        { img: sql, name: "SQL" },
+        { img: nodejsURL, name: "nodejsURL" },
+        { img: postgresURL, name: "Postgress" },
+        { img: sqlURL, name: "SQL" },
       ],
     },
     // link: "http://foodarity.herokuapp.com/",
@@ -116,12 +119,12 @@ export const projectsData = [
   //   image: portfolio,
   //   tools: {
   //     front: [
-  //       { img: react, name: "React" },
-  //       { img: redux, name: "Redux" },
-  //       { img: material, name: "MaterialUI" },
+  //       { img: reactURL, name: "React" },
+  //       { img: reduxURL, name: "Redux" },
+  //       { img: materialURL, name: "materialUIURLUI" },
   //       { img: js, name: "JavaScript" },
-  //       { img: css, name: "CSS" },
-  //       { img: html, name: "HTML" },
+  //       { img: cssURL, name: "CSS" },
+  //       { img: htmlURL, name: "HTML" },
   //     ],
   //   },
   //   link: "https://portfolio-karenderkach.vercel.app/",
@@ -138,11 +141,11 @@ export const projectsData = [
     image: dercon,
     tools: {
       front: [
-        { img: next, name: "Next.js" },
-        { img: bootstrap, name: "Bootstrap" },
-        { img: js, name: "JavaScript" },
-        { img: css, name: "CSS" },
-        { img: html, name: "HTML" },
+        { img: nextURL, name: "Next.js" },
+        { img: bootstrapURL, name: "Bootstrap" },
+        { img: javascriptURL, name: "JavaScript" },
+        { img: cssURL, name: "CSS" },
+        { img: htmlURL, name: "HTML" },
       ]
     },
     link: "https://dercon-srl.vercel.app/",
@@ -159,14 +162,14 @@ export const projectsData = [
     image: tripSync,
     tools: {
       front: [
-        { img: react, name: "React" },
-        { img: bootstrap, name: "Bootstrap" },
-        { img: js, name: "JavaScript" },
-        { img: css, name: "CSS" },
-        { img: html, name: "HTML" },
-        { img: firebase, name: "Firebase" },
-        { img: tailwind, name: "Tailwind" },
-        { img: gemini, name: "Gemini AI" },
+        { img: reactURL, name: "React" },
+        { img: bootstrapURL, name: "Bootstrap" },
+        { img:javascriptURL, name: "JavaScript" },
+        { img: cssURL, name: "CSS" },
+        { img: htmlURL, name: "HTML" },
+        { img: firebaseURL, name: "Firebase" },
+        { img: tailwindURL, name: "Tailwind" },
+        { img: geminiURL, name: "Gemini AI" },
 
       ]
     },

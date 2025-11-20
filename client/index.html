@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=2.0" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Karen Derkach - Full Stack Developer Portfolio" />
     <meta name="keywords" content="Karen Derkach, Full Stack Developer, React, Node.js, JavaScript, Portfolio, FrontEnd" />
@@ -17,20 +17,202 @@
     <link rel="manifest" href="/manifest.json" />
     <title>Karen Derkach - Full Stack Developer Portfolio</title>
     
-    <!-- Fonts -->
+    <!-- Fonts - Optimized for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,500&display=swap" rel="stylesheet">
+    <!-- Preload the most critical font weight -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" as="style">
+    <!-- Load critical font immediately -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <!-- Load additional weights asynchronously -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,500&display=swap"></noscript>
     
     <!-- Performance optimizations -->
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles.css">
+    <!-- Preload non-critical CSS -->
+    <link rel="preload" href="./styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./styles.css"></noscript>
     
     <!-- Progressive Enhancement CSS -->
     <style>
+      /* Critical CSS for above-the-fold content */
+      :root {
+        --header-height: 3rem;
+        --font-semi: 600;
+        --hue-color: 224;
+        --first-color: hsl(var(--hue-color), 89%, 60%);
+        --second-color: hsl(var(--hue-color), 56%, 12%);
+        --body-font: "Poppins", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+        --big-font-size: 2rem;
+        --h2-font-size: 1.25rem;
+        --normal-font-size: .938rem;
+        --smaller-font-size: .75rem;
+        --mb-2: 1rem;
+        --mb-4: 2rem;
+        --mb-5: 2.5rem;
+        --mb-6: 3rem;
+        --z-back: -10;
+        --z-fixed: 100;
+        --hunter-green: #386641ff;
+        --asparagus: #6a994eff;
+        --yellow-green: #a7c957ff;
+        --parchment: #f2e8cfff;
+        --bittersweet-shimmer: #bc4749ff;
+      }
+      
+      /* Critical base styles */
+      *, ::before, ::after {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: var(--body-font);
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        margin: var(--header-height) 0 0 0;
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+        color: var(--second-color);
+        background: #fff;
+      }
+      
+      /* Critical layout styles for above-the-fold */
+      .container {
+        display: flex;
+        width: 100vw;
+        max-width: none !important;
+        height: 100%;
+        margin: 0;
+        padding: 0 !important;
+      }
+      
+      .section-left {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
+        contain: layout;
+      }
+      
+      .introduction {
+        padding: 10rem 0 10rem 5rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+      
+      .i-intro {
+        font-size: 30px;
+        font-weight: 300;
+      }
+      
+      .i-name {
+        font-size: 60px;
+        font-weight: bold;
+        color: var(--second-color);
+        text-shadow: -2px 3px 3px rgba(0, 0, 0, 0.57);
+      }
+      
+      .section-right {
+        flex: 0 0 auto;
+        width: 30%;
+        min-width: 450px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        contain: layout;
+        content-visibility: auto;
+        contain-intrinsic-size: 450px 100vh;
+      }
+      
+      .i-bg {
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+        background-color: var(--bg-color);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        will-change: transform, opacity;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        contain: layout;
+        content-visibility: auto;
+      }
+      
+      .i-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        will-change: transform, opacity;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+        aspect-ratio: 1 / 1;
+        max-width: 945px;
+        max-height: 945px;
+        contain: layout;
+      }
+      
+      /* Mobile optimizations */
+      @media (max-width: 480px) {
+        .container {
+          flex-direction: column;
+        }
+        
+        .introduction {
+          padding: 0;
+          justify-content: flex-start;
+          margin-top: 100px;
+          align-items: center;
+        }
+        
+        .i-name {
+          font-size: 32px;
+        }
+        
+        .section-right {
+          width: 100%;
+          min-width: auto;
+        }
+        
+        .i-img {
+          max-width: 300px;
+          max-height: 300px;
+        }
+      }
+      
+      /* Critical font fallbacks to prevent layout shift */
+      @font-face {
+        font-family: 'Poppins-fallback';
+        src: local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), sans-serif;
+        font-display: swap;
+      }
+      
+      /* Use fallback until Poppins loads */
+      body {
+        font-family: 'Poppins-fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      }
+      
+      /* Override with Poppins when loaded */
+      .fonts-loaded body {
+        font-family: 'Poppins', 'Poppins-fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      }
+      
       /* Por defecto, mostrar contenido sin JS */
       .no-js-content {
         display: block;
@@ -46,11 +228,78 @@
         display: none;
       }
       
-    
       .js .js-content {
         display: block;
       }
+      
+      /* Prevent layout shift during font loading */
+      * {
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
     </style>
+    
+    <!-- Performance optimization script -->
+    <script>
+      // Mark that JS is available
+      document.documentElement.className += ' js';
+      
+      // CSS loading fallback for older browsers
+      (function() {
+        if (!window.addEventListener) {
+          return;
+        }
+        
+        function loadCSS(href) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          link.type = 'text/css';
+          
+          var head = document.head || document.getElementsByTagName('head')[0];
+          head.appendChild(link);
+        }
+        
+        // Fallback for browsers that don't support onload on link elements
+        var timeout = setTimeout(function() {
+          loadCSS('./styles.css');
+        }, 100);
+        
+        // Cancel fallback if preload works
+        var preloadLinks = document.querySelectorAll('link[rel="preload"][as="style"]');
+        for (var i = 0; i < preloadLinks.length; i++) {
+          preloadLinks[i].addEventListener('load', function() {
+            clearTimeout(timeout);
+          });
+        }
+      })();
+      
+      // Font loading detection
+      if ('fontDisplay' in document.body.style) {
+        document.documentElement.classList.add('fonts-loaded');
+      } else {
+        // Fallback font loading detection
+        var fontTest = document.createElement('div');
+        fontTest.style.fontFamily = 'Poppins';
+        fontTest.style.position = 'absolute';
+        fontTest.style.visibility = 'hidden';
+        fontTest.innerHTML = 'test';
+        document.body.appendChild(fontTest);
+        
+        var checkFont = function() {
+          if (fontTest.offsetWidth !== 0) {
+            document.documentElement.classList.add('fonts-loaded');
+            document.body.removeChild(fontTest);
+          } else {
+            setTimeout(checkFont, 50);
+          }
+        };
+        
+        setTimeout(checkFont, 0);
+      }
+    </script>
   </head>
   
   <body>
@@ -62,11 +311,39 @@
     <!-- Preload critical Bootstrap resources for better performance -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"></noscript>
+    
+    <!-- Preload critical profile image for LCP optimization -->
+    <link rel="preload" href="/src/assets/Home/profilephoto-.webp" as="image" fetchpriority="high">
+    <link rel="dns-prefetch" href="//localhost">
 
     <!-- Progressive Enhancement JavaScript -->
     <script>
       // Detect if JS is enabled
       document.documentElement.classList.add('js');
+      
+      // Font loading optimization
+      if ('fonts' in document) {
+        // Check if Poppins is already loaded
+        document.fonts.ready.then(function() {
+          document.documentElement.classList.add('fonts-loaded');
+        });
+        
+        // Load additional font weights after critical content
+        setTimeout(function() {
+          const fontWeights = ['100', '200', '300', '500'];
+          fontWeights.forEach(function(weight) {
+            const font = new FontFace('Poppins', 'url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2)', {
+              weight: weight,
+              display: 'swap'
+            });
+            font.load().then(function(loadedFont) {
+              document.fonts.add(loadedFont);
+            }).catch(function() {
+              // Font loading failed, fallback already in place
+            });
+          });
+        }, 1000);
+      }
 
       // Async load Bootstrap JS when needed
       function loadBootstrapJS() {

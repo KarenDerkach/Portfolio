@@ -6,9 +6,9 @@
   --orange-shadow: rgba(245, 127, 23,0.2);
   --white: #ffffff;
   --black: #393939;
-  --green-solid: #ccd5ae;
-  --green-transp:#ccd5aedc;
-  --light-green: #e9edc9;
+  --green-solid: #8b9968;
+  --green-transp:#8b9968dc;
+  --light-green: #7a8450;
   --dark-green: #606c38;
   --btn: #eec170;
   --btn-hover:#ffe1a8;
@@ -88,7 +88,7 @@ body ::-webkit-scrollbar-thumb {
 .primary-btn:hover {
   color: aliceblue;
   border: 2px solid #ff5823;
-  background-color: #1f2235;
+  /* background-color: #1f2235; */
 }
 
 .highlighted-btn {

@@ -47,7 +47,7 @@ function Education(props) {
                   }
                   className="e-structure"
                 >
-                  {elem.EN.dowload ? <a href={elem.EN.dowload} className="e-links">
+                  {elem.EN.download ? <a href={elem.EN.download} className="e-links">
                     <h3 className="vertical-timeline-element-title">
                       {elem.EN.title}
                     </h3> </a> : <h3 className="vertical-timeline-element-title">
@@ -72,7 +72,7 @@ function Education(props) {
                       iconStyle={schoolIconStyles}
                       icon={<MdSchool />}
                     >
-                      <a href={elem.EN.dowload} className="e-links">
+                      <a href={elem.EN.download} className="e-links">
                         <h3 className="vertical-timeline-element-title">
                           {elem.EN.title}
                         </h3>
@@ -98,7 +98,7 @@ function Education(props) {
                         iconStyle={courseIconStyles}
                         icon={<BsPaperclip />}
                       >
-                        <a href={elem.EN.dowload} className="e-links">
+                        <a href={elem.EN.download} className="e-links">
                           <h3 className="vertical-timeline-element-title">
                             {elem.EN.title}
                           </h3>
@@ -122,7 +122,7 @@ function Education(props) {
                         iconStyle={worksIconStyles}
                         icon={<MdWork />}
                       >
-                        {elem.EN.dowload ? <a href={elem.EN.dowload} className="e-links">
+                        {elem.EN.download ? <a href={elem.EN.download} className="e-links">
                           <h3 className="vertical-timeline-element-title">
                             {elem.EN.title}
                           </h3>
@@ -158,7 +158,7 @@ function Education(props) {
                   }
                   className="e-structure"
                 >
-                  {elem.ES.dowload ? <a href={elem.ES.dowload} className="e-links">
+                  {elem.ES.download ? <a href={elem.ES.download} className="e-links">
                     <h3 className="vertical-timeline-element-title">
                       {elem.ES.title}
                     </h3>
@@ -182,7 +182,7 @@ function Education(props) {
                       iconStyle={schoolIconStyles}
                       icon={<MdSchool />}
                     >
-                      <a href={elem.ES.dowload} className="e-links">
+                      <a href={elem.ES.download} className="e-links">
                         <h3 className="vertical-timeline-element-title">
                           {elem.ES.title}
                         </h3>
@@ -207,7 +207,7 @@ function Education(props) {
                         iconStyle={courseIconStyles}
                         icon={<BsPaperclip />}
                       >
-                        <a href={elem.ES.dowload} className="e-links">
+                        <a href={elem.ES.download} className="e-links">
                           <h3 className="vertical-timeline-element-title">
                             {elem.ES.title}
                           </h3>
@@ -231,7 +231,7 @@ function Education(props) {
                         iconStyle={worksIconStyles}
                         icon={<MdWork />}
                       >
-                        {elem.ES.dowload ? <a href={elem.ES.dowload} className="e-links">
+                        {elem.ES.download ? <a href={elem.ES.download} className="e-links">
                           <h3 className="vertical-timeline-element-title">
                             {elem.ES.title}
                           </h3>

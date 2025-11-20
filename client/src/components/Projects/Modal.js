@@ -1,9 +1,8 @@
-import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import close from '../../assets/Projects/close-modal-grey.svg';
+
 import './modal.css';
 
 export default function Projects({ project, openModal, setOpenModal, language }) {
@@ -30,7 +29,7 @@ export default function Projects({ project, openModal, setOpenModal, language })
         <Fade in={openModal} timeout={600}>
           <Box className="enhanced-modal-box">
             {/* Header Section with Close Button */}
-            <div className="modal-header">
+            <div className="modal-header-btn">
               <div className="modal-close-btn" onClick={() => setOpenModal(false)}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
