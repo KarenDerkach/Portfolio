@@ -34,17 +34,11 @@ export default defineConfig({
                         if (id.includes('react') || id.includes('react-dom')) {
                             return 'react-vendor';
                         }
-                        if (id.includes('@mui/material')) {
-                            return 'mui-core';
-                        }
-                        if (id.includes('@mui/icons-material')) {
-                            return 'mui-icons';
+                        if (id.includes('@emotion')) {
+                            return 'emotion';
                         }
                         if (id.includes('bootstrap')) {
                             return 'bootstrap';
-                        }
-                        if (id.includes('@emotion')) {
-                            return 'emotion';
                         }
                         if (id.includes('react-vertical-timeline')) {
                             return 'timeline';
@@ -114,14 +108,6 @@ export default defineConfig({
             'react-dom', 
             'react/jsx-runtime',
             'framer-motion',
-            '@mui/material',
-            '@mui/material/styles',
-            '@mui/material/Box',
-            '@mui/material/Modal',
-            '@mui/material/Backdrop',
-            '@mui/material/Fade',
-            '@emotion/react',
-            '@emotion/styled',
             'bootstrap/dist/css/bootstrap.min.css'
         ]
     },

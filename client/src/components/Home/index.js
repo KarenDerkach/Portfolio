@@ -5,6 +5,10 @@ import Footer from '../Footer';
 //import Waves from '../Waves';
 import './index.css'
 
+// TODOS: Ver carpeta vite.config y eliminar conf innecesaria
+// Insertar animacion de carga scrolls
+// mejorar fonts 
+// optimizar imagenes
 
 
 

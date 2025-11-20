@@ -4,38 +4,20 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import store from './react-redux/store'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
 // Import Bootstrap CSS for better bundling and tree-shaking
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
 
-// Create MUI theme
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#d4a373',
-    },
-    secondary: {
-      main: '#606c38',
-    },
-  },
-})
-
 // Add class to indicate React is loaded
 document.documentElement.classList.add('react-loaded')
 
 root.render(
   <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </ThemeProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </Provider>
 )
 

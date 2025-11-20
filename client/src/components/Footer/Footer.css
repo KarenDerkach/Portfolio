@@ -15,10 +15,11 @@
 .menu {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
+  gap: 20px;
   z-index: 60;
 }
 
@@ -28,7 +29,7 @@
 }
 
 .social-icon__link {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #ffffff;
   margin: 0 10px;
   display: inline-block;
@@ -89,5 +90,15 @@ width: 3rem !important;
 }
 .footer p {
   text-align: center;
+}
+.social-icon{
+  gap: 10px;
+}
+.menu {
+  gap: 10px;
+  justify-content: center;
+}
+.social-icon__link{
+  font-size: 2rem;
 }
 }
