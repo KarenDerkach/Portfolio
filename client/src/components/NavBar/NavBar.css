@@ -229,7 +229,7 @@ ul.show {
     width: 100%;
     height: 10vh;
     padding: 0;
-    z-index: 20;
+    z-index: 100;
   }
 
  .navbarContainer.sticky {
