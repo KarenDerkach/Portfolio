@@ -8,6 +8,37 @@ function Portfolio({ language }) {
   const [openModalIndex, setOpenModalIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Function to convert month/year to comparable date for sorting
+  const getComparableDate = (dateString) => {
+    const monthMap = {
+      'January': '01', 'Enero': '01',
+      'February': '02', 'Febrero': '02',
+      'March': '03', 'Marzo': '03',
+      'April': '04', 'Abril': '04',
+      'May': '05', 'Mayo': '05',
+      'June': '06', 'Junio': '06',
+      'July': '07', 'Julio': '07',
+      'August': '08', 'Agosto': '08',
+      'September': '09', 'Septiembre': '09',
+      'October': '10', 'Octubre': '10',
+      'November': '11', 'Noviembre': '11',
+      'December': '12', 'Diciembre': '12'
+    };
+
+    const parts = dateString.split(' ');
+    const month = monthMap[parts[0]] || '01';
+    const year = parts[1] || '2020';
+    
+    return new Date(`${year}-${month}-01`);
+  };
+
+  // Sort projects by lastUpdate (most recent first)
+  const sortedProjects = [...projectsData].sort((a, b) => {
+    const dateA = getComparableDate(a.lastUpdate[language] || a.lastUpdate.EN);
+    const dateB = getComparableDate(b.lastUpdate[language] || b.lastUpdate.EN);
+    return dateB - dateA; // Descending order (newest first)
+  });
+
   useEffect(() => {
     // Ensure Bootstrap carousel is initialized
     const initializeCarousel = () => {
@@ -46,13 +77,13 @@ function Portfolio({ language }) {
 
   const handlePrevSlide = () => {
     setCurrentSlide((prev) => 
-      prev === 0 ? projectsData.length - 1 : prev - 1
+      prev === 0 ? sortedProjects.length - 1 : prev - 1
     );
   };
 
   const handleNextSlide = () => {
     setCurrentSlide((prev) => 
-      prev === projectsData.length - 1 ? 0 : prev + 1
+      prev === sortedProjects.length - 1 ? 0 : prev + 1
     );
   };
 
@@ -72,6 +103,7 @@ function Portfolio({ language }) {
       tools: project.tools,
       link: project.link,
       code: project.code,
+      lastUpdate: project.lastUpdate[lang],
     };
   };
 
@@ -81,7 +113,7 @@ function Portfolio({ language }) {
 
       {/* Grid Desktop */}
       <div className="projects-grid desktop-only">
-        {projectsData.map((project, index) => (
+        {sortedProjects.map((project, index) => (
           <div key={project.id || index} className="p-card grid-card">
             <img className="image" src={project.image} alt={project.title} />
             <div className="p-content" onClick={() => handleOpenModal(index)}>
@@ -96,7 +128,7 @@ function Portfolio({ language }) {
       {/* Carousel Mobile */}
       <div id="carouselExampleControls" className="carousel slide custom-carousel mobile-only" data-bs-ride="carousel">
         <div className="carousel-inner">
-          {projectsData.map((project, index) => (
+          {sortedProjects.map((project, index) => (
             <div 
               key={project.id || index} 
               className={`carousel-item ${index === 0 ? 'active' : ''}`} 
@@ -143,7 +175,7 @@ function Portfolio({ language }) {
       {/* Modal */}
       {openModalIndex !== null && (
         <Modal
-          project={language === 'EN' ? getProjectDataByLanguage(projectsData[openModalIndex], 'EN') : getProjectDataByLanguage(projectsData[openModalIndex], 'ES')}
+          project={language === 'EN' ? getProjectDataByLanguage(sortedProjects[openModalIndex], 'EN') : getProjectDataByLanguage(sortedProjects[openModalIndex], 'ES')}
           openModal={true}
           setOpenModal={handleCloseModal}
           language={language}

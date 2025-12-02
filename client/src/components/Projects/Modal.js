@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './modal.css';
 
-// Custom Modal Component without MUI dependencies
+
 const CustomModal = ({ open, onClose, children }) => {
   useEffect(() => {
     if (open) {
@@ -69,7 +69,7 @@ export default function Projects({ project, openModal, setOpenModal, language })
           <div className="tech-stack-section">
             <h2 className="tech-stack-title">
               <span className="tech-icon">⚡</span>
-              {language === 'EN' ? 'Tech Stack' : 'Stack Tecnológico'}
+              {language === 'EN' ? 'Last update: ' : 'Última actualización: '} {project.lastUpdate}
             </h2>
             
             <div className="tech-containers">

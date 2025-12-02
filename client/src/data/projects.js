@@ -52,6 +52,7 @@ export const projectsData = [
     },
     link: "https://agenda-financiera.vercel.app/",
     code: "https://github.com/KarenDerkach/Agenda-Financiera",
+    lastUpdate: { EN: "December 2024", ES: "Diciembre 2024" },
   },
   {
     id: 2,
@@ -79,6 +80,7 @@ export const projectsData = [
     // link: "https://dogs-world.vercel.app/",
     link: null,
     code: "https://github.com/KarenDerkach/PI-DOGS",
+    lastUpdate: { EN: "March 2022", ES: "Marzo 2022" },
   },
   {
     id: 3,
@@ -99,7 +101,7 @@ export const projectsData = [
         { img: htmlURL, name: "HTML" },
       ],
       back: [
-        { img: nodejsURL, name: "nodejsURL" },
+        { img: nodejsURL, name: "nodeJS" },
         { img: postgresURL, name: "Postgress" },
         { img: sqlURL, name: "SQL" },
       ],
@@ -107,6 +109,7 @@ export const projectsData = [
     // link: "http://foodarity.herokuapp.com/",
     link: null,
     code: "https://github.com/KarenDerkach/foodarity-app",
+    lastUpdate: { EN: "February 2022", ES: "Febrero 2022" },
   },
   // {
   //   id: 4,
@@ -150,6 +153,7 @@ export const projectsData = [
     },
     link: "https://dercon-srl.vercel.app/",
     code: "https://github.com/KarenDerkach/DERCON_SRL",
+    lastUpdate: { EN: "November 2025", ES: "Noviembre 2025" },
   },
   {
     id: 5,
@@ -175,6 +179,7 @@ export const projectsData = [
     },
     link: "https://trip-sync-planner.vercel.app/",
     code: "https://github.com/KarenDerkach/TripSync-planner",
+    lastUpdate: { EN: "August 2025", ES: "Agosto 2025" },
   },
 ];
 

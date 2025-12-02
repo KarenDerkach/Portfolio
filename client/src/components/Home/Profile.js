@@ -253,7 +253,7 @@ const handleDownload = (e) => {
             src={photo} 
             alt="Karen Derkach - Desarrolladora Full Stack" 
             className="i-img"
-            loading="eager"
+            loading="eager" //"eager" asset is loaded as soon as possible, "lazy" asset is loaded when it enters the viewport
             decoding="async"
             fetchpriority="high"
             width="945"

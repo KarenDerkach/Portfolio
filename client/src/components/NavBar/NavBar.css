@@ -100,9 +100,8 @@
   width: 100%;
   right: 0;
 }
-.menu-items, li:hover, a:hover{
+.i-link:hover{
   color: var(--green-solid) !important;
-  text-decoration: none;
  font-weight: bold;
 
 }

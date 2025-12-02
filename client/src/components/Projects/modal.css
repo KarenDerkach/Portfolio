@@ -329,7 +329,6 @@
   gap: 0.5rem;
   padding: 14px 24px;
   text-decoration: none;
-  color: inherit;
   width: 100%;
   height: 100%;
 }
@@ -345,11 +344,13 @@
   color: white;
   box-shadow: 0 8px 25px rgba(238, 193, 112, 0.4);
 }
-
-.secondary-btn {
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--green-solid);
-  border: 1px solid rgba(238, 193, 112, 0.3);
+.primary-btn a{
+  color: white;
+}
+.primary-btn a:hover{
+ 
+  color: white;
+  
 }
 
 .secondary-btn:hover {
@@ -358,7 +359,12 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
-
+.secondary-btn a{
+  color: var(--green-solid);
+}
+.secondary-btn a:hover{
+  color: var(--green-solid);
+}
 .btn-icon {
   transition: transform 0.3s ease;
 }
@@ -366,6 +372,7 @@
 .action-btn:hover .btn-icon {
   transform: translateX(3px);
 }
+
 
 /* Decorative Elements */
 .modal-decoration {

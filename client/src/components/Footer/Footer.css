@@ -43,6 +43,7 @@ width: 5rem !important;
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
+  color: var(--light-green);
 }
 
 .menu__link {
@@ -59,6 +60,7 @@ width: 5rem !important;
 
 .menu__link:hover {
   opacity: 1;
+    color: var(--light-green);
 }
 
 .footer p {
