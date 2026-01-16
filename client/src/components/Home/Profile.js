@@ -206,19 +206,19 @@ const handleDownload = (e) => {
               <div className="card-gradient-overlay"></div>
             </div>
           </div>
-          <div className="resume-section">
+          <div className="resume-section" onClick={handleDownload}>
             <div className="cv-download-container">
+                <div className="button-background">
+                  <div className="button-border"></div>
+                  <div className="button-ripple"></div>
+                </div>
               <a
-                onClick={handleDownload}
+                
                 href="CV Karen Derkach.pdf"
                 download="CV Karen Derkach.pdf"
                 className="premium-cv-button"
                 aria-label={language === "EN" ? "Download Karen's Resume" : "Descargar CV de Karen"}
               >
-                <div className="button-background">
-                  <div className="button-border"></div>
-                  <div className="button-ripple"></div>
-                </div>
                 <div className="button-content">
                   <div className="icon-container">
                     <svg className="download-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +231,7 @@ const handleDownload = (e) => {
                       {language === "EN" ? "Download Resume" : "Descargar CV"}
                     </span>
                     <span className="button-sub-text">
-                      {language === "EN" ? "PDF • Updated 2025" : "PDF • Actualizado 2025"}
+                      {language === "EN" ? "PDF • Updated 2026" : "PDF • Actualizado 2026"}
                     </span>
                   </div>
                 </div>

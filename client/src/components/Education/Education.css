@@ -8,6 +8,9 @@
 .e-links:hover{
     color:var(--btn-hover)
 }
+.vertical-timeline{
+    padding: 0px !important;
+}
 
 .vertical-timeline-element-title{
     font-weight: bold;
